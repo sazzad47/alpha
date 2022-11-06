@@ -1,0 +1,12 @@
+.navbar_beta {
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    background: rgb(19, 25, 49);
+    color: #fff;
+}
+.search_bar_beta {
+    border: none;
+    outline: none;
+}
