@@ -2,6 +2,7 @@ import { Button } from '@mui/material'
 import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
+import Global from '../components/global'
 
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Link href="/beta"><Button variant='contained'>Beta</Button></Link>
+      <Global/>
       </div>
     </React.Fragment>
   )

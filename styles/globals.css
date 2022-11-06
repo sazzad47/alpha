@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -16,6 +20,7 @@ a {
 }
 
 /*.........Global............*/
+@import url(./global/search.css);
 @import url(home.css);
 /*.........Beta............*/
 @import url(./beta/navbar.css);
