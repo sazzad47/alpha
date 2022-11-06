@@ -4,7 +4,10 @@ import SearchBar from './SearchBar';
 
 const Hero = () => {
   return (
-    <SearchBar/>
+    <div className='global_hero_section'>
+
+      <SearchBar/>
+    </div>
   )
 }
 

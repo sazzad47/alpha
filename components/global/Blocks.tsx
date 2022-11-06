@@ -3,6 +3,9 @@ import {Grid} from '@mui/material'
 import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
 import OfflineBoltIcon from '@mui/icons-material/OfflineBolt';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import TravelExploreIcon from '@mui/icons-material/TravelExplore';
+import LocationSearchingIcon from '@mui/icons-material/LocationSearching';
+import RadarIcon from '@mui/icons-material/Radar';
 import Link from 'next/link';
 
 const cards = [
@@ -25,27 +28,27 @@ const cards = [
     path: '/delta'
     },
     {id: 4,
-    icon: <PlayCircleFilledIcon className='icon'/>,
-    name: 'Beta',
+    icon: <TravelExploreIcon className='icon'/>,
+    name: 'Epsilon',
     desc: 'Beta is the best video sharing platform after YouTube. This makes the data safe from hackers. Thus, Beta is a great YouTube alternative.',
-    path: '/beta'
+    path: '/epsilon'
     },
     {id: 5,
-    icon: <PlayCircleFilledIcon className='icon'/>,
-    name: 'Beta',
+    icon: <LocationSearchingIcon className='icon'/>,
+    name: 'Zeta',
     desc: 'Beta is the best video sharing platform after YouTube. This makes the data safe from hackers. Thus, Beta is a great YouTube alternative.',
-    path: '/beta'
+    path: '/zeta'
     },
     {id: 6,
-    icon: <PlayCircleFilledIcon className='icon'/>,
-    name: 'Beta',
+    icon: <RadarIcon className='icon'/>,
+    name: 'Eta',
     desc: 'Beta is the best video sharing platform after YouTube. This makes the data safe from hackers. Thus, Beta is a great YouTube alternative.',
-    path: '/beta'
+    path: '/eta'
     },
 ]
 const Blocks = () => {
   return (
-    <div className='w-full mt-2 p-5'>
+    <div className='global_service_section w-full p-5'>
         <Grid container spacing={4}>
            {cards.map((item) => (
              <Grid key={item.id} item xs={12} md={4} className="flex justify-center">

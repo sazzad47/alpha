@@ -1,10 +1,44 @@
 .global {
   min-height: 100vh;
-  padding-top: 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.global_hero_section {
+  padding-top: 10rem;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  background: #127787;
+}
+.global_service_section {
+  position: relative;
   background: #a10543;
+}
+.global_service_section::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100px;
+  left: 0;
+  top: -48px;
+  background: #127787;
+  transform: skewY(10deg);
+
+}
+.global_service_section::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100px;
+  right: 0;
+  top: -48px;
+  background: #127787;
+  transform: skewY(-10deg);
+
 }
 .global_service_block_container {
   position: relative;
