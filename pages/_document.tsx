@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import Script from 'next/script'
 
 class MyDocument extends Document {
     render() {
@@ -11,7 +12,7 @@ class MyDocument extends Document {
                         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
                         crossOrigin="anonymous"
                     />
-                    <script src="https://kit.fontawesome.com/e20sdfsd9.js" crossOrigin="anonymous"></script>
+                    <Script src="https://kit.fontawesome.com/e20sdfsd9.js"></Script>
                 </Head>
                 <body>
                     <Main />
