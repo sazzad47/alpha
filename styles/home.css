@@ -1,6 +1,96 @@
 .global {
   min-height: 100vh;
+  padding-top: 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #a10543;
+}
+.global_service_block_container {
+  position: relative;
+}
+.global_service_block_container::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -1;
+}
+.global_service_block_container .global_service_block {
+  width: 300px;
+  height: 200px;
+  transition: 0.4s;
+  border: 1px solid #fff;
+}
+.global_service_block_container .face1 {
+  position: relative;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+.global_service_block_container:hover .face1 {
+  box-shadow: inset 2px 2px 12px 4px #fff,
+      inset 2px 0 2px 5px #fff,
+      inset 3px 0 2px 4px #fff;
+  transform: translateY(0px)
+}
+.global_service_block_container .face1 .global_service_block_content .icon {
+  color: #fff;
+  font-size: 3em;
+  text-align: center;
+}
+.global_service_block_container .face1 .global_service_block_content h3 {
+  color: #fff;
+  font-size: 1em;
+  text-align: center;
+}
+.global_service_block_container:hover .face1 .global_service_block_content {
+  opacity: 0.2;
+  text-align: center;
+  transition: 0.5s;
+}
+.global_service_block_container:hover .face1 .global_service_block_content {
+  opacity: 1;
+}
+.global_service_block_container .face2 {
+  position: relative;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+  transform: translateY(-100px);
+}
+.global_service_block_container:hover .face2 {
+  transform: translateY(0px);
+}
+.global_service_block_container .face2 .global_service_block_content {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-size: 12px;
+}
+.global_service_block_content .icon {
+  text-shadow: 0 0 50px #0f0,
+               0 0 100px #0f0,
+               0 0 150px #0f0,
+               0 0 200px #0f0,
+               0 0 250px #0f0;
+  animation: animateIcon 5s linear infinite;
+}
+@keyframes animateIcon {
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
 }
