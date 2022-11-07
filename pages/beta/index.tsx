@@ -1,10 +1,12 @@
 import React from 'react'
 import { NextPage } from 'next'
+import Beta from '../../components/beta'
 
-const Beta: NextPage = () => {
+
+const Home: NextPage = () => {
   return (
-    <div>Beta</div>
+    <Beta/>
   )
 }
 
-export default Beta
+export default Home
