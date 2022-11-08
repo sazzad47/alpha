@@ -58,7 +58,7 @@
 
 .global_service_block_container .face1 .global_service_block_content .icon {
   color: #fff;
-  font-size: 3em;
+  font-size: 1em;
   text-align: center;
 }
 .global_service_block_container .face2 .global_service_block_content button {
@@ -183,4 +183,8 @@
       display: initial;
   }
 
+}
+/*..............Counter.............*/
+.counter_item_global {
+   max-width: 13rem
 }
