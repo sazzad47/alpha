@@ -54,7 +54,7 @@ const Blocks = () => {
              <Grid key={item.id} item xs={12} md={4} className="flex justify-center">
               <Link href={`${item.path}`}>
                <div className='global_service_block_container'>
-                <div className='global_service_block face1 bg-rose-700 hover:bg-rose-900'>
+                <div className='global_service_block face1 bg-stone-700 hover:bg-rose-900'>
                     <div className='global_service_block_content flex flex-col items-center justify-center p-4'>
                          {item.icon}
                         <h3 className='text-2xl text-slate-50'>{item.name}</h3>
