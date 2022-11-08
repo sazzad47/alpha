@@ -18,9 +18,11 @@ export default function Navbar() {
   return (
     <div className="flex justify-between items-center px-10 h-14 bg-[#212121] opacity-95 sticky top-0 z-50">
       <div className="flex gap-8 items-center text-2xl">
-        <div className="flex gap-1 items-center justify-center">
-          <AccountBalanceWalletIcon className="text-3xl text-slate-50" />
-        </div>
+      <Link href="/">
+            <div className="flex gap-1 items-center justify-center">
+            <AccountBalanceWalletIcon className="text-3xl text-slate-50" />
+            </div>
+        </Link>
         <Link href="/beta">
           <div className="flex gap-1 items-center justify-center">
             <EmergencyRecordingIcon className="text-3xl text-slate-50" />
