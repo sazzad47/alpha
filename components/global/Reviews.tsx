@@ -8,7 +8,7 @@ import "swiper/css/scrollbar";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay  } from "swiper";
 
-const Reviews = () => {
+const Reviews: React.FC = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center px-3 md:px-5 bg-gray-800 w-full">
@@ -23,7 +23,7 @@ const Reviews = () => {
             scrollbar={{ draggable: true }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
-            autoplay={{ delay: 2000 }}
+            autoplay={{ delay: 4000 }}
           >
             {items.map((item, index) => {
               return (

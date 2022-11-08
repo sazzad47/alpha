@@ -49,7 +49,7 @@ const menus = [
     path: '/eta'
     },
 ]
-export default function Navbar() {
+const Navbar: React.FC = () => {
   const location = useRouter();
   const router = useRouter();
 
@@ -88,3 +88,5 @@ export default function Navbar() {
     </div>
   );
 }
+
+export default Navbar

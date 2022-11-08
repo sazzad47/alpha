@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import EmergencyRecordingIcon from "@mui/icons-material/EmergencyRecording";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
+import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
 
 export default function Navbar() {
   const location = useRouter();
@@ -25,7 +26,7 @@ export default function Navbar() {
         </Link>
         <Link href="/beta">
           <div className="flex gap-1 items-center justify-center">
-            <EmergencyRecordingIcon className="text-3xl text-slate-50" />
+            <SmartDisplayIcon className="text-3xl text-slate-50" />
           </div>
         </Link>
       </div>

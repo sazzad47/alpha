@@ -27,7 +27,7 @@ type Props = {
   onExit: () => any;
   className: string;
 };
-const Counter = () => {
+const Counter: React.FC = () => {
   const [counterOn, setCounterOn] = useState<boolean>(false);
   const TriggerCounter = ScrollTrigger as unknown as React.FC<Props>;
   return (

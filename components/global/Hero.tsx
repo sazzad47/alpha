@@ -2,7 +2,7 @@ import React from 'react'
 import SearchBar from './SearchBar';
 
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <div className='global_hero_section'>
 

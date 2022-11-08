@@ -47,7 +47,7 @@ const cards = [
     path: '/eta'
     },
 ]
-const Blocks = () => {
+const Blocks: React.FC = () => {
   return (
     <div className='global_service_section w-full p-5 bg-gray-800'>
         <Grid container spacing={2} className="pt-[8rem]">
