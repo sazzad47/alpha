@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+:root{
+  --color-dark: #151C35;
+  --color-secodary-dark: #464C70;
+  --color-primary: #EE709D;
+  --color-text: #8297E2;
+  --color-light: #EBEBFB;
+}
 html,
 body {
   padding: 0;
