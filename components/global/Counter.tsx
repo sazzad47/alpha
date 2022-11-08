@@ -2,6 +2,25 @@ import { Grid } from "@mui/material";
 import React, { useState, ReactNode } from "react";
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
+
+const items = [
+  {id: 1,
+   title: "Total Users",
+   number: 100
+  },
+  {id: 1,
+   title: "Customers",
+   number: 100
+  },
+  {id: 1,
+   title: "Clients",
+   number: 100
+  },
+  {id: 1,
+   title: "Awards",
+   number: 100
+  },
+]
 type Props = {
   children?: ReactNode;
   onEnter: () => any;
@@ -19,72 +38,27 @@ const Counter = () => {
         onExit={() => setCounterOn(false)}
         className="w-full"
       >
-          <Grid container className="w-full flex items-center justify-between">
-            <Grid
+          <Grid container className="w-full flex items-center justify-center md:justify-between">
+            {items.map((item)=> (
+              <Grid
+              key={item.id}
               item
-              xs={6}
+              xs={12}
+              sm={6}
               md={3}
               sx={{maxWidth:'13rem'}}
               className="counter_item_global min-h-[6rem] mb-3 p-2 flex flex-col items-center justify-center bg-pink-800 text-slate-50 border-b-4 border-indigo-500"
             >
               
-              <p className="mt-2 text-sm text-slate-50 whitespace-nowrap">Total Users</p>
+              <p className="mt-2 text-sm text-slate-50 whitespace-nowrap">{item.title}</p>
               <h3>
                 {counterOn? (
-                  <CountUp start={0} end={100} duration={2} delay={0} />
-                ): 100}
+                  <CountUp start={0} end={item.number} duration={2} delay={0} />
+                ): item.number}
                 +
               </h3>
             </Grid>
-            <Grid
-              item
-              xs={6}
-              md={3}
-              sx={{maxWidth:'13rem'}}
-              className="counter_item_global min-h-[6rem] mb-3 p-2 flex flex-col items-center justify-center bg-pink-800 text-slate-50 border-b-4 border-indigo-500"
-            >
-              
-              <p className="mt-2 text-sm text-slate-50 whitespace-nowrap">Total Customers</p>
-              <h3>
-                {counterOn? (
-                  <CountUp start={0} end={100} duration={2} delay={0} />
-                ): 100}
-                +
-              </h3>
-            </Grid>
-            <Grid
-              item
-              xs={6}
-              md={3}
-              sx={{maxWidth:'13rem'}}
-              className="counter_item_global min-h-[6rem] mb-3 p-2 flex flex-col items-center justify-center bg-pink-800 text-slate-50 border-b-4 border-indigo-500"
-            >
-              
-              <p className="mt-2 text-sm text-slate-50 whitespace-nowrap">Total Clients</p>
-              <h3>
-                {counterOn? (
-                  <CountUp start={0} end={100} duration={2} delay={0} />
-                ): 100}
-                +
-              </h3>
-            </Grid>
-            <Grid
-              item
-              xs={6}
-              md={3}
-              sx={{maxWidth:'13rem'}}
-              className="counter_item_global min-h-[6rem] mb-3 p-2 flex flex-col items-center justify-center bg-pink-800 text-slate-50 border-b-4 border-indigo-500"
-            >
-              
-              <p className="mt-2 text-sm text-slate-50 whitespace-nowrap">Total Awards</p>
-              <h3>
-                {counterOn? (
-                  <CountUp start={0} end={100} duration={2} delay={0} />
-                ): 100}
-                +
-              </h3>
-            </Grid>
-            
+            ))}           
           </Grid>
       </TriggerCounter>
         </Grid>
