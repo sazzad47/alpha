@@ -24,14 +24,15 @@ const Counter = () => {
               item
               xs={6}
               md={3}
+              sx={{maxWidth:'13rem'}}
               className="counter_item_global mb-3 p-2 flex flex-col items-center justify-center bg-pink-800 text-slate-50 border-b-4 border-indigo-500"
             >
               
               <p className="mt-2 text-slate-400">Total Users</p>
               <h3>
-                {counterOn && (
+                {counterOn? (
                   <CountUp start={0} end={100} duration={2} delay={0} />
-                )}
+                ): 100}
                 +
               </h3>
             </Grid>
@@ -39,14 +40,15 @@ const Counter = () => {
               item
               xs={6}
               md={3}
+              sx={{maxWidth:'13rem'}}
               className="counter_item_global mb-3 p-2 flex flex-col items-center justify-center bg-pink-800 text-slate-50 border-b-4 border-indigo-500"
             >
               
               <p className="mt-2 text-slate-400">Total Customers</p>
               <h3>
-                {counterOn && (
+                {counterOn? (
                   <CountUp start={0} end={100} duration={2} delay={0} />
-                )}
+                ): 100}
                 +
               </h3>
             </Grid>
@@ -54,14 +56,15 @@ const Counter = () => {
               item
               xs={6}
               md={3}
+              sx={{maxWidth:'13rem'}}
               className="counter_item_global mb-3 p-2 flex flex-col items-center justify-center bg-pink-800 text-slate-50 border-b-4 border-indigo-500"
             >
               
               <p className="mt-2 text-slate-400">Total Clients</p>
               <h3>
-                {counterOn && (
+                {counterOn? (
                   <CountUp start={0} end={100} duration={2} delay={0} />
-                )}
+                ): 100}
                 +
               </h3>
             </Grid>
@@ -69,14 +72,15 @@ const Counter = () => {
               item
               xs={6}
               md={3}
+              sx={{maxWidth:'13rem'}}
               className="counter_item_global mb-3 p-2 flex flex-col items-center justify-center bg-pink-800 text-slate-50 border-b-4 border-indigo-500"
             >
               
               <p className="mt-2 text-slate-400">Total Awards</p>
               <h3>
-                {counterOn && (
+                {counterOn? (
                   <CountUp start={0} end={100} duration={2} delay={0} />
-                )}
+                ): 100}
                 +
               </h3>
             </Grid>
