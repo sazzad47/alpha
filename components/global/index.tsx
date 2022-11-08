@@ -2,6 +2,7 @@ import React from 'react'
 import Blocks from './Blocks'
 import Hero from './Hero'
 import Reviews from './Reviews'
+import Counter from './Counter'
 
 
 const Global = () => {
@@ -11,6 +12,7 @@ const Global = () => {
        <Hero/>
        <Blocks/>
        <Reviews/>
+       <Counter/>
       </div>
     </React.Fragment>
   )
