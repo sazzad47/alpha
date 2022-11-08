@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay  } from "swiper";
 
 const Reviews = () => {
   return (
@@ -15,7 +15,7 @@ const Reviews = () => {
         <div className="board bg-pink-800">
           <h2 className="text-slate-50 text-2xl p-3 mt-1 md:mt-0">Reviews from our verified users.</h2>
           <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay ]}
             spaceBetween={50}
             slidesPerView={1}
             navigation
@@ -23,6 +23,7 @@ const Reviews = () => {
             scrollbar={{ draggable: true }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
+            autoplay={{ delay: 2000 }}
           >
             {items.map((item, index) => {
               return (
