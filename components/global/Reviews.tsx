@@ -11,7 +11,7 @@ import { Navigation, Pagination, Scrollbar, A11y, Autoplay  } from "swiper";
 const Reviews = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center px-3 md:px-5 py-[5rem] md:py-[3rem] bg-gray-800 w-full">
+      <div className="flex flex-col items-center justify-center px-3 md:px-5 bg-gray-800 w-full">
         <div className="board min-w-full">
           <h1 className="text-slate-50 text-4xl font-bold uppercase p-3 mt-1 md:mt-0">Reviews from our verified users</h1>
           <Swiper
