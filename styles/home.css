@@ -186,5 +186,5 @@
 }
 /*..............Counter.............*/
 .counter_item_global {
-   max-width: 13rem
+   max-width: 13rem !important;
 }
