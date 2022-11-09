@@ -114,7 +114,7 @@ const ContactForm = () => {
             <Grid sx={{ pl: { sm: 0, md: 5 }, pt: {sm:3, md:0}, mt: {sm:5, md:0} }}>
               <p className="text-2xl pl-0">Get in touch</p>
               <p className="text-sm font-semibold pl-0 mt-4">
-                Contrairement à une opinion répandue, le Lorem Ipsum n'est pas
+                Contrairement à une opinion répandue, le Lorem Ipsum n&apos;est pas
                 simplement du texte aléatoire.
               </p>
               <p className="text-sm pl-0 mt-4">
