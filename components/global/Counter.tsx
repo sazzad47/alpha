@@ -8,15 +8,15 @@ const items = [
    title: "Total Users",
    number: 100
   },
-  {id: 1,
+  {id: 2,
    title: "Customers",
    number: 100
   },
-  {id: 1,
+  {id: 3,
    title: "Clients",
    number: 100
   },
-  {id: 1,
+  {id: 4,
    title: "Awards",
    number: 100
   },

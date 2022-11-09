@@ -25,7 +25,8 @@ a {
 * {
   box-sizing: border-box;
 }
-
+/*.........Common............*/
+@import url(common.css);
 /*.........Global............*/
 @import url(./global/search.css);
 @import url(home.css);

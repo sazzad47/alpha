@@ -5,6 +5,7 @@ import Reviews from './Reviews'
 import Counter from './Counter'
 import Navbar from './Navbar'
 import ContactForm from './ContactForm'
+import Footer from './Footer'
 
 
 const Global: React.FC = () => {
@@ -17,6 +18,7 @@ const Global: React.FC = () => {
        <Reviews/>
        <Counter/>
        <ContactForm/>
+       <Footer/>
       </div>
     </React.Fragment>
   )

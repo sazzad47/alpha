@@ -1,0 +1,34 @@
+.input_wrapper_standard {
+  width: 100%;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.input_wrapper_standard .input_data_standard {
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+.input_wrapper_standard .input_data_standard input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  border-bottom: 2px solid silver;
+}
+.input_wrapper_standard .input_data_standard label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: gray;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.input_wrapper_standard .input_data_standard input[required]:valid ~ label,
+.input_wrapper_standard .input_data_standard input:focus ~ label {
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: #4158d0;
+
+}
