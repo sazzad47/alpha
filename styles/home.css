@@ -4,6 +4,13 @@
   align-items: center;
   justify-content: center;
 }
+.bg_image {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .global_hero_section {
   padding-top: 10rem;
   width: 100%;

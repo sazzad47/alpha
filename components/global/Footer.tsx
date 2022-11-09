@@ -5,6 +5,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Link from "next/link";
+import footerBackground from '../../public/global/bg-footer.jpg'
 
 const legacyLinks = [
   { id: 1, name: "Terms", path: "/terms" },
@@ -28,7 +29,7 @@ const companyLinks = [
 const Footer = () => {
   return (
     <React.Fragment>
-      <Grid className="w-full px-5 pt-5 text-slate-50 bg-gray-800">
+      <Grid sx={{backgroundImage: `url(${footerBackground.src})`}} className="bg_image w-full px-5 pt-5 text-slate-50">
         <Grid container className="w-full">
           <Grid item xs={12}>
             <Grid container className="flex items-center justify-between">
@@ -36,7 +37,8 @@ const Footer = () => {
                 item
                 xs={12}
                 md={4}
-                className="flex items-center justify-start"
+                sx={{justifyContent:'flex-start'}}
+                className="flex items-center"
               >
                 <List>
                   {companyLinks.map((item) => (
@@ -50,7 +52,8 @@ const Footer = () => {
                 item
                 xs={12}
                 md={4}
-                className="flex items-center justify-center"
+                sx={{justifyContent:{xs:'flex-start', md:'center'}}}
+                className="flex items-center"
               >
                 <List>
                   {supportLinks.map((item) => (
@@ -64,7 +67,8 @@ const Footer = () => {
                 item
                 xs={12}
                 md={4}
-                className="flex items-center justify-end"
+                sx={{justifyContent:{xs:'flex-start', md:'flex-end'}}}
+                className="flex items-center"
               >
                 <List>
                   {legacyLinks.map((item) => (
