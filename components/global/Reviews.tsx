@@ -6,16 +6,18 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay  } from "swiper";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 
 const Reviews: React.FC = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center px-3 md:px-5 bg-gray-800 w-full">
         <div className="board min-w-full">
-          <h1 className="text-slate-50 text-4xl font-bold uppercase p-3 mt-1 md:mt-0">Reviews from our verified users</h1>
+          <h1 className="text-slate-50 text-4xl font-bold uppercase p-3 mt-1 md:mt-0">
+            Reviews from our verified users
+          </h1>
           <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay ]}
+            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
             spaceBetween={50}
             slidesPerView={1}
             navigation
