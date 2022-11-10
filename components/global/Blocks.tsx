@@ -8,6 +8,7 @@ import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import Link from 'next/link';
 import Avatar from '@mui/material/Avatar';
+import blocksBackground from '../../public/global/bg-blocks.jpg'
 
 const cards = [
     {id: 1,
@@ -49,8 +50,8 @@ const cards = [
 ]
 const Blocks: React.FC = () => {
   return (
-    <div className='global_service_section w-full p-5 bg-gray-800'>
-        <Grid container spacing={2} className="pt-[8rem]">
+    <div style={{backgroundImage: `url(${blocksBackground.src})`}} className='bg_image global_service_section w-full p-5 bg-gray-800'>
+        <Grid container spacing={2} className="py-[3rem]">
            {cards.map((item) => (
              <Grid key={item.id} item xs={12} md={4} className="flex justify-center">
               <Link href={`${item.path}`}>

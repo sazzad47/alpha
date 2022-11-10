@@ -11,7 +11,7 @@ const Global: React.FC = () => {
   return (
     <React.Fragment>
       <div className="flex flex-col w-full justify-center items-center">
-        <Navbar />
+        {/* <Navbar /> */}
         <Hero />
         <Blocks />
         <Reviews />

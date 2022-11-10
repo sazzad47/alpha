@@ -2,6 +2,7 @@ import { Grid } from "@mui/material";
 import React, { useState, ReactNode } from "react";
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
+import counterBackground from '../../public/global/bg-counter.jpg'
 
 const items = [
   { id: 1, title: "Total Users", number: 100 },
@@ -20,7 +21,8 @@ const Counter: React.FC = () => {
   const TriggerCounter = ScrollTrigger as unknown as React.FC<Props>;
   return (
     <React.Fragment>
-      <Grid className="w-full p-5 flex items-center justify-center bg-gray-800">
+      <Grid sx={{backgroundImage: `url(${counterBackground.src})`}} className="bg_image w-full p-5 flex items-center justify-center bg-gray-800">
+        
         <TriggerCounter
           onEnter={() => setCounterOn(true)}
           onExit={() => setCounterOn(false)}
@@ -30,6 +32,8 @@ const Counter: React.FC = () => {
             container
             className="w-full flex items-center justify-center md:justify-between"
           >
+            <Grid item xs={12}>
+            </Grid>
             {items.map((item) => (
               <Grid
                 key={item.id}

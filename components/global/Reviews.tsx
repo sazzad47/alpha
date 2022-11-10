@@ -7,11 +7,12 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
+import reviewsBackground from '../../public/global/bg-reviews.jpg'
 
 const Reviews: React.FC = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center px-3 md:px-5 bg-gray-800 w-full">
+      <div style={{backgroundImage: `url(${reviewsBackground.src})`}} className="bg_image flex flex-col items-center justify-center px-3 md:px-5 w-full">
         <div className="board min-w-full">
           <h1 className="text-slate-50 text-4xl font-bold uppercase p-3 mt-1 md:mt-0">
             Reviews from our verified users

@@ -25,6 +25,12 @@ const companyLinks = [
   { id: 3, name: "Affiliates", path: "/affiliates" },
   { id: 4, name: "Investors", path: "/investors" },
 ];
+const usefulLinks = [
+  { id: 1, name: "Account", path: "/account" },
+  { id: 2, name: "Order Tracking", path: "/order-tracking" },
+  { id: 3, name: "Refund Policy", path: "/refund-policy" },
+  { id: 4, name: "Payment", path: "/payment" },
+];
 
 const Footer = () => {
   return (
@@ -32,12 +38,12 @@ const Footer = () => {
       <Grid sx={{backgroundImage: `url(${footerBackground.src})`}} className="bg_image w-full px-5 pt-5 text-slate-50">
         <Grid container className="w-full">
           <Grid item xs={12}>
-            <Grid container className="flex items-center justify-between">
+            <Grid container className="flex items-center justify-center">
               <Grid
                 item
                 xs={12}
-                md={4}
-                sx={{justifyContent:'flex-start'}}
+                md={3}
+                // sx={{justifyContent:{ sx:'flex-start', md: 'center'}}}
                 className="flex items-center"
               >
                 <List>
@@ -51,8 +57,8 @@ const Footer = () => {
               <Grid
                 item
                 xs={12}
-                md={4}
-                sx={{justifyContent:{xs:'flex-start', md:'center'}}}
+                md={3}
+                // sx={{justifyContent:{ sx:'flex-start', md: 'center'}}}
                 className="flex items-center"
               >
                 <List>
@@ -66,8 +72,8 @@ const Footer = () => {
               <Grid
                 item
                 xs={12}
-                md={4}
-                sx={{justifyContent:{xs:'flex-start', md:'flex-end'}}}
+                md={3}
+                // sx={{justifyContent:{ sx:'flex-start', md: 'center'}}}
                 className="flex items-center"
               >
                 <List>
@@ -78,37 +84,24 @@ const Footer = () => {
                   ))}
                 </List>
               </Grid>
+              <Grid
+                item
+                xs={12}
+                md={3}
+                // sx={{justifyContent:{ sx:'flex-start', md: 'center'}}}
+                className="flex items-center"
+              >
+                <List>
+                  {usefulLinks.map((item) => (
+                    <ListItemText key={item.id}>
+                      <Link href={`${item.path}`}>{item.name}</Link>
+                    </ListItemText>
+                  ))}
+                </List>
+              </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={12} className="flex justify-center border-b-2 mt-2">
-            <div className="w-1/3 my-4 flex items-center justify-between">
-              <a
-                href="https://www.facebook.com/profile.php?id=100084751181209"
-                target="blank"
-              >
-                <FacebookIcon />
-              </a>
-              <a
-                href="https://www.facebook.com/profile.php?id=100084751181209"
-                target="blank"
-              >
-                <InstagramIcon />
-              </a>
-              <a
-                href="https://www.facebook.com/profile.php?id=100084751181209"
-                target="blank"
-              >
-                <TwitterIcon />
-              </a>
-              <a
-                href="https://www.facebook.com/profile.php?id=100084751181209"
-                target="blank"
-              >
-                <LinkedInIcon />
-              </a>
-            </div>
-          </Grid>
-          <Grid item xs={12} className="my-2">
+          <Grid item xs={12} className="my-2 border-t-[1px] pt-2">
             <Typography variant="body2" align="center">
               {"Copyright © "}
               <span className="me-2">Lilo</span>

@@ -9,6 +9,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
+import contactInfoBackground from '../../public/global/bg-contact-info.jpg'
 
 const items = [
   {
@@ -29,15 +30,15 @@ const items = [
 const ContactForm = () => {
   return (
     <React.Fragment>
-      <Grid className="w-full bg-gray-800 p-5">
+      <Grid sx={{backgroundImage: `url(${contactInfoBackground.src})`}} className="bg_image w-full p-5">
         <Grid container>
           <Grid item xs={12}>
-            <h1 className="text-slate-50 text-center text-4xl font-bold uppercase mb-5">
+            <h1 className="text-slate-50 text-center text-4xl font-bold uppercase mb-5 py-0 md:py-5">
               Contact Information
             </h1>
             <Grid
               container
-              className="w-full flex items-center justify-center md:justify-between mb-5 pb-5"
+              className="w-full flex items-center justify-center md:justify-between mt-1 md:mt-5 mb-5 py-5"
             >
               {items.map((item) => (
                 <Grid
