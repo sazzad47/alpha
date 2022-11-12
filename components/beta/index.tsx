@@ -1,14 +1,18 @@
 import React from 'react'
-import Navbar from './common/navbar'
+import { ThemeProvider } from "next-themes";
 import {Grid} from '@mui/material'
+import Navbar from './navbar'
 
 const Beta = () => {
   return (
     <React.Fragment>
-      <Grid className='min-h-[100vh] overflow-y-scroll'>
+       <ThemeProvider enableSystem={true} attribute="class">
+        
+      <Grid className='min-h-[100vh] overflow-y-scroll bg-[#eee] dark:bg-[#242526]'>
 
         <Navbar/>
       </Grid>
+       </ThemeProvider>
     </React.Fragment>
   )
 }

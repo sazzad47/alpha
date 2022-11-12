@@ -6,12 +6,13 @@ import Link from "next/link";
 import { Tooltip, IconButton } from "@mui/material";
 import { useRouter } from "next/router";
 import Image from "next/legacy/image";
-import EmergencyRecordingIcon from "@mui/icons-material/EmergencyRecording";
-import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
-import ProfileMenu from "./ProfileMenu";
-import AppsMenu from "../../../common/AppsMenu";
+
+
 import Notification from "./Notification";
+
+import ProfileMenu from "./profileMenu";
+import AppsMenu from "./AppsMenu";
 
 
 export default function Navbar() {
@@ -75,7 +76,7 @@ export default function Navbar() {
         
         <Notification/>
         
-         <AppsMenu bgColor="bg-[#242526]" iconSize="text-lg"/>
+         <AppsMenu bgColor="bg-bgLight dark:bg-bgDark" iconSize="text-lg"/>
        
         <ProfileMenu/>
       </div>

@@ -102,7 +102,7 @@ const NotificationItems = [
 function NotificationList() {
   return (
     <React.Fragment>
-        <Grid className="dropdown_notification_beta flex flex-col items-center justify-center text-slate-50 pt-[15rem] pb-[1rem] bg-[#242526]">
+        <Grid className="dropdown_notification_beta flex flex-col items-center justify-center pt-[15rem] pb-[1rem] bg-bgLight dark:bg-bgDark text-textLight dark:text-textDark">
       
       <Grid className="notify_head_beta w-full flex items-start justify-between pt-[5rem]">
             <h1 className="text-2xl font-bold">Notifications</h1>
@@ -114,7 +114,7 @@ function NotificationList() {
     <List>
        
       {NotificationItems.map((item) => (
-         <ListItem key={item.id} className="flex flex-col cursor-pointer hover:bg-zinc-900">
+         <ListItem key={item.id} className="flex flex-col cursor-pointer hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
             <Grid className="flex items-start justify-center">
 
          <ListItemAvatar className="mt-2">
@@ -137,7 +137,7 @@ function NotificationList() {
          </Grid>
             </Grid>
          <Grid className="w-full flex items-center justify-between mt-2 px-3">
-            <span className="text-slate-300 ml-[2.6rem] text-sm">{item.time}</span>
+            <span className="text-textLight dark:text-textDark ml-[2.6rem] text-sm">{item.time}</span>
             <CircleIcon sx={{color:'blue', fontSize:'10px'}}/>
          </Grid>
        </ListItem>

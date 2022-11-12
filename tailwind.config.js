@@ -6,8 +6,18 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class", 
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "bgDark": "var(--bgDark)",
+        "bgDarkHover": "var(--bgDarkHover)",
+        "bgLight": "var(--bgLight)",
+        "bgLightHover": "var(--bgLightHover)",
+        "textLight": "var(--textLight)",
+        "textDark": "var(--textDark)",
+      },
+    },
   },
   plugins: [],
 }

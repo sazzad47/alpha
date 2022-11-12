@@ -21,6 +21,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import { Grid } from '@mui/material';
+import ThemeChanger from './ThemeChanger';
 
 const ProfileMenu = () => {
     const [open, setOpen] = useState(false);
@@ -34,7 +35,7 @@ const ProfileMenu = () => {
 
          <Avatar
           sx={{ width: 30, height: 30 }}
-          className="text-lg p-0 bg-zinc-600 text-slate-50 rounded-full cursor-pointer"
+          className="text-lg p-0 bg-zinc-600  rounded-full cursor-pointer"
           onClick={() => setOpen(!open)}
         >
           S
@@ -62,16 +63,16 @@ function DropdownMenu() {
 
   function DropdownItem(props: any) {
     return (
-      <Link href="#" className="menu_item_beta_drop" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
-        <span className={props.leftIcon? "icon-button": props.doneIcon? "icon-button bg-transparent" : "icon-button invisible" }>{props.doneIcon? props.doneIcon: props.leftIcon}</span>
-        <span className='text-slate-50 text-sm'>{props.children}</span>
-        <span className="icon-right text-slate-50">{props.rightIcon}</span>
+      <Link href="#" className="menu_item_beta_drop hover:bg-bgLightHover dark:hover:bg-bgDarkHover px-4" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
+        <span className={props.leftIcon? "text-textLight dark:text-textDark bg-[#dde2e7] dark:bg-[#6f7072] icon-button": props.doneIcon? "text-textLight dark:text-textDark icon-button bg-transparent" : "icon-button invisible" }>{props.doneIcon? props.doneIcon: props.leftIcon}</span>
+        <span className='text-textLight dark:text-textDark text-[1rem]'>{props.children}</span>
+        <span className="text-textLight dark:text-textDark icon-right ">{props.rightIcon}</span>
       </Link>
     );
   }
 
   return (
-    <div className="dropdown_nav_beta" style={{ height: menuHeight }} ref={dropdownRef}>
+    <div className="dropdown_nav_beta p-5 bg-bgLight dark:bg-bgDark text-textLight dark:text-textDark" style={{ height: menuHeight }} ref={dropdownRef}>
 
       <CSSTransition
         in={activeMenu === 'main'}
@@ -128,8 +129,8 @@ function DropdownMenu() {
         <div className="menu_beta_drop">
           <div className='flex p-[0.5rem]'>
 
-        <span className="text-slate-50 cursor-pointer w-[30px] h-[30px] m-[2px] p-[5px] flex items-center justify-center hover:rounded-[50%] hover:bg-gray-600" onClick={()=> setActiveMenu('main')} ><KeyboardBackspaceIcon/></span>
-        <h1 className='text-slate-50 text-2xl font-semibold ml-1'>Switch Channel</h1>
+        <span className="cursor-pointer w-[30px] h-[30px] m-[2px] p-[5px] flex items-center justify-center hover:rounded-[50%] hover:bg-gray-600" onClick={()=> setActiveMenu('main')} ><KeyboardBackspaceIcon/></span>
+        <h1 className='text-2xl font-semibold ml-1'>Switch Channel</h1>
           </div>
           <DropdownItem >Lets Code</DropdownItem>
           <DropdownItem doneIcon={<DoneIcon/>}>Sazzad Hossen</DropdownItem>
@@ -145,8 +146,8 @@ function DropdownMenu() {
         <div className="menu_beta_drop">
           <div className='flex p-[0.5rem]'>
 
-        <span className="text-slate-50 cursor-pointer w-[30px] h-[30px] m-[2px] p-[5px] flex items-center justify-center hover:rounded-[50%] hover:bg-gray-600" onClick={()=> setActiveMenu('main')} ><KeyboardBackspaceIcon/></span>
-        <h1 className='text-slate-50 text-2xl font-semibold ml-1'>Settings</h1>
+        <span className="cursor-pointer w-[30px] h-[30px] m-[2px] p-[5px] flex items-center justify-center hover:rounded-[50%] hover:bg-gray-600" onClick={()=> setActiveMenu('main')} ><KeyboardBackspaceIcon/></span>
+        <h1 className='text-2xl font-semibold ml-1'>Settings</h1>
           </div>
           <DropdownItem leftIcon={<AccountCircleIcon/>}>Account</DropdownItem>
           <DropdownItem leftIcon={<DownloadForOfflineIcon/>}>Downloads</DropdownItem>
@@ -162,8 +163,8 @@ function DropdownMenu() {
         <div className="menu_beta_drop">
           <div className='flex p-[0.5rem]'>
 
-        <span className="text-slate-50 cursor-pointer w-[30px] h-[30px] m-[2px] p-[5px] flex items-center justify-center hover:rounded-[50%] hover:bg-gray-600" onClick={()=> setActiveMenu('main')} ><KeyboardBackspaceIcon/></span>
-        <h1 className='text-slate-50 text-2xl font-semibold ml-1'>Language</h1>
+        <span className="cursor-pointer w-[30px] h-[30px] m-[2px] p-[5px] flex items-center justify-center hover:rounded-[50%] hover:bg-gray-600" onClick={()=> setActiveMenu('main')} ><KeyboardBackspaceIcon/></span>
+        <h1 className='text-2xl font-semibold ml-1'>Language</h1>
           </div>
           <DropdownItem doneIcon={<DoneIcon/>}>English</DropdownItem>
           <DropdownItem >Mandarin</DropdownItem>
@@ -184,13 +185,13 @@ function DropdownMenu() {
         <div className="menu_beta_drop">
           <div className='flex p-[0.5rem]'>
 
-        <span className="text-slate-50 cursor-pointer w-[30px] h-[30px] m-[2px] p-[5px] flex items-center justify-center hover:rounded-[50%] hover:bg-gray-600" onClick={()=> setActiveMenu('main')} ><KeyboardBackspaceIcon/></span>
-        <h1 className='text-slate-50 text-2xl font-semibold ml-1'>Theme</h1>
+        <span className="cursor-pointer w-[30px] h-[30px] m-[2px] p-[5px] flex items-center justify-center hover:rounded-[50%] hover:bg-gray-600" onClick={()=> setActiveMenu('main')} ><KeyboardBackspaceIcon/></span>
+        <h1 className='text-2xl font-semibold ml-1'>Theme</h1>
           </div>
-          <DropdownItem doneIcon={<DoneIcon/>}>Dark Theme</DropdownItem>
-          <DropdownItem >Light Theme</DropdownItem>
+         <ThemeChanger/>
         </div>
       </CSSTransition>
+     
      
     </div>
   );

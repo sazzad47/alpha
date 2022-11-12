@@ -1,23 +1,18 @@
 import * as React from 'react';
+import {useTheme} from "next-themes";
 import {Grid} from '@mui/material'
 import Box from '@mui/material/Box';
-import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Tooltip from '@mui/material/Tooltip';
-import PersonAdd from '@mui/icons-material/PersonAdd';
-import Settings from '@mui/icons-material/Settings';
-import Logout from '@mui/icons-material/Logout';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import CheckIcon from '@mui/icons-material/Check';
 import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
 import NotificationsOffIcon from '@mui/icons-material/NotificationsOff';
 
 export default function AccountMenu() {
+  const {systemTheme , theme, setTheme} = useTheme();
+  const currentTheme = theme === "system" ? systemTheme : theme ;
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -37,7 +32,7 @@ export default function AccountMenu() {
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            <MoreVertIcon sx={{color:'white'}}/>
+            <MoreVertIcon className='text-textLight dark:text-textDark'/>
           </IconButton>
       </Box>
       <Menu
@@ -49,9 +44,10 @@ export default function AccountMenu() {
         PaperProps={{
           elevation: 0,
           sx: {
+            boxShadow: "0px 0px 25px 25px rgba(0,0,0,0.2)",
+            backgroundColor: currentTheme==='dark'? "#474849": "#fff",
+            color: currentTheme==='dark'? "#fff": "#000",
             overflow: 'visible',
-            backgroundColor:"#3b453d",
-            color: "white",
             mt: 1.5,
             '& .MuiAvatar-root': {
               width: 32,
@@ -67,7 +63,7 @@ export default function AccountMenu() {
               right: 14,
               width: 10,
               height: 10,
-              bgcolor: "#3b453d",
+              bgcolor: currentTheme==='dark'? "#474849": "#fff",
               transform: 'translateY(-50%) rotate(45deg)',
               zIndex: 0,
             },
@@ -76,13 +72,13 @@ export default function AccountMenu() {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
-        <MenuItem className='hover:bg-black'>
+        <MenuItem className='hover:bg-bgLightHover dark:hover:bg-bgDarkHover'>
           <CheckIcon /> <Grid className='ml-4'>Mark as read</Grid>
         </MenuItem>
-        <MenuItem className='hover:bg-black'>
+        <MenuItem className='hover:bg-bgLightHover dark:hover:bg-bgDarkHover'>
           <CancelPresentationIcon /> <Grid className='ml-4'>Remove this notification</Grid>
         </MenuItem>
-        <MenuItem className='hover:bg-black'>
+        <MenuItem className='hover:bg-bgLightHover dark:hover:bg-bgDarkHover'>
           <NotificationsOffIcon /> <Grid className='ml-4'>Turn off all notifications from this channel</Grid>
         </MenuItem>
         
