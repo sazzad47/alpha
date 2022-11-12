@@ -10,3 +10,128 @@
     border: none;
     outline: none;
 }
+
+  /* Icon Button */
+  .icon-button {
+    --button-size: calc(var(--nav-size) * 0.5);
+    width: var(--button-size);
+    height: var(--button-size);
+    background: #484a4d;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 300ms;
+  }
+  .icon-button:hover {
+    filter: brightness(1.2);
+  }
+  
+  .icon-button svg { 
+    fill: var(--text-color);
+    width: 20px;
+    height: 20px;
+  }
+  
+/* Dropdown Menu */
+
+.dropdown_nav_beta {
+    position: absolute;
+    top: 56px;
+    width: 300px;
+    transform: translateX(-85%);
+    background-color: var(--bg);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    transition: height var(--speed) ease;
+    overflow: hidden;
+  }
+  
+  .menu_beta_drop {
+    width: 100%;
+  }
+  
+  .menu_item_beta_drop {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-radius);
+    transition: background var(--speed);
+    padding: 0.5rem;
+  }
+  
+  .menu_item_beta_drop .icon-button {
+    margin-right: 0.5rem;
+  }
+  
+  
+  .menu_item_beta_drop .icon-button:hover {
+    filter: none;
+  }
+  
+  .menu_item_beta_drop:hover {
+    background-color: #525357;
+  }
+  
+  .icon-right {
+    margin-left: auto;
+  }
+  
+  /* CSSTransition classes  */
+  .menu-primary-enter {
+    position: absolute;
+    transform: translateX(-110%);
+  }
+  .menu-primary-enter-active {
+    transform: translateX(0%);
+    transition: all var(--speed) ease;
+  }
+  .menu-primary-exit {
+    position: absolute;
+  }
+  .menu-primary-exit-active {
+    transform: translateX(-110%);
+    transition: all var(--speed) ease;
+  }
+  
+  
+  .menu-secondary-enter {
+    transform: translateX(110%);
+  }
+  .menu-secondary-enter-active {
+    transform: translateX(0%);
+    transition: all var(--speed) ease;
+  }
+  .menu-secondary-exit {
+  
+  }
+  .menu-secondary-exit-active {
+    transform: translateX(110%);
+    transition: all var(--speed) ease;
+  }
+  /*........Notification Dropdown......*/
+  .dropdown_notification_beta {
+    position: absolute;
+    top: 56px;
+    width: 450px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-75%);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .notify_head_beta {
+    width: 100%;
+    padding-top: 5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
