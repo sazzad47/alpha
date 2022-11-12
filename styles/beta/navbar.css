@@ -117,10 +117,10 @@
     top: 56px;
     width: 450px;
     max-height: 90vh;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     transform: translateX(-75%);
     border: var(--border);
     border-radius: var(--border-radius);
@@ -129,9 +129,9 @@
     overflow-x: hidden;
   }
   .notify_head_beta {
-    width: 100%;
+    /* width: 100%;
     padding-top: 5rem;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-between; */
   }

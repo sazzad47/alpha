@@ -6,11 +6,9 @@ import CircleIcon from '@mui/icons-material/Circle';
 import {
   List,
   ListItem,
-  Divider,
   ListItemText,
   ListItemAvatar,
   Avatar,
-  Typography,
   Grid,
   Tooltip,
   IconButton,
@@ -28,8 +26,8 @@ const Notification = () => {
       <ClickAwayListener onClickAway={handleClickAway}>
         <Grid>
           <Tooltip title="Notifications">
-            <IconButton className="focus:outline-none">
-              <Grid className="relative" onClick={()=> setOpen(!open)}>
+            <IconButton className="focus:outline-none" onClick={()=> setOpen(!open)}>
+              <Grid className="relative">
                 <BsBell className="text-slate-50" />
                 <span className="absolute bottom-2 left-2 text-xs text-slate-50 bg-red-600 rounded-full px-1">
                   9+
@@ -104,9 +102,9 @@ const NotificationItems = [
 function NotificationList() {
   return (
     <React.Fragment>
-        <Grid className="dropdown_notification_beta text-slate-50 pt-[15rem] pb-[1rem] bg-[#242526]">
+        <Grid className="dropdown_notification_beta flex flex-col items-center justify-center text-slate-50 pt-[15rem] pb-[1rem] bg-[#242526]">
       
-      <Grid className="notify_head_beta">
+      <Grid className="notify_head_beta w-full flex items-start justify-between pt-[5rem]">
             <h1 className="text-2xl font-bold">Notifications</h1>
             <Grid className="mb-2">
             <NotifyHeadDropdown/>
