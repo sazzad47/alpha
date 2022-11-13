@@ -55,12 +55,9 @@ const apps = [
   },
 ];
 
-interface Props {
-  iconSize: string;
-  bgColor: string;
-}
 
-const AppsMenu = (props: Props) => {
+
+const AppsMenu = () => {
   const [open, setOpen] = useState(false);
   const handleClickAway = () => {
     setOpen(false);
@@ -70,25 +67,22 @@ const AppsMenu = (props: Props) => {
       <ClickAwayListener onClickAway={handleClickAway}>
         <Grid>
           <Tooltip title="Apps">
-            <IconButton className="focus:outline-none">
+            <IconButton className="focus:outline-none" onClick={() => setOpen(!open)} >
               <IoAppsSharp
-                className={`text-slate-50 ${props.iconSize}`}
-                onClick={() => setOpen(!open)}
+                className="text-textLight dark:text-textDark text-lg"
               />
             </IconButton>
           </Tooltip>
-          {open && <DropdownMenu bgColor={props.bgColor} />}
+          {open && <DropdownMenu />}
         </Grid>
       </ClickAwayListener>
     </React.Fragment>
   );
 };
-interface DropdownProps {
-  bgColor: string;
-}
-function DropdownMenu(props: DropdownProps) {
+
+function DropdownMenu() {
   return (
-    <div className={`dropdown_apps ${props.bgColor}`}>
+    <div className="dropdown_apps border border-gray-300 bg-bgLight dark:bg-bgDark">
       <Grid container className="flex items-center justify-center">
         {apps.map((item) => (
           <Grid

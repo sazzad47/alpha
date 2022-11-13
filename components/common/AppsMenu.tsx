@@ -70,10 +70,9 @@ const AppsMenu = (props: Props) => {
       <ClickAwayListener onClickAway={handleClickAway}>
         <Grid>
           <Tooltip title="Apps">
-            <IconButton className="focus:outline-none">
+            <IconButton className="focus:outline-none" onClick={() => setOpen(!open)}>
               <IoAppsSharp
                 className={`text-slate-50 ${props.iconSize}`}
-                onClick={() => setOpen(!open)}
               />
             </IconButton>
           </Tooltip>

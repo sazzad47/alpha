@@ -72,7 +72,7 @@ function DropdownMenu() {
   }
 
   return (
-    <div className="dropdown_nav_beta p-5 bg-bgLight dark:bg-bgDark text-textLight dark:text-textDark" style={{ height: menuHeight }} ref={dropdownRef}>
+    <div className="dropdown_nav_beta border border-gray-300 p-5 bg-bgLight dark:bg-bgDark text-textLight dark:text-textDark" style={{ height: menuHeight }} ref={dropdownRef}>
 
       <CSSTransition
         in={activeMenu === 'main'}
