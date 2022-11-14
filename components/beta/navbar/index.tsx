@@ -21,7 +21,7 @@ export default function Navbar() {
   const handleSearch = () => {};
 
   return (
-    <div className=" flex justify-between items-center px-8 h-14 w-full bg-bgLight dark:bg-bgDark text-textLight dark:text-textDark opacity-95 fixed z-50">
+    <div className="top-0 left-0 flex justify-between items-center px-8 h-14 w-full max-w-full bg-bgLight dark:bg-bgDark text-textLight dark:text-textDark opacity-95 fixed z-50">
       <div className="flex gap-8 items-center text-2xl">
       <Link href="/"><div className="brand_logo"><Image src={'/logo.png'} alt="logo" layout="fill" objectFit="contain" /></div></Link>
         <Link href="/beta">
@@ -38,7 +38,7 @@ export default function Navbar() {
       <div className="flex gap-5 items-center text-xl">
         <Tooltip title="Beta Shorts">
           <IconButton className="focus:outline-none" >
-          <BsCameraVideo className="text-textLight dark:text-textDark text-lg" />
+          <BsCameraVideo className="text-textLight dark:text-textDark text-2xl" />
           </IconButton>
         </Tooltip>
         

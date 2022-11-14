@@ -28,7 +28,7 @@ const Notification = () => {
           <Tooltip title="Notifications">
             <IconButton className="focus:outline-none" onClick={()=> setOpen(!open)}>
               <Grid className="relative">
-                <BsBell className="text-textLight dark:text-textDark text-lg" />
+                <BsBell className="text-textLight dark:text-textDark text-2xl" />
                 <span className="absolute bottom-2 left-2 text-xs text-textLight dark:text-textDark bg-red-600 rounded-full px-1">
                   9+
                 </span>

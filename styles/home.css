@@ -121,19 +121,19 @@
   color: var(--color-light);
 }
 
-.swiper {
+.swiper-review {
   min-width: 100%;
   height: auto;
 }
 
-.swiper .swiper-slide .flex{
+.swiper-review .swiper-slide .flex{
   margin: 3em 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.swiper .swiper-slide .comments{
+.swiper-review .swiper-slide .comments{
   background-color: var(--color-light);
   padding: 1.5em 2em;
   width: 50%;
@@ -142,7 +142,7 @@
   position: relative;
 }
 
-.swiper .swiper-slide .comments::after{
+.swiper-review .swiper-slide .comments::after{
   content: '';
   position: absolute;
   bottom: -19px;
@@ -156,14 +156,14 @@
 }
 
 
-.swiper .profile{
+.swiper-review .profile{
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 1em;
 }
 
-.swiper .profile .img{
+.swiper-review .profile .img{
   position: relative;
   width: 80px;
   height: 80px;
@@ -174,17 +174,17 @@
   margin-bottom: 15px;
 }
 
-.swiper .profile > a{
+.swiper-review .profile > a{
   text-decoration: none;
   color: var(--color-light);
 }
 
-.swiper .profile > span{
+.swiper-review .profile > span{
   color: var(--color-text);
   font-size: .8em;
 }
 
-.swiper .swiper-button-prev, .swiper-button-next{
+.swiper-review .swiper-button-prev, .swiper-button-next{
   color: var(--color-text);
   display: none;
 } 
@@ -194,7 +194,7 @@
       width: auto;
   }
 
-  .swiper {
+  .swiper-review {
       width: 320px;
     }
 
@@ -208,11 +208,11 @@
       width: 100%;
   }
 
-  .swiper {
+  .swiper-review {
       width: 600px;
     }
 
-  .swiper .swiper-button-prev, .swiper-button-next{
+  .swiper-review .swiper-button-prev, .swiper-button-next{
       display: initial;
   }
 

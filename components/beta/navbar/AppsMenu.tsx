@@ -69,7 +69,7 @@ const AppsMenu = () => {
           <Tooltip title="Apps">
             <IconButton className="focus:outline-none" onClick={() => setOpen(!open)} >
               <IoAppsSharp
-                className="text-textLight dark:text-textDark text-lg"
+                className="text-textLight dark:text-textDark text-2xl"
               />
             </IconButton>
           </Tooltip>

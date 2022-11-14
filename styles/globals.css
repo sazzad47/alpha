@@ -9,7 +9,7 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #242526;
+  background: white;
 }
 
 /* Handle */
@@ -18,10 +18,10 @@
   min-height: 40px;
 }
 
-/* Handle on hover */
+/* Handle on hover 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
-}
+}*/
 :root{
   --bgDark: #474849;
   --bgDarkHover: #5a5c5e; 

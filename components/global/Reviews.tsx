@@ -27,6 +27,7 @@ const Reviews: React.FC = () => {
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
             autoplay={{ delay: 4000 }}
+            className="swiper-review"
           >
             {items.map((item, index) => {
               return (
