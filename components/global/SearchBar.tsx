@@ -9,7 +9,7 @@ const SearchBar = () => {
 
     <Paper component="form" onSubmit={() => {}} className="flex pl-[20px] w-full mx-5 md:mx-0 md:w-1/2 rounded-3xl">
       <input
-        className="search_input_global"
+        className="search_input_global bg-inherit"
         placeholder="Search..."
         value=""
         onChange={() => {}}

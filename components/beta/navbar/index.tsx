@@ -14,6 +14,7 @@ import AppsMenu from "./AppsMenu";
 import SearchBar from "./SearchBar";
 
 
+
 export default function Navbar() {
   const location = useRouter();
   const router = useRouter();
@@ -22,17 +23,21 @@ export default function Navbar() {
 
   return (
     <div className="top-0 left-0 flex justify-between items-center px-8 h-14 w-full max-w-full bg-bgLight dark:bg-bgDark text-textLight dark:text-textDark opacity-95 fixed z-50">
-      <div className="flex gap-8 items-center text-2xl">
+      <div className="flex flex-wrap gap-8 items-center text-2xl">
       <Link href="/"><div className="brand_logo"><Image src={'/logo.png'} alt="logo" layout="fill" objectFit="contain" /></div></Link>
+        <div className="flex gap-1 items-center justify-center">
         <Link href="/beta">
-          <div className="flex gap-1 items-center justify-center">
           <Tooltip title="Beta Home">
             <IconButton className="focus:outline-none">
             <SmartDisplayIcon className="text-3xl text-textLight dark:text-textDark" />
             </IconButton>
           </Tooltip>
-          </div>
         </Link>
+          </div>
+      
+       
+
+       
       </div>
       <SearchBar/>
       <div className="flex gap-5 items-center text-xl">

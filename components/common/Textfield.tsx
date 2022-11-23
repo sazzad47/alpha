@@ -21,7 +21,11 @@ import { OutlinedInputProps } from '@mui/material/OutlinedInput';
   underlineBeforeColor?: string,
   underlineBeforeHoverColor?: string,
   underlineAfterColor?: string,
-  underlineAfterHoverColor?: string
+  underlineAfterHoverColor?: string,
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void,
+  onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void,
+  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void,
+  value?: string,
 
 }
 export const CustomTextField = (props: Props) => {
@@ -49,6 +53,11 @@ export const CustomTextField = (props: Props) => {
                 '& .MuiInput-underline:after': { borderBottomColor: props.underlineAfterColor },
                 '& .MuiInput-underline:hover:after': { borderBottomColor: props.underlineAfterHoverColor },
               }}
+              onChange={props.onChange}
+              onFocus={props.onFocus}
+              onBlur={props.onFocus}
+              value={props.value}
+              autoComplete="off"
             />
           )
 }

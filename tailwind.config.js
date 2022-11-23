@@ -16,8 +16,16 @@ module.exports = {
         "bgLightHover": "var(--bgLightHover)",
         "textLight": "var(--textLight)",
         "textDark": "var(--textDark)",
+        "bgButton": "var(--bgButton)",
+        "bgButtonHover": "var(--bgButtonHover)",
+        "bgButtonDark": "var(--bgButtonDark)",
+        "bgButtonDarkHover": "var(--bgButtonDarkHover)",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+    require('tailwind-scrollbar-hide'),
+    require('@tailwindcss/line-clamp'),
+],
 }

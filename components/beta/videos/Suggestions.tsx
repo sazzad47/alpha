@@ -1,11 +1,10 @@
-import React from "react";
-import { Grid, Typography, Avatar } from "@mui/material";
-import thumbnailEverest from "../../../../public/thumbnail-everest.jpg";
-import channelPhoto from "../../../../public/user.jpg";
+import React from 'react'
+import { Grid, Typography } from '@mui/material'
+import thumbnailEverest from "../../../public/thumbnail-everest.jpg";
+import channelPhoto from "../../../public/user.jpg";
 import Image from "next/legacy/image";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import CardMenus from "./CardMenus";
-import Link from "next/link";
+import Link from 'next/link';
 
 const items = [
   {
@@ -100,62 +99,24 @@ const items = [
   },
 ];
 
-const Feed = () => {
+const Suggestions = () => {
   return (
-    <Grid container spacing={2} className="my-[5rem] px-5 -z-1">
-      {items.map((item) => (
-        <Grid
-          key={item.id}
-          item
-          xs={12}
-          md={4}
-          sm={6}
-          lg={3}
-          className="flex flex-col"
-        >
-          <Link href="/beta/videos/333">
-            <Grid className="relative w-full h-[10rem] -z-2 rounded-lg overflow-hidden">
-              <Image
-                src={item.thumbnail}
-                alt="thumbnail"
-                layout="fill"
-                objectFit="cover"
-              />
+    <Grid container className=''>
+        {items.map((item) => (
+          <Grid key={item.id} container spacing={0} className='flex items-start h-[7rem] mb-3'>
+            <Grid item xs={6} className="w-full h-[7rem] relative rounded-lg overflow-hidden" >
+            <Link href="/beta/videos/444"><Image src={item.thumbnail} alt="" layout='fill' objectFit='cover' /> </Link>
             </Grid>
-          </Link>
-          <Grid container className="w-full h-[7rem] mt-3">
-            <Grid item xs={1}>
-              <Avatar alt="Sazzad Hossen" src={`${item.channelPhoto}`} />
-            </Grid>
-            <Grid
-              item
-              xs={11}
-              className="flex flex-col items-start justify-start"
-            >
-              <Grid className="w-full mb-2 flex items-start justify-between text-textLight dark:text-textDark">
-                <Link href="/beta/videos/333">
-                  <Grid className="w-full max-w-full line-clamp-2">
-                    <Typography className="ml-[-0.2rem] font-medium text-[1rem] text-textLight dark:text-textDark">
-                      {item.title}
-                    </Typography>
-                  </Grid>
-                </Link>
-                <Grid className="mt-[0.3rem]">
-                  <CardMenus />
-                </Grid>
-              </Grid>
-              <Typography className="opacity-[0.7] text-sm text-textLight dark:text-textDark">
-                {item.channelName} <CheckCircleIcon className="text-sm" />
-              </Typography>
-              <Typography className="opacity-[0.7] text-sm text-textLight dark:text-textDark">
-                {item.views} views • {item.createdAt}
-              </Typography>
+        
+            <Grid item xs={6} className="flex flex-col items-start justify-start " >
+            <Link href="/beta/videos/444"><Typography className='pl-2 line-clamp-2 font-medium text-[0.9rem] text-textLight dark:text-textDark' >How to learn reciting Quran beatifully? </Typography></Link>
+                <Typography className='pl-2 line-clamp-1 text-sm mt-2 opacity-[0.8] text-textLight dark:text-textDark' >{item.channelName} <CheckCircleIcon className="text-sm mb-1" /> </Typography>
+                <Typography className='pl-2 text-sm opacity-[0.8] text-textLight dark:text-textDark' >{item.views} views • {item.createdAt}</Typography>
             </Grid>
           </Grid>
-        </Grid>
-      ))}
+        ))} 
     </Grid>
-  );
-};
+  )
+}
 
-export default Feed;
+export default Suggestions

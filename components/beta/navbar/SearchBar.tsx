@@ -2,6 +2,7 @@ import { IconButton, Tooltip } from '@mui/material';
 import React, {useState} from 'react'
 import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
 import { TiMicrophone } from "react-icons/ti";
+import PublicIcon from '@mui/icons-material/Public';
 
 
 const SearchBar = () => {
@@ -21,7 +22,7 @@ const SearchBar = () => {
           }}
         >
               <div className={`${isVisibleIcon? 'visible' : 'invisible'} bg-zinc-200 dark:bg-zinc-600 h-10 text-zinc-600 dark:text-slate-200 text-2xl px-2 rounded-l-3xl flex items-center justify-start`} >
-                <AiOutlineSearch />
+                <PublicIcon />
               </div>
           <div className={`flex flex-1 bg-zinc-200 dark:bg-zinc-600 items-center justify-between ${isVisibleIcon? 'rounded-l-none': 'rounded-l-3xl'} rounded-r-3xl h-10 pl-2 mr-5`}>
             <div className="w-full flex justify-between items-center">

@@ -1,0 +1,25 @@
+module.exports = {
+  locales: [
+    "en",
+    "es",
+    "fr",
+    "de",
+    "ja",
+    "ko",
+    "it",
+    "nl",
+    "pl",
+    "pt",
+    "ru",
+    "sv",
+    "tr",
+    "ar",
+    "zh",
+  ],
+  defaultLocale: "en",
+  pages: {
+    "*": ["common"],
+    "/": ["home"],
+    "/beta": ["beta"],
+  },
+};

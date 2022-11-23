@@ -22,6 +22,7 @@ import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import { Grid } from '@mui/material';
 import ThemeChanger from './ThemeChanger';
+import LanguageChanger from './LanguageChanger';
 
 const ProfileMenu = () => {
     const [open, setOpen] = useState(false);
@@ -72,7 +73,7 @@ function DropdownMenu() {
   }
 
   return (
-    <div className="dropdown_nav_beta border border-gray-300 p-5 bg-bgLight dark:bg-bgDark text-textLight dark:text-textDark" style={{ height: menuHeight }} ref={dropdownRef}>
+    <div className="dropdown_nav_beta max-h-[90vh] overflow-y-auto border border-gray-300 p-3 bg-bgLight dark:bg-bgDark text-textLight dark:text-textDark" style={{ height: menuHeight }} ref={dropdownRef}>
 
       <CSSTransition
         in={activeMenu === 'main'}
@@ -166,14 +167,7 @@ function DropdownMenu() {
         <span className="cursor-pointer w-[30px] h-[30px] m-[2px] p-[5px] flex items-center justify-center hover:rounded-[50%] hover:bg-gray-600" onClick={()=> setActiveMenu('main')} ><KeyboardBackspaceIcon/></span>
         <h1 className='text-2xl font-semibold ml-1'>Language</h1>
           </div>
-          <DropdownItem doneIcon={<DoneIcon/>}>English</DropdownItem>
-          <DropdownItem >Mandarin</DropdownItem>
-          <DropdownItem >Hindi</DropdownItem>
-          <DropdownItem >Spanish</DropdownItem>
-          <DropdownItem >French</DropdownItem>
-          <DropdownItem >Arabic</DropdownItem>
-          <DropdownItem >Russian</DropdownItem>
-          <DropdownItem >Portuguese</DropdownItem>
+          <LanguageChanger/>
         </div>
       </CSSTransition>
       <CSSTransition

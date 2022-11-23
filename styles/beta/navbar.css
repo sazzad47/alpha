@@ -133,3 +133,18 @@
     align-items: flex-start;
     justify-content: space-between; */
   }
+  .dropdown_categories_beta {
+  position: absolute;
+  top: 56px;
+  width: 250px;
+ 
+  
+
+  /* border: var(--border); */
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  overflow: hidden;
+}
+.hideReplyBox{
+  display: none !important;
+}

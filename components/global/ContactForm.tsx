@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import React from "react";
+import { useTranslation } from "next-i18next";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -28,13 +29,14 @@ const items = [
   { id: 4, icon: <EmailIcon />, title: "Email", description: "test@gmail.com" },
 ];
 const ContactForm = () => {
+  const { t } = useTranslation();
   return (
     <React.Fragment>
       <Grid sx={{backgroundImage: `url(${contactInfoBackground.src})`}} className="bg_image w-full p-5">
         <Grid container>
           <Grid item xs={12}>
             <h1 className="text-slate-50 text-center text-4xl font-bold uppercase mb-5 py-0 md:py-5">
-              Contact Information
+            Contact Information
             </h1>
             <Grid
               container

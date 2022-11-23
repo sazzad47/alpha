@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import {useTheme} from "next-themes";
 import DropdownItem from './DropdownItem';
 import DoneIcon from '@mui/icons-material/Done';
@@ -7,14 +7,6 @@ import { Grid } from '@mui/material';
 
 
 const ThemeChanger = () => {
-    
-    // const [mounted, setMounted] = useState(false);
-
-    //   useEffect(() =>{
-    //     setMounted(true);
-    //   },[])
-
-    //   if(!mounted) return null;
    
       const {systemTheme , theme, setTheme} = useTheme();
       const currentTheme = theme === "system" ? systemTheme : theme ;

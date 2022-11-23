@@ -29,6 +29,10 @@
   --bgLightHover: #ddedf1;
   --textLight: #000;
   --textDark: #fff;
+  --bgButton: #fff;
+  --bgButtonHover: #0be0e7;
+  --bgButtonDark: #474849;
+  --bgButtonDarkHover: #5a5c5e;
   --color-dark: #151C35;
   --color-secodary-dark: #464C70;
   --color-primary: #EE709D;
@@ -65,3 +69,4 @@ a {
 @import url(home.css);
 /*.........Beta............*/
 @import url(./beta/navbar.css);
+@import url(./beta/videoContainer.css);

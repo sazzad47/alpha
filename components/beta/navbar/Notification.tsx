@@ -29,7 +29,7 @@ const Notification = () => {
             <IconButton className="focus:outline-none" onClick={()=> setOpen(!open)}>
               <Grid className="relative">
                 <BsBell className="text-textLight dark:text-textDark text-2xl" />
-                <span className="absolute bottom-2 left-2 text-xs text-textLight dark:text-textDark bg-red-600 rounded-full px-1">
+                <span className="absolute text-center bottom-2 left-2 text-xs text-textDark bg-red-600 rounded-full h-[20px] w-[20px]">
                   9+
                 </span>
               </Grid>
@@ -102,7 +102,7 @@ const NotificationItems = [
 function NotificationList() {
   return (
     <React.Fragment>
-        <Grid className="dropdown_notification_beta border border-gray-300 flex flex-col items-center justify-center pt-[15rem] pb-[1rem] bg-bgLight dark:bg-bgDark text-textLight dark:text-textDark">
+        <Grid className="dropdown_notification_beta z-[1000] border border-gray-300 flex flex-col items-center justify-center pt-[15rem] pb-[1rem] bg-bgLight dark:bg-bgDark text-textLight dark:text-textDark">
       
       <Grid className="notify_head_beta w-full flex items-start justify-between pt-[5rem]">
             <h1 className="text-2xl font-bold">Notifications</h1>
