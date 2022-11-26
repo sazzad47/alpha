@@ -110,7 +110,7 @@ const Suggestions = () => {
         
             <Grid item xs={6} className="flex flex-col items-start justify-start " >
             <Link href="/beta/videos/444"><Typography className='pl-2 line-clamp-2 font-medium text-[0.9rem] text-textLight dark:text-textDark' >How to learn reciting Quran beatifully? </Typography></Link>
-                <Typography className='pl-2 line-clamp-1 text-sm mt-2 opacity-[0.8] text-textLight dark:text-textDark' >{item.channelName} <CheckCircleIcon className="text-sm mb-1" /> </Typography>
+            <Link href="/beta/channels/222"><Typography className='pl-2 line-clamp-1 text-sm mt-2 opacity-[0.8] text-textLight dark:text-textDark' >{item.channelName} <CheckCircleIcon className="text-sm mb-1" /> </Typography></Link>
                 <Typography className='pl-2 text-sm opacity-[0.8] text-textLight dark:text-textDark' >{item.views} views • {item.createdAt}</Typography>
             </Grid>
           </Grid>

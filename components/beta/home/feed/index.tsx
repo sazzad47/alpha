@@ -125,7 +125,9 @@ const Feed = () => {
           </Link>
           <Grid container className="w-full h-[7rem] mt-3">
             <Grid item xs={1}>
+            <Link href="/beta/channels/222">
               <Avatar alt="Sazzad Hossen" src={`${item.channelPhoto}`} />
+            </Link>
             </Grid>
             <Grid
               item
@@ -144,9 +146,11 @@ const Feed = () => {
                   <CardMenus />
                 </Grid>
               </Grid>
-              <Typography className="opacity-[0.7] text-sm text-textLight dark:text-textDark">
+              <Link href="/beta/channels/222">
+             <Typography className="opacity-[0.7] text-sm text-textLight dark:text-textDark">
                 {item.channelName} <CheckCircleIcon className="text-sm" />
               </Typography>
+            </Link>
               <Typography className="opacity-[0.7] text-sm text-textLight dark:text-textDark">
                 {item.views} views • {item.createdAt}
               </Typography>
