@@ -40,10 +40,10 @@ const About = () => {
           Details
         </Typography>
         <Grid container spacing={2}>
-          <Grid item xs={4} className="flex flex-start items-start">
+          <Grid item xs={4} className="flex flex-start items-center">
             <Typography className="pl-0 text-sm">For business inquiries:</Typography>
           </Grid>
-          <Grid item xs={8} className="flex flex-start items-start">
+          <Grid item xs={8} className="flex flex-start items-center">
             <Button className="ml-[-0.8rem] px-3 py-1 focus:outline-none bg-bgButton hover:bg-bgButtonHover dark:bg-bgButtonDark dark:hover:bg-bgButtonDarkHover text-textLight dark:text-textDark rounded-3xl capitalize">
               View email address
             </Button>

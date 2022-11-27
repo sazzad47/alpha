@@ -22,6 +22,7 @@ import Videos from "./Videos";
 import Playlists from "./Playlists";
 import Channels from "./Channels";
 import About from "./About";
+import Shorts from "./Shorts";
 
 const ChannelLayout = () => {
   const router = useRouter();
@@ -89,8 +90,9 @@ const ChannelLayout = () => {
             <Tab label="Home" {...a11yProps(0)} />
             <Tab label="Videos" {...a11yProps(1)} />
             <Tab label="Playlists" {...a11yProps(2)} />
-            <Tab label="Channels" {...a11yProps(3)} />
-            <Tab label="About" {...a11yProps(4)} />
+            <Tab label="Shorts" {...a11yProps(3)} />
+            <Tab label="Channels" {...a11yProps(4)} />
+            <Tab label="About" {...a11yProps(5)} />
           </Tabs>
         </Grid>
         <Grid item className="w-full">
@@ -104,9 +106,12 @@ const ChannelLayout = () => {
             <Playlists/>
           </TabPanel>
           <TabPanel value={value} index={3}>
-            <Channels/>
+            <Shorts/>
           </TabPanel>
           <TabPanel value={value} index={4}>
+            <Channels/>
+          </TabPanel>
+          <TabPanel value={value} index={5}>
             <About/>
           </TabPanel>
         </Grid>
