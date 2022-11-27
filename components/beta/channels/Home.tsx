@@ -4,8 +4,9 @@ import { Grid, Typography, Button } from "@mui/material";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import Image from "next/image";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import CardMenus from "./CardMenus";
 
-function App() {
+function Home() {
   return (
     <Grid className="max-w-[1200] mr-auto ml-auto pb-5 px-5">
       <Grid className="mt-5">
@@ -24,10 +25,15 @@ function App() {
                 <Image src="/thumbnail-everest.jpg" alt="" fill />
               </Grid>
               <Grid item className="flex flex-col items-start">
-                <Typography className="line-clamp-2 pl-0 font-medium text-[1rem] text-textLight dark:text-textDark">
-                  Who created this beautiful world?
-                </Typography>
-                <Typography className="pl-0 opacity-[0.7] text-sm text-textLight dark:text-textDark">
+                <Grid className="mt-2 flex justify-between items-start">
+                  <Typography className="line-clamp-2 pl-0 font-medium text-[1rem] text-textLight dark:text-textDark">
+                    Who created this beautiful world?
+                  </Typography>
+                  <Grid className="mt-2">
+                    <CardMenus />
+                  </Grid>
+                </Grid>
+                <Typography className="mt-2 pl-0 opacity-[0.7] text-sm text-textLight dark:text-textDark">
                   Explore <CheckCircleIcon className="text-sm" />
                 </Typography>
                 <Typography className="pl-0 opacity-[0.7] text-sm text-textLight dark:text-textDark">
@@ -38,7 +44,7 @@ function App() {
           ))}
         </Carousel>
       </Grid>
-      <hr className="mx-2 text-textLight dark:text-textDark"/>
+      <hr className="mx-2 text-textLight dark:text-textDark" />
       <Grid className="mt-5">
         <Grid className="h-[3rem] flex items-center">
           <Typography className="px-2  text-textLight dark:text-textDark">
@@ -55,10 +61,15 @@ function App() {
                 <Image src="/thumbnail-everest.jpg" alt="" fill />
               </Grid>
               <Grid item className="flex flex-col items-start">
-                <Typography className="line-clamp-2 pl-0 font-medium text-[1rem] text-textLight dark:text-textDark">
-                  Who created this beautiful world?
-                </Typography>
-                <Typography className="pl-0 opacity-[0.7] text-sm text-textLight dark:text-textDark">
+                <Grid className="mt-2 flex justify-between items-start">
+                  <Typography className="line-clamp-2 pl-0 font-medium text-[1rem] text-textLight dark:text-textDark">
+                    Who created this beautiful world?
+                  </Typography>
+                  <Grid className="mt-2">
+                    <CardMenus />
+                  </Grid>
+                </Grid>
+                <Typography className="mt-2 pl-0 opacity-[0.7] text-sm text-textLight dark:text-textDark">
                   Explore <CheckCircleIcon className="text-sm" />
                 </Typography>
                 <Typography className="pl-0 opacity-[0.7] text-sm text-textLight dark:text-textDark">
@@ -69,7 +80,7 @@ function App() {
           ))}
         </Carousel>
       </Grid>
-      <hr className="mx-2 text-textLight dark:text-textDark"/>
+      <hr className="mx-2 text-textLight dark:text-textDark" />
       <Grid className="mt-5">
         <Grid className="h-[3rem] flex items-center">
           <Typography className="px-2  text-textLight dark:text-textDark">
@@ -86,10 +97,15 @@ function App() {
                 <Image src="/thumbnail-everest.jpg" alt="" fill />
               </Grid>
               <Grid item className="flex flex-col items-start">
-                <Typography className="line-clamp-2 pl-0 font-medium text-[1rem] text-textLight dark:text-textDark">
-                  Who created this beautiful world?
-                </Typography>
-                <Typography className="pl-0 opacity-[0.7] text-sm text-textLight dark:text-textDark">
+                <Grid className="mt-2 flex justify-between items-start">
+                  <Typography className="line-clamp-2 pl-0 font-medium text-[1rem] text-textLight dark:text-textDark">
+                    Who created this beautiful world?
+                  </Typography>
+                  <Grid className="mt-2">
+                    <CardMenus />
+                  </Grid>
+                </Grid>
+                <Typography className="mt-2 pl-0 opacity-[0.7] text-sm text-textLight dark:text-textDark">
                   Explore <CheckCircleIcon className="text-sm" />
                 </Typography>
                 <Typography className="pl-0 opacity-[0.7] text-sm text-textLight dark:text-textDark">
@@ -100,7 +116,7 @@ function App() {
           ))}
         </Carousel>
       </Grid>
-      <hr className="mx-2 text-textLight dark:text-textDark"/>
+      <hr className="mx-2 text-textLight dark:text-textDark" />
       <Grid className="mt-5">
         <Grid className="h-[3rem] flex items-center">
           <Typography className="px-2  text-textLight dark:text-textDark">
@@ -117,10 +133,15 @@ function App() {
                 <Image src="/thumbnail-everest.jpg" alt="" fill />
               </Grid>
               <Grid item className="flex flex-col items-start">
-                <Typography className="line-clamp-2 pl-0 font-medium text-[1rem] text-textLight dark:text-textDark">
-                  Who created this beautiful world?
-                </Typography>
-                <Typography className="pl-0 opacity-[0.7] text-sm text-textLight dark:text-textDark">
+                <Grid className="mt-2 flex justify-between items-start">
+                  <Typography className="line-clamp-2 pl-0 font-medium text-[1rem] text-textLight dark:text-textDark">
+                    Who created this beautiful world?
+                  </Typography>
+                  <Grid className="mt-2">
+                    <CardMenus />
+                  </Grid>
+                </Grid>
+                <Typography className="mt-2 pl-0 opacity-[0.7] text-sm text-textLight dark:text-textDark">
                   Explore <CheckCircleIcon className="text-sm" />
                 </Typography>
                 <Typography className="pl-0 opacity-[0.7] text-sm text-textLight dark:text-textDark">
@@ -134,4 +155,4 @@ function App() {
     </Grid>
   );
 }
-export default App;
+export default Home;

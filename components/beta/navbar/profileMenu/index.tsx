@@ -33,7 +33,6 @@ const ProfileMenu = () => {
     <React.Fragment>
       <ClickAwayListener onClickAway={handleClickAway}>
         <Grid>
-
          <Avatar
           sx={{ width: 30, height: 30 }}
           className="text-lg p-0 bg-zinc-600  rounded-full cursor-pointer"
@@ -43,7 +42,6 @@ const ProfileMenu = () => {
         </Avatar>
         {open && <DropdownMenu></DropdownMenu>}
         </Grid>
-     
       </ClickAwayListener>
     </React.Fragment>
   )
@@ -135,7 +133,7 @@ function DropdownMenu() {
           </div>
           <DropdownItem >Lets Code</DropdownItem>
           <DropdownItem doneIcon={<DoneIcon/>}>Sazzad Hossen</DropdownItem>
-          <DropdownItem >Lets Develope</DropdownItem>
+          <DropdownItem >Lets Develop</DropdownItem>
         </div>
       </CSSTransition>
       <CSSTransition
