@@ -1,12 +1,12 @@
 import { NextPage } from "next";
-import Channels from "../../../components/beta/channels";
+import Videos from "../../../components/beta/channels/Layout";
 import Layout from "../../../components/beta/Layout";
 
 
 const Page: NextPage = () => {
   return (
     <Layout>
-        <Channels />
+        <Videos />
     </Layout>
   );
 };

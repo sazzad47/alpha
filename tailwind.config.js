@@ -21,6 +21,9 @@ module.exports = {
         "bgButtonDark": "var(--bgButtonDark)",
         "bgButtonDarkHover": "var(--bgButtonDarkHover)",
       },
+      flex: {
+        'video-slider': '0 0 25%'
+      }
     },
   },
   plugins: [
