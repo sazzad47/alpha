@@ -245,7 +245,7 @@ const VideoPlayer = ({ toggleTheater }: Props) => {
       onMouseMove={handleMouseMove}
       onMouseLeave={hanldeMouseLeave}
       ref={playerContainerRef}
-      className="w-full h-full relative"
+      className="w-full h-[20rem] relative"
     > 
      
       <ReactPlayer

@@ -14,7 +14,6 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import Notification from "../videos/watch/action/Notification";
 import { useTheme } from "next-themes";
 import Layout from "../Layout";
-import Link from "./Link";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Home from "./Home";

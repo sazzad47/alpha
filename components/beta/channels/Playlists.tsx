@@ -14,16 +14,18 @@ const Playlists = () => {
             <Grid className="playlist_item relative w-full h-[10rem]">
               <Image src="/thumbnail-everest.jpg" alt="" fill />
               <Grid className="z-[1] absolute w-[50%] h-full bg-[rgba(0,0,0,0.6)] right-0 flex flex-col items-center justify-center">
-                <Typography>44</Typography>
+                <Typography>10</Typography>
                 <Grid>
                   <PlaylistPlayIcon />
                 </Grid>
               </Grid>
               <Grid className="z-[2] opacity-0 hover:opacity-100 absolute w-full h-full bg-[rgba(0,0,0,0.8)] flex items-center justify-center">
+                  <Link href="/beta/channels/222/playlists/23">
                   <Grid className="flex items-center justify-center cursor-pointer">
-                    <PlayArrowIcon className="text-md"/>
-                  <Typography className="pl-0 text-sm">Play All</Typography>
+                    <PlayArrowIcon className="text-md text-textLight dark:text-textDark"/>
+                  <Typography className="pl-0 text-sm text-textLight dark:text-textDark">Play All</Typography>
                   </Grid>
+                  </Link>
               </Grid>
             </Grid>
             <Typography className="pl-0 font-medium mt-2">
