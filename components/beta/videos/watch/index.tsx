@@ -229,7 +229,7 @@ const VideoPlayer = ({ toggleTheater }: Props) => {
       : `-${format(duration - currentTime)}`;
 
   const totalDuration = format(duration);
-  console.log("loop", loop);
+ 
   const handleClickAway = () => {
     controlsRef.current.style.visibility = "hidden";
   };

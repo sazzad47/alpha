@@ -14,7 +14,6 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import Notification from "../videos/watch/action/Notification";
 import { useTheme } from "next-themes";
 import Layout from "../Layout";
-import { useRouter } from "next/router";
 import Image from "next/image";
 import Home from "./Home";
 import Videos from "./Videos";
@@ -24,7 +23,7 @@ import About from "./About";
 import Shorts from "./Shorts";
 
 const ChannelLayout = () => {
-  const router = useRouter();
+
   const { systemTheme, theme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
   const [value, setValue] = React.useState(0);
