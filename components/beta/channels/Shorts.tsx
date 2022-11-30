@@ -6,8 +6,8 @@ const Shorts = () => {
   return (
     <Grid container spacing={1} className='p-5'>
            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((_, index) => (
-            <Grid item xs={12} sm={4} md={3} lg={2}>
-            <Grid key={index} container>
+            <Grid key={index} item xs={12} sm={4} md={3} lg={2}>
+            <Grid container>
               <Grid item className="relative w-full h-[17rem]">
                 <Image src="/thumbnail-everest.jpg" alt="" fill />
               </Grid>

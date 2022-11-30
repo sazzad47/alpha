@@ -4,9 +4,7 @@ import {
   Typography,
   Tooltip,
   IconButton,
-  List,
-  Button,
-  ListItemIcon,
+  List
 } from "@mui/material";
 import LoopIcon from "@mui/icons-material/Loop";
 import CloseIcon from "@mui/icons-material/Close";
@@ -57,7 +55,7 @@ const Playlist = () => {
         <List
           component="div"
           disablePadding
-          className="mt-2 pb-2 max-h-[13.5rem] overflow-y-auto"
+          className="mt-2 pb-2 max-h-[14rem] overflow-y-auto"
         >
           {[1,2,3,4,5,6,7,8,9,10].map((item)=> (
           <Grid key={item} className="p-3 rounded-[20px] flex items-center justify-between hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">

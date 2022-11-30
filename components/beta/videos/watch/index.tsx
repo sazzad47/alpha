@@ -1,15 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
-import {
-  Grid,
-  Typography,
-  IconButton,
-  Paper
-} from "@mui/material";
+import { Grid, Typography, IconButton, Paper } from "@mui/material";
 import screenful from "screenfull";
 import ReactPlayer from "react-player";
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from "@mui/icons-material/Close";
 import Controls from "./Controls";
 import { ClickAwayListener } from "@mui/base";
+import Image from "next/image";
 
 let count = 0;
 
@@ -26,8 +22,6 @@ const format = (seconds: number) => {
   }
   return `${mm}:${ss}`;
 };
-
-
 
 interface Props {
   toggleTheater: () => void;
@@ -86,8 +80,6 @@ const VideoPlayer = ({ toggleTheater }: Props) => {
     volume,
   } = state;
 
-  
-
   const handlePlayPause = () => {
     setState({ ...state, playing: !state.playing });
     if (playing === true) {
@@ -116,9 +108,9 @@ const VideoPlayer = ({ toggleTheater }: Props) => {
     }
   };
 
-  const handleSeekChange = ( event: Event, newValue: number | number[]) => {
+  const handleSeekChange = (event: Event, newValue: number | number[]) => {
     // console.log({ newValue });
-    let value = Number(newValue)
+    let value = Number(newValue);
     setState({ ...state, played: value / 100 });
   };
 
@@ -126,8 +118,11 @@ const VideoPlayer = ({ toggleTheater }: Props) => {
     setState({ ...state, seeking: true });
   };
 
-  const handleSeekMouseUp = (event: Event | React.SyntheticEvent<Element, Event>, newValue: number | number[]) => {
-    let value = Number(newValue)
+  const handleSeekMouseUp = (
+    event: Event | React.SyntheticEvent<Element, Event>,
+    newValue: number | number[]
+  ) => {
+    let value = Number(newValue);
     setState({ ...state, seeking: false });
     // console.log(sliderRef.current.value)
     playerRef.current.seekTo(value / 100, "fraction");
@@ -137,13 +132,16 @@ const VideoPlayer = ({ toggleTheater }: Props) => {
     setState({ ...state, duration });
   };
 
-  const handleVolumeSeekDown = (event: Event | React.SyntheticEvent<Element, Event>, newValue: number | number[]) => {
-    let value = Number(newValue)
+  const handleVolumeSeekDown = (
+    event: Event | React.SyntheticEvent<Element, Event>,
+    newValue: number | number[]
+  ) => {
+    let value = Number(newValue);
     setState({ ...state, seeking: false, volume: value / 100 });
   };
   const handleVolumeChange = (event: Event, newValue: number | number[]) => {
     // console.log(newValue);
-    let value = Number(newValue)
+    let value = Number(newValue);
     setState({
       ...state,
       volume: value / 100,
@@ -163,20 +161,18 @@ const VideoPlayer = ({ toggleTheater }: Props) => {
 
   const hanldeMouseLeave = () => {
     if (!playing || openSettings) {
-
       controlsRef.current.style.visibility = "visible";
       count = 0;
     } else {
       controlsRef.current.style.visibility = "hidden";
     }
   };
- 
-  useEffect(()=> {
+
+  useEffect(() => {
     if (playing === true) {
-      controlsRef.current.style.visibility = "visible"
+      controlsRef.current.style.visibility = "visible";
     }
-   
-  },[playing])
+  }, [playing]);
 
   const handleDisplayFormat = () => {
     setTimeDisplayFormat(
@@ -216,8 +212,8 @@ const VideoPlayer = ({ toggleTheater }: Props) => {
     });
     setBookmarks(bookmarksCopy);
   };
-  const removeBookmark = (index: number)=> {
-    setBookmarks(bookmarks => bookmarks.filter((_, i) => i !== index));
+  const removeBookmark = (index: number) => {
+    setBookmarks((bookmarks) => bookmarks.filter((_, i) => i !== index));
   };
 
   const currentTime =
@@ -233,95 +229,99 @@ const VideoPlayer = ({ toggleTheater }: Props) => {
       : `-${format(duration - currentTime)}`;
 
   const totalDuration = format(duration);
-  console.log('loop', loop)
+  console.log("loop", loop);
   const handleClickAway = () => {
     controlsRef.current.style.visibility = "hidden";
   };
   return (
-   <ClickAwayListener onClickAway={handleClickAway}>
-    <Grid>
-    <Grid
-      
-      onMouseMove={handleMouseMove}
-      onMouseLeave={hanldeMouseLeave}
-      ref={playerContainerRef}
-      className="w-full h-[20rem] relative"
-    > 
-     
-      <ReactPlayer
-        
-        ref={playerRef}
-        url="https://res.cloudinary.com/sazzadhossen/video/upload/v1669121335/test2_jjw78a.mp4"
-        width="100%"
-        height="100%"
-        pip={pip}
-        playing={playing}
-        controls={false}
-        light={light}
-        loop={loop}
-        playbackRate={playbackRate}
-        volume={volume}
-        muted={muted}
-        onProgress={handleProgress}
-        config={{
-          file: {
-            attributes: {
-              crossorigin: "anonymous",
-            },
-          },
-        }}
-      />
-      <Grid
-        ref={controlsRef}
-      >
-        <Controls
-          
-          onSeek={handleSeekChange}
-          onSeekMouseDown={handleSeekMouseDown}
-          onSeekMouseUp={handleSeekMouseUp}
-          onDuration={handleDuration}
-          onRewind={handleRewind}
-          onPlayPause={handlePlayPause}
-          onFastForward={handleFastForward}
-          playing={playing}
-          played={played}
-          elapsedTime={elapsedTime}
-          totalDuration={totalDuration}
-          onMute={hanldeMute}
-          muted={muted}
-          onVolumeChange={handleVolumeChange}
-          onVolumeSeekDown={handleVolumeSeekDown}
-          onChangeDispayFormat={handleDisplayFormat}
-          playbackRate={playbackRate}
-          onPlaybackRateChange={handlePlaybackRate}
-          onToggleFullScreen={toggleFullScreen}
-          volume={volume}
-          onBookmark={addBookmark}
-          loop={loop}
-          setLoop={setLoop}
-          setOpenSettings={setOpenSettings}
-          openSettings={openSettings}
-        />
-      </Grid>
-    </Grid>
-    <Grid container style={{ marginTop: 20 }} spacing={3}>
+    <ClickAwayListener onClickAway={handleClickAway}>
+      <Grid>
+        <Grid
+          onMouseMove={handleMouseMove}
+          onMouseLeave={hanldeMouseLeave}
+          ref={playerContainerRef}
+          className="w-full h-[20rem] relative"
+        >
+          <ReactPlayer
+            ref={playerRef}
+            url="https://res.cloudinary.com/sazzadhossen/video/upload/v1669121335/test2_jjw78a.mp4"
+            width="100%"
+            height="100%"
+            pip={pip}
+            playing={playing}
+            controls={false}
+            light={light}
+            loop={loop}
+            playbackRate={playbackRate}
+            volume={volume}
+            muted={muted}
+            onProgress={handleProgress}
+            config={{
+              file: {
+                attributes: {
+                  crossorigin: "anonymous",
+                },
+              },
+            }}
+          />
+          <Grid ref={controlsRef}>
+            <Controls
+              onSeek={handleSeekChange}
+              onSeekMouseDown={handleSeekMouseDown}
+              onSeekMouseUp={handleSeekMouseUp}
+              onDuration={handleDuration}
+              onRewind={handleRewind}
+              onPlayPause={handlePlayPause}
+              onFastForward={handleFastForward}
+              playing={playing}
+              played={played}
+              elapsedTime={elapsedTime}
+              totalDuration={totalDuration}
+              onMute={hanldeMute}
+              muted={muted}
+              onVolumeChange={handleVolumeChange}
+              onVolumeSeekDown={handleVolumeSeekDown}
+              onChangeDispayFormat={handleDisplayFormat}
+              playbackRate={playbackRate}
+              onPlaybackRateChange={handlePlaybackRate}
+              onToggleFullScreen={toggleFullScreen}
+              volume={volume}
+              onBookmark={addBookmark}
+              loop={loop}
+              setLoop={setLoop}
+              setOpenSettings={setOpenSettings}
+              openSettings={openSettings}
+            />
+          </Grid>
+        </Grid>
+        <Grid container style={{ marginTop: 20 }} spacing={3}>
           {bookmarks.map((bookmark, index) => (
             <Grid key={index} item>
-              <Paper
-                elevation={3}
-                className="relative"
-              > 
-              <IconButton onClick={()=> removeBookmark(index)} className="focus:outline-none z-[10] text-white absolute w-[30px] h-[30px] top-0 right-0">
-                <CloseIcon/>
-              </IconButton>
-                <img onClick={() => {
-                  playerRef.current.seekTo(bookmark.time);
-                  controlsRef.current.style.visibility = "visible";
+              <Paper elevation={3}>
+                <Grid
+                  className="cursor-pointer relative bg-[blue] min-w-[100px] h-[50px] z-[2]"
+                  onClick={() => {
+                    playerRef.current.seekTo(bookmark.time);
+                    controlsRef.current.style.visibility = "visible";
 
-                  setTimeout(() => {
-                    controlsRef.current.style.visibility = "hidden";
-                  }, 1000);
-                }} className="cursor-pointer w-full" crossOrigin="anonymous" src={bookmark.image} />
+                    setTimeout(() => {
+                      controlsRef.current.style.visibility = "hidden";
+                    }, 1000);
+                  }}
+                >
+                  <IconButton
+                    onClick={() => removeBookmark(index)}
+                    className="focus:outline-none absolute top-0 right-0  z-[1000] p-0"
+                  >
+                    <CloseIcon className="text-white" />
+                  </IconButton>
+                  <Image
+                    crossOrigin="anonymous"
+                    src={bookmark.image}
+                    fill
+                    alt=""
+                  />
+                </Grid>
                 <Typography variant="body2" align="center">
                   bookmark at {bookmark.display}
                 </Typography>
@@ -330,7 +330,7 @@ const VideoPlayer = ({ toggleTheater }: Props) => {
           ))}
         </Grid>
         <canvas className="hidden" ref={canvasRef} />
-    </Grid>
-        </ClickAwayListener>
+      </Grid>
+    </ClickAwayListener>
   );
 };
