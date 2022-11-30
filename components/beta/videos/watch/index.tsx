@@ -1,11 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Grid, Typography, IconButton, Paper } from "@mui/material";
+import { Grid, Typography, IconButton, Paper, Tooltip } from "@mui/material";
 import screenful from "screenfull";
 import ReactPlayer from "react-player";
 import CloseIcon from "@mui/icons-material/Close";
 import Controls from "./Controls";
 import { ClickAwayListener } from "@mui/base";
 import Image from "next/image";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import QueryBuilderIcon from "@mui/icons-material/QueryBuilder";
 
 let count = 0;
 
@@ -34,6 +36,20 @@ const Index = ({ toggleTheater }: Props) => {
         <Typography className="pl-0 text-xl font-medium text-textLight dark:text-textDark">
           Who created this beautiful world?
         </Typography>
+        <Grid className="my-3 flex items-center text-textLight dark:text-textDark">
+          <Grid>
+            <Tooltip title="Views">
+              <VisibilityIcon className="mr-1"/>
+            </Tooltip>
+            118K
+          </Grid>
+          <Grid className="ml-4">
+            <Tooltip title="Time">
+              <QueryBuilderIcon className="mr-1" />
+            </Tooltip>
+            5 days ago
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   );
@@ -229,7 +245,7 @@ const VideoPlayer = ({ toggleTheater }: Props) => {
       : `-${format(duration - currentTime)}`;
 
   const totalDuration = format(duration);
- 
+
   const handleClickAway = () => {
     controlsRef.current.style.visibility = "hidden";
   };

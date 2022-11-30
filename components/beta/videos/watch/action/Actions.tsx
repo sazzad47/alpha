@@ -6,8 +6,8 @@ import DoneIcon from "@mui/icons-material/Done";
 import StarIcon from "@mui/icons-material/Star";
 import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import CommentIcon from "@mui/icons-material/Comment";
-import FlagIcon from "@mui/icons-material/Flag";
 import InfoIcon from "@mui/icons-material/Info";
+import Report from "./Report";
 interface Props {
   handleShowInfoBox: () => void;
   handleShowCommentBox: () => void;
@@ -49,11 +49,8 @@ const Actions = ({
           <CommentIcon />
         </IconButton>
       </Tooltip>
-      <Tooltip title="Report">
-        <IconButton className="focus:outline-none bg-bgButton hover:bg-bgButtonHover dark:bg-bgButtonDark dark:hover:bg-bgButtonDarkHover text-textLight dark:text-textDark">
-          <FlagIcon />
-        </IconButton>
-      </Tooltip>
+     
+      <Report/>
       <Tooltip title="Information">
         <IconButton onClick={handleShowInfoBox} className="focus:outline-none bg-bgButton hover:bg-bgButtonHover dark:bg-bgButtonDark dark:hover:bg-bgButtonDarkHover text-textLight dark:text-textDark">
           <InfoIcon />

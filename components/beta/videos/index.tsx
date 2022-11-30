@@ -40,7 +40,6 @@ const Index = () => {
       >
         <Grid item xs={12} md={7}>
           <Watch toggleTheater={toggleTheater} />
-          <Grid>commentBox</Grid>
           <Action
             handleShowCommentBox={handleShowCommentBox}
             handleShowReportBox={handleShowReportBox}

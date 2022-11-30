@@ -24,9 +24,6 @@ const Description = () => {
 
   return (
     <Grid className="mt-5 bg-bgButton dark:bg-bgButtonDark p-2 text-textLight dark:text-textDark">
-      <Typography className="pl-0 font-bold opacity-[0.8]">
-        118K views • 5 days ago
-      </Typography>
         <ReadMore>
           This entire universe is composed of billions of galaxies and we
           earthlings are a tiny part of one tiny planet having unimaginable
