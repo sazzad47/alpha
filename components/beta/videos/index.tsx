@@ -48,6 +48,9 @@ const Index = () => {
           />
           {showInfoBox && <Description />}
           {showCommentBox && <CommentBox />}
+          <Grid className="mt-5">
+            <Suggestions />
+          </Grid>
         </Grid>
         <Grid item xs={12} md={5}>
           <Suggestions />
@@ -69,6 +72,9 @@ const Index = () => {
           />
           {showInfoBox && <Description />}
           {showCommentBox && <CommentBox />}
+          <Grid className="mt-5">
+            <Suggestions />
+          </Grid>
         </Grid>
         <Grid item xs={12} md={5}>
           <Suggestions />
