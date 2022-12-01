@@ -34,10 +34,6 @@ export default function Navbar() {
           </Tooltip>
         </Link>
           </div>
-      
-       
-
-       
       </div>
       <SearchBar/>
       <div className="flex gap-5 items-center text-xl">

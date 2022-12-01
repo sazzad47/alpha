@@ -34,7 +34,7 @@ const Playlist = () => {
             </Typography>
             <Typography className="pl-0 text-sm opacity-[0.8]">1/10</Typography>
           </Grid>
-          <Grid className="mt-1">
+          <Grid className="my-1">
             <Tooltip title="Loop playlist">
               <IconButton className="focus:outline-none text-textLight dark:text-textDark bg-bgButton dark:bg-bgButtonDark hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
                 <LoopIcon />
@@ -55,7 +55,7 @@ const Playlist = () => {
         <List
           component="div"
           disablePadding
-          className="mt-2 pb-2 max-h-[14rem] overflow-y-auto"
+          className=" pb-2 max-h-[14rem] overflow-y-auto"
         >
           {[1,2,3,4,5,6,7,8,9,10].map((item)=> (
           <Grid key={item} className="p-3 rounded-[20px] flex items-center justify-between hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
