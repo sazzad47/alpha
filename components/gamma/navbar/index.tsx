@@ -7,6 +7,7 @@ import Image from "next/image";
 import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
 import HomeIcon from '@mui/icons-material/Home';
 import GroupIcon from '@mui/icons-material/Group';
+import GroupsIcon from '@mui/icons-material/Groups';
 import AssistantPhotoIcon from '@mui/icons-material/AssistantPhoto';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
 import Diversity3Icon from '@mui/icons-material/Diversity3';
@@ -48,7 +49,7 @@ export default function Navbar() {
                   </Tooltip>
                   <Tooltip title="Group">
                     <Button className="ml-2 w-[2rem] h-[2.5rem] rounded-[10px] focus:outline-none text-textLight dark:text-textDark hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
-                    <Diversity3Icon/>
+                    <GroupsIcon/>
                     </Button>
                   </Tooltip>
                   <Tooltip title="Page">
