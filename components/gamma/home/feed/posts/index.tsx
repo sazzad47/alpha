@@ -5,6 +5,7 @@ import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import {FaShare} from 'react-icons/fa'
 import MoreMenus from "./MoreMenus";
+import Comment from './comment'
 import Angry from "../../../../../public/icons/angry.png";
 import Care from "../../../../../public/icons/care.png";
 import Haha from "../../../../../public/icons/haha.png";
@@ -12,9 +13,11 @@ import Like from "../../../../../public/icons/like.png";
 import Love from "../../../../../public/icons/love.png";
 import Sad from "../../../../../public/icons/sad.png";
 import Wow from "../../../../../public/icons/wow.png";
+
 interface Props {
   children: string;
 }
+
 const ReadMore = ({ children }: Props) => {
   const text = children;
   const [isReadMore, setIsReadMore] = useState(true);
@@ -100,6 +103,9 @@ const Posts = () => {
                 <FaShare />
                 <Typography className="pl-2 p-0">Share</Typography>
               </Grid>
+            </Grid>
+            <Grid>
+              <Comment/>
             </Grid>
           </Grid>
         </Grid>
