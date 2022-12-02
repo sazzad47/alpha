@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Grid, Avatar, Button, IconButton } from "@mui/material";
-import channelPhoto from "../../../../../public/user.jpg";
+import channelPhoto from "../../../../../../public/user.jpg";
 import { CustomTextField } from "../../../../../common/Textfield";
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import { useTheme } from "next-themes";

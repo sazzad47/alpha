@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
-import SortIcon from "@mui/icons-material/Sort";
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 export default function SortComment() {
   const { systemTheme, theme } = useTheme();
@@ -21,10 +21,7 @@ export default function SortComment() {
   return (
     <React.Fragment>
       <Grid container className="mt-5 flex flex-col">
-        <Grid className="flex">
-          <Typography className="pl-0 text-textLight dark:text-textDark">
-            10 Comments
-          </Typography>
+        <Grid className="flex justify-end">
           <Box
             sx={{
               display: "flex",
@@ -44,8 +41,8 @@ export default function SortComment() {
                 aria-expanded={open ? "true" : undefined}
                 disableRipple
               >
-                <SortIcon className="text-textLight dark:text-textDark" />{" "}
-                <Typography className="pl-2">Sort by</Typography>
+                <Typography className="p-0">All comments</Typography>
+                <ArrowDropDownIcon className="text-textLight dark:text-textDark" />
               </IconButton>
             </Tooltip>
           </Box>
@@ -73,16 +70,13 @@ export default function SortComment() {
             anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
           >
             <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-              <Grid>All</Grid>
+              <Grid>All comments</Grid>
             </MenuItem>
             <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-              <Grid>Top</Grid>
+              <Grid>Top comments</Grid>
             </MenuItem>
             <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-              <Grid>Oldest</Grid>
-            </MenuItem>
-            <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-              <Grid>Newest</Grid>
+              <Grid>Most recent comments</Grid>
             </MenuItem>
           </Menu>
         </Grid>
