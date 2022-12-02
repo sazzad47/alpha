@@ -7,7 +7,6 @@ import {
   Button,
   Tabs,
   Tab,
-  Box,
 } from "@mui/material";
 
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";

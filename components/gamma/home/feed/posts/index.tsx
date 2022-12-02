@@ -55,7 +55,7 @@ const Posts = () => {
         <Grid
           key={i}
           container
-          className="text-textLight dark:text-textDark w-[calc(100%-2rem)] mx-1 mt-5 p-5 bg-bgLight dark:bg-bgDark"
+          className="text-textLight dark:text-textDark w-full mt-5 p-5 bg-bgLight dark:bg-bgDark"
         >
           <Grid item xs={12} className="flex flex-col">
             <Grid className="flex items-center justify-between">

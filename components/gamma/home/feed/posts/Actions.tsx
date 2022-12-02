@@ -4,7 +4,6 @@ import { Grid, Typography, Avatar } from "@mui/material";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 
-
 import Angry from "../../../../../public/icons/angry.png";
 import Care from "../../../../../public/icons/care.png";
 import Haha from "../../../../../public/icons/haha.png";
@@ -15,6 +14,7 @@ import Wow from "../../../../../public/icons/wow.png";
 
 import Comment from "./comment";
 import Share from "./Share";
+import ReactModal from "./ReactModal";
 
 const icons = [
   { id: 1, icon: Like },
@@ -35,7 +35,7 @@ const Actions = () => {
       <Grid className="flex relative justify-between">
         <LikeButton />
         <CommentButton setShowCommentBox={setShowCommentBox} />
-        <Share/>
+        <Share />
       </Grid>
       <Grid>
         {showCommentBox && (
@@ -52,12 +52,11 @@ const Actions = () => {
 const ActionHeader = ({ setShowCommentBox }: CommentProps) => {
   return (
     <Grid className="flex justify-between items-center">
-      <Grid className="flex">
-        <Avatar src={Love.src} sx={{ width: "20px", height: "20px" }} />
-        <Avatar src={Wow.src} sx={{ width: "20px", height: "20px" }} />
-        <Typography className="p-0 pl-2 text-sm opacity-[0.7]">200</Typography>
-      </Grid>
-      <Grid onClick={() => setShowCommentBox((prev:boolean)=> !prev)} className="cursor-pointer" >
+      <ReactModal />
+      <Grid
+        onClick={() => setShowCommentBox((prev: boolean) => !prev)}
+        className="cursor-pointer"
+      >
         <Typography className="p-0 text-sm"> 10 Comments</Typography>
       </Grid>
     </Grid>
@@ -98,7 +97,7 @@ interface CommentProps {
 const CommentButton = ({ setShowCommentBox }: CommentProps) => {
   return (
     <Grid
-      onClick={() => setShowCommentBox((prev:boolean)=> !prev)}
+      onClick={() => setShowCommentBox((prev: boolean) => !prev)}
       className="flex items-center justify-center cursor-pointer px-5 py-2 rounded-sm hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover"
     >
       <ChatBubbleOutlineIcon />
