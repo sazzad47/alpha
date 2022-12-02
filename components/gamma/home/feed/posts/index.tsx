@@ -72,7 +72,7 @@ const Posts = () => {
           to talk about the protons, neutrons and electrons that make up an atom
         </ReadMore>
         <hr className="my-4" />
-        <Grid className="flex">
+        <Grid className="reaction_box flex">
           {icons.map((item) => (
             <Grid key={item.id} className="mr-1">
               <Avatar sx={{width:'20px', height: '20px'}} src={item.icon.src}/>
@@ -80,7 +80,7 @@ const Posts = () => {
           ))}
         </Grid>
         <Grid className="flex justify-between mt-2">
-         <Grid className="flex">
+         <Grid className="like_button flex">
              <ThumbUpOffAltIcon/>
              <Typography className="pl-2">Like</Typography>
          </Grid>

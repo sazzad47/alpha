@@ -70,3 +70,5 @@ a {
 /*.........Beta............*/
 @import url(./beta/navbar.css);
 @import url(./beta/videoContainer.css);
+/*.........Gamma............*/
+@import url(./gamma/home.css)
