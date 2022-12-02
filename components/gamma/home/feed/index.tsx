@@ -5,7 +5,7 @@ import Posts from './posts'
 
 const Feed = () => {
   return (
-    <Grid className='flex flex-col w-[50%] items-center'>
+    <Grid className='flex flex-col w-[50%] items-center ml-[15rem]'>
      
       <CreatePost/>
       <Posts/>

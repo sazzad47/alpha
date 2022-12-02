@@ -6,6 +6,7 @@ import {
   List,
   ListItem,
   IconButton,
+  Divider
 } from "@mui/material";
 import Image from "next/image";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
@@ -22,12 +23,12 @@ const SideBar = () => {
   const groupsToRender = groups.slice(0, groupIndex);
 
   return (
-    <Grid className="w-1/4 bg-bgLight dark:bg-bgDark flex flex-col p-3 text-textLight dark:text-textDark">
+    <Grid className="w-[15rem] h-[90vh] pb-5 fixed overflow-y-auto bg-bgLight dark:bg-bgDark flex flex-col p-3 text-textLight dark:text-textDark">
       <Grid className="w-full flex justify-start items-center">
         <Avatar src="/user.jpg" />
         <Typography className="pl-4">Sazzad Hossen</Typography>
       </Grid>
-      <hr className="my-3" />
+      <Divider className="my-3" />
       <Typography className="p-0">Pages</Typography>
       <List>
         {pagesToRender.map((_, i) => (

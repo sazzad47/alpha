@@ -1,11 +1,11 @@
 import React from "react";
-import { Grid, Typography, IconButton, Avatar, Button } from "@mui/material";
+import { Grid, Typography, IconButton, Avatar, Button, Divider } from "@mui/material";
 import Link from "next/link";
 import { AiOutlinePlus } from "react-icons/ai";
 
 const RightBar = () => {
   return (
-    <Grid className="w-[25%] bg-bgLight dark:bg-bgDark flex flex-col text-textLight dark:text-textDark p-3">
+    <Grid className="w-[15rem] h-[90vh] pb-5 fixed overflow-y-auto right-0 bg-bgLight dark:bg-bgDark flex flex-col text-textLight dark:text-textDark p-3">
       <Grid className="flex flex-col">
         <Grid className="flex items-center justify-between">
           <Typography className="p-0">Friend requests</Typography>
@@ -33,7 +33,8 @@ const RightBar = () => {
           </Grid>
         </Grid>
       </Grid>
-      <hr className="my-4" />
+      
+      <Divider className="my-4" />
       <Grid className="flex flex-col">
         <Typography className="p-0 mb-2">Create</Typography>
         <Grid className="py-1 px-2 rounded-[5px] flex items-center cursor-pointer hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
@@ -49,7 +50,7 @@ const RightBar = () => {
           <Typography className="pl-2 text-sm">Create new group</Typography>
         </Grid>
       </Grid>
-      <hr className="my-4"/>
+      <Divider className="my-4" />
       <Grid>
         <Typography className="p-0 mb-1">Contacts</Typography>
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_, i) => (
