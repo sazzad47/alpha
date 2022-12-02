@@ -29,6 +29,7 @@ export default function ReactModal() {
   return (
     <div>
         <Grid onClick={handleClickOpen} className="flex cursor-pointer">
+        <Avatar src={Like.src} sx={{ width: "20px", height: "20px" }} />
         <Avatar src={Love.src} sx={{ width: "20px", height: "20px" }} />
         <Avatar src={Wow.src} sx={{ width: "20px", height: "20px" }} />
         <Typography className="p-0 pl-2 text-sm opacity-[0.7]">200</Typography>
