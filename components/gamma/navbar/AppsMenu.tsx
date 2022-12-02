@@ -82,7 +82,7 @@ const AppsMenu = () => {
 
 function DropdownMenu() {
   return (
-    <div className="absolute w-[350px] h-[300px] top-[80px] flex items-center justify-center translate-x-[-75%] p-[1rem] overflow-hidden rounded-[var(--border-radius)] border border-gray-300 bg-bgLight dark:bg-bgDark">
+    <div className="z-[1000] absolute w-[350px] h-[300px] top-[80px] flex items-center justify-center translate-x-[-75%] p-[1rem] overflow-hidden rounded-[var(--border-radius)] border border-gray-300 bg-bgLight dark:bg-bgDark">
       <Grid container className="flex items-center justify-center">
         {apps.map((item) => (
           <Grid
