@@ -1,7 +1,7 @@
 import React from 'react'
 import {Grid} from '@mui/material'
 import CreatePost from './CreatePost'
-import Posts from './Posts'
+import Posts from './posts'
 
 const Feed = () => {
   return (

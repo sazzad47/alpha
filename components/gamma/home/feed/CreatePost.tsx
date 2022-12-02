@@ -14,15 +14,15 @@ const CreatePost = () => {
       </Grid>
       <hr className='my-3'/>
       <Grid className='w-full flex justify-between'>
-        <Grid className='flex w-1/3 px-3 py-2 items-center justify-center hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover'>
+        <Grid className='flex cursor-pointer w-1/3 px-3 py-2 items-center justify-center hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover'>
             <CollectionsIcon/>
             <Typography className='pl-2'>Photo</Typography>
         </Grid>
-        <Grid className='flex w-1/3 px-3 py-2 items-center justify-center hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover'>
+        <Grid className='flex cursor-pointer w-1/3 px-3 py-2 items-center justify-center hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover'>
             <VideoLibraryIcon/>
             <Typography className='pl-2'>Video</Typography>
         </Grid>
-        <Grid className='flex w-1/3 px-3 py-2 items-center justify-center hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover'>
+        <Grid className='flex cursor-pointer w-1/3 px-3 py-2 items-center justify-center hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover'>
             <MoodIcon/>
             <Typography className='pl-2'>Feeling</Typography>
         </Grid>
