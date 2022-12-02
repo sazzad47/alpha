@@ -23,10 +23,10 @@ const RightBar = () => {
               1 mutual friend
             </Typography>
             <Grid className="mt-1 flex items-center justify-between">
-              <Button className="focus:outline-none bg-bgButton dark:bg-[#707075] dark:hover:bg-bgButtonDarkHover text-textLight dark:text-textDark capitalize text-sm">
+              <Button className="focus:outline-none bg-[#f0e1e1] hover:bg-bgButtonHover dark:bg-[#707075] dark:hover:bg-bgButtonDarkHover text-textLight dark:text-textDark capitalize text-sm">
                 Confirm
               </Button>
-              <Button className="focus:outline-none bg-bgButton dark:bg-bgButtonDark dark:hover:bg-bgButtonDarkHover text-textLight dark:text-textDark capitalize text-sm">
+              <Button className="focus:outline-none bg-bgButton hover:bg-bgButtonHover dark:bg-bgButtonDark dark:hover:bg-bgButtonDarkHover text-textLight dark:text-textDark capitalize text-sm">
                 Cancel
               </Button>
             </Grid>
