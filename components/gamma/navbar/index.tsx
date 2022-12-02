@@ -32,7 +32,7 @@ export default function Navbar() {
   const handleSearch = () => {};
 
   return (
-    <header className="w-full h-[80px] flex items-center justify-center">
+    <header className="w-full h-[80px] flex items-center justify-center fixed z-[1000]">
         <div className="header-container w-full h-full bg-bgLight dark:bg-bgDark overflow-hidden p-[20px] shadow-lg">
             <div className="header-wrapper w-full h-full flex items-center justify-between py-0 px-[8px]">
                 <div className="logoBox flex items-center">
