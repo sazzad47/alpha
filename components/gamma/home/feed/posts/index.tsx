@@ -1,13 +1,21 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Grid, Avatar, Typography } from "@mui/material";
 import PublicIcon from "@mui/icons-material/Public";
+import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import {BiShare} from 'react-icons/bi'
 import MoreMenus from "./MoreMenus";
-
-
+import Angry from '../../../../../public/icons/angry.png'
+import Care from '../../../../../public/icons/care.png'
+import Haha from '../../../../../public/icons/haha.png'
+import Like from '../../../../../public/icons/like.png'
+import Love from '../../../../../public/icons/love.png'
+import Sad from '../../../../../public/icons/sad.png'
+import Wow from '../../../../../public/icons/wow.png'
 interface Props {
-  children: string
+  children: string;
 }
-const ReadMore = ( {children}: Props ) => {
+const ReadMore = ({ children }: Props) => {
   const text = children;
   const [isReadMore, setIsReadMore] = useState(true);
   const toggleReadMore = () => {
@@ -16,13 +24,24 @@ const ReadMore = ( {children}: Props ) => {
   return (
     <p className="pl-0 my-3 inline w-full">
       {isReadMore ? text.slice(0, 150) : text}
-      <span onClick={toggleReadMore} className="font-bold text-textLight dark:text-textDark cursor-pointer">
+      <span
+        onClick={toggleReadMore}
+        className="font-bold text-textLight dark:text-textDark cursor-pointer"
+      >
         {isReadMore ? "...Read more" : " Show less"}
       </span>
     </p>
   );
 };
-
+const icons = [
+  { id: 1, icon: Like },
+  { id: 2, icon: Love },
+  { id: 3, icon: Care },
+  { id: 4, icon: Wow },
+  { id: 5, icon: Haha },
+  { id: 6, icon: Sad },
+  { id: 7, icon: Angry },
+];
 const Posts = () => {
   return (
     <Grid
@@ -51,9 +70,29 @@ const Posts = () => {
           formed from atoms. If you ask that question of a physicist, the
           physicist will probably start by talking about atoms, and then proceed
           to talk about the protons, neutrons and electrons that make up an atom
-          </ReadMore>
-         <hr className="my-4"/>
-         
+        </ReadMore>
+        <hr className="my-4" />
+        <Grid className="flex">
+          {icons.map((item) => (
+            <Grid key={item.id} className="mr-1">
+              <Avatar sx={{width:'20px', height: '20px'}} src={item.icon.src}/>
+            </Grid>
+          ))}
+        </Grid>
+        <Grid className="flex justify-between mt-2">
+         <Grid className="flex">
+             <ThumbUpOffAltIcon/>
+             <Typography className="pl-2">Like</Typography>
+         </Grid>
+         <Grid className="flex justify-center">
+             <ThumbUpOffAltIcon/>
+             <Typography className="pl-2 p-0">Comment</Typography>
+         </Grid>
+         <Grid className="flex justify-end">
+             <ThumbUpOffAltIcon/>
+             <Typography className="pl-2 p-0">Share</Typography>
+         </Grid>
+        </Grid>
       </Grid>
     </Grid>
   );
