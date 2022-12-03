@@ -3,7 +3,6 @@ import {
   Grid,
   Avatar,
   Typography,
-  Tooltip,
   Button,
   IconButton,
   Tabs,
@@ -15,9 +14,8 @@ import PersonAddIcon from '@mui/icons-material/PersonAdd';
 
 import Like from "../../../../../public/icons/like.png";
 import Love from "../../../../../public/icons/love.png";
-import Sad from "../../../../../public/icons/sad.png";
 import Wow from "../../../../../public/icons/wow.png";
-import Image from 'next/image';
+
 interface Props {
   handleClose: () => void;
 }
@@ -57,11 +55,11 @@ const ReactList = ({handleClose}: Props) => {
             <Tab label={<Grid className='flex items-center'><Avatar sx={{width:'20px', height:'20px'}} src={Love.src}/> <Typography className='pl-1 p-0 text-sm opacity-[0.7]'>70</Typography></Grid>} {...a11yProps(2)} />
             <Tab label={<Grid className='flex items-center'><Avatar sx={{width:'20px', height:'20px'}} src={Wow.src}/> <Typography className='pl-1 p-0 text-sm opacity-[0.7]'>30</Typography></Grid>} {...a11yProps(3)} />
           </Tabs>
-          <IconButton onClick={handleClose} className="w-[30px] h-[30px] bg-bgButton dark:bg-[#707075] hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
+          <IconButton onClick={handleClose} className="text-textLight dark:text-textDark w-[30px] h-[30px] bg-bgButton dark:bg-[#707075] hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
                 <CloseIcon/>
             </IconButton>
         </Grid>
-          <Grid className='min-h-[20rem] max-h-[20rem] overflow-y-auto'>
+          <Grid className='min-h-[20rem] max-h-[20rem] overflow-y-auto scrollbar scrollbar-track-[transparent]'>
           <TabPanel value={value} index={0}>
             {[1,2,3,4,5,6,7,8,9].map((_, i)=> (
               <Grid key={i} className="w-full flex justify-between items-center my-3">

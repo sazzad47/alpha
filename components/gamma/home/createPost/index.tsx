@@ -1,8 +1,9 @@
 import React from 'react'
-import {Grid, Avatar, Button, Typography} from '@mui/material'
+import {Grid, Avatar, Typography} from '@mui/material'
 import CollectionsIcon from '@mui/icons-material/Collections';
 import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 import MoodIcon from '@mui/icons-material/Mood';
+import PostModal from './PostModal';
 
 
 const CreatePost = () => {
@@ -10,7 +11,7 @@ const CreatePost = () => {
     <Grid className='text-textLight dark:text-textDark w-full p-5 bg-bgLight dark:bg-bgDark flex flex-col'>
       <Grid className=' flex items-center'>
         <Avatar src="/user.jpg"/>
-        <Button className='focus:outline-none ml-3 flex justify-start w-full normal-case bg-bgButton dark:bg-[#707075] hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover rounded-[20px] text-textLight dark:text-textDark'>What are you thinking?</Button>
+        <PostModal/>
       </Grid>
       <hr className='my-3'/>
       <Grid className='w-full flex justify-between'>

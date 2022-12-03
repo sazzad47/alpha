@@ -1,18 +1,12 @@
-import * as React from 'react';
-import {Grid, Typography, Button, Avatar} from '@mui/material';
-import { styled } from '@mui/material/styles';
-import Dialog from '@mui/material/Dialog';
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
+import * as React from "react";
+import { Grid, Typography, Avatar } from "@mui/material";
+import Dialog from "@mui/material/Dialog";
 
 import Like from "../../../../../public/icons/like.png";
 import Love from "../../../../../public/icons/love.png";
-import Sad from "../../../../../public/icons/sad.png";
 import Wow from "../../../../../public/icons/wow.png";
-import ReactList from './ReactList';
-import { useTheme } from 'next-themes';
-
-
+import ReactList from "./ReactList";
+import { useTheme } from "next-themes";
 
 export default function ReactModal() {
   const { systemTheme, theme } = useTheme();
@@ -28,7 +22,7 @@ export default function ReactModal() {
 
   return (
     <div>
-        <Grid onClick={handleClickOpen} className="flex cursor-pointer">
+      <Grid onClick={handleClickOpen} className="flex cursor-pointer">
         <Avatar src={Like.src} sx={{ width: "20px", height: "20px" }} />
         <Avatar src={Love.src} sx={{ width: "20px", height: "20px" }} />
         <Avatar src={Wow.src} sx={{ width: "20px", height: "20px" }} />
@@ -36,19 +30,18 @@ export default function ReactModal() {
       </Grid>
       <Dialog
         sx={{
-          '& .MuiDialog-paper': {
-            backgroundColor: currentTheme === "dark"? "#474849": "#fff", minWidth:"30rem"
-          }
+          "& .MuiDialog-paper": {
+            backgroundColor: currentTheme === "dark" ? "#474849" : "#fff",
+            minWidth: "30rem",
+          },
         }}
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
       >
-        <Grid className='flex flex-col'>
-          
+        <Grid className="flex flex-col">
           <Grid className="flex justify-between items-center p-4">
-            <ReactList handleClose ={handleClose} />
-            
+            <ReactList handleClose={handleClose} />
           </Grid>
         </Grid>
       </Dialog>
