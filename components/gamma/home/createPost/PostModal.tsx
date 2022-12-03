@@ -52,12 +52,12 @@ export default function PostModal() {
         aria-labelledby="customized-dialog-title"
         open={open}
       >
-        <Grid className="text-textLight dark:text-textDark flex flex-col justify-start p-4">
+        <Grid className="h-[8rem] text-textLight dark:text-textDark flex flex-col justify-start p-4 pb-0">
           <Grid className="relative flex items-center justify-center w-full h-[2rem]">
             <Typography className="p-0">Create post</Typography>
             <IconButton
               onClick={handleClose}
-              className="text-textLight dark:text-textDark absolute right-0 w-[30px] h-[30px] bg-bgButton dark:bg-[#707075] hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover"
+              className="focus:outline-none text-textLight dark:text-textDark absolute right-0 w-[30px] h-[30px] bg-bgButton dark:bg-[#707075] hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover"
             >
               <CloseIcon />
             </IconButton>
@@ -75,8 +75,8 @@ export default function PostModal() {
               </Grid>
             </Grid>
           </Grid>
-          <ModalBody />
         </Grid>
+          <ModalBody />
       </Dialog>
     </div>
   );
@@ -103,16 +103,18 @@ const ModalBody = () => {
   };
 
   return (
-    <React.Fragment>
-      <Grid className="mt-4">
+    <Grid className="min-h-[18rem] p-4 flex flex-col justify-between">
+      <Grid className="">
         <textarea
           autoFocus
-          className="w-full min-h-[8rem] border-none outline-none bg-[transparent] resize-none scrollbar scrollbar-track-[transparent] text-textLight dark:text-textDark"
+          className="w-full border-none outline-none bg-[transparent] resize-none scrollbar scrollbar-track-[transparent] text-textLight dark:text-textDark"
           placeholder="What&lsquo;s on your mind?"
           onChange={handleComment}
           value={comment}
         />
       </Grid>
+      <Grid>
+
       <Grid className="relative">
         <IconButton
           onClick={() => setShowPicker((prev) => !prev)}
@@ -167,7 +169,8 @@ const ModalBody = () => {
             <Typography className=" p-0 normal-case text-textLight dark:text-textDark"> Post</Typography>
         </Button>
       </Grid>
+      </Grid>
       
-    </React.Fragment>
+    </Grid>
   );
 };
