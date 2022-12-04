@@ -1,33 +1,50 @@
 
 /* CSSTransition classes  */
-.post_audience-enter {
+.post_audience_modal-enter {
     position: absolute;
     transform: translateX(-110%);
   }
-  .post_audience-enter-active {
+  .post_audience_modal-enter-active {
     transform: translateX(0%);
     transition: all var(--speed) ease;
   }
-  .post_audience-exit {
+  .post_audience_modal-exit {
     position: absolute;
   }
-  .post_audience-exit-active {
+  .post_audience_modal-exit-active {
+    transform: translateX(-110%);
+    transition: all var(--speed) ease;
+  }
+
+
+.post_feelings_modal-enter {
+    position: absolute;
+    transform: translateX(-110%);
+  }
+  .post_feelings_modal-enter-active {
+    transform: translateX(0%);
+    transition: all var(--speed) ease;
+  }
+  .post_feelings_modal-exit {
+    position: absolute;
+  }
+  .post_feelings_modal-exit-active {
     transform: translateX(-110%);
     transition: all var(--speed) ease;
   }
   
   
-  .main_body-enter {
+  .post_main_modal-enter {
     transform: translateX(110%);
   }
-  .main_body-enter-active {
+  .post_main_modal-enter-active {
     transform: translateX(0%);
     transition: all var(--speed) ease;
   }
-  .main_body-exit {
+  .post_main_modal-exit {
   
   }
-  .main_body-exit-active {
+  .post_main_modal-exit-active {
     transform: translateX(110%);
     transition: all var(--speed) ease;
   }
