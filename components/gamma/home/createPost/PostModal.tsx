@@ -171,9 +171,9 @@ const ModalBody = ({setShowAudience, handleClose, postAudience}: Props) => {
               <Avatar src="/user.jpg" />
               <Grid className="flex flex-col ml-2">
                 <Typography className="p-0">Sazzad Hossen</Typography>
-                <Button onClick={()=> setShowAudience(true)} className="px-2 focus:outline-none flex items-center normal-case text-textLight dark:text-textDark bg-[#f0e1e1] dark:bg-[#707075] hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
+                <Button onClick={()=> setShowAudience(true)} className="focus:outline-none flex items-center normal-case text-textLight dark:text-textDark bg-[#f0e1e1] dark:bg-[#707075] hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
                    {postAudience.icon}
-                  <Typography className="pl-2 p-0 text-sm whitespace-nowrap ">{postAudience.audience}</Typography>
+                  <Typography className="px-2 p-0 text-sm whitespace-nowrap ">{postAudience.audience}</Typography>
                 </Button>
               </Grid>
             </Grid>
