@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Grid, IconButton, Typography, Divider, Avatar } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import SearchIcon from '@mui/icons-material/Search';
+import { ActionProps } from ".";
 
 const emojies = [
   {id: 1,
@@ -54,7 +55,7 @@ const emojies = [
   },
 ]
 interface Props {
-  setShowBody: Function;
+  setActions: Function;
   setFeeling: Function;
 }
 
@@ -63,7 +64,7 @@ export interface EmojiProps {
   icon?: string,
   title?: string
 }
-const Feelings = ({ setShowBody, setFeeling }: Props) => {
+const Feelings = ({ setActions, setFeeling }: Props) => {
   const [feelings, setFeelings] = useState<EmojiProps[]>(emojies)
   
   const handleFilterEmoji = (e: React.ChangeEvent<HTMLInputElement>)=> {
@@ -72,14 +73,14 @@ const Feelings = ({ setShowBody, setFeeling }: Props) => {
   }
   const handleAddFeeling = (emoji: EmojiProps) => {
     setFeeling(emoji);
-    setShowBody(true);
+    setActions((prevState: ActionProps)=> ({...prevState, showBody: true}));
   }
   return (
     <Grid className="audience_Modal text-textLight dark:text-textDark p-2">
       <Grid className="relative flex items-center justify-center w-full h-[2rem]">
         <Typography className="p-0">How are you feeling?</Typography>
         <IconButton
-          onClick={() => setShowBody(true)}
+          onClick={() => setActions((prevState: ActionProps)=> ({...prevState, showBody: true}))}
           className="focus:outline-none text-textLight dark:text-textDark absolute left-0 top-0 w-[30px] h-[30px] bg-bgButton dark:bg-[#707075] hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover"
         >
           <KeyboardBackspaceIcon />

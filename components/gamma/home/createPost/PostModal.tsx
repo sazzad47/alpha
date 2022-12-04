@@ -7,23 +7,29 @@ import { useTheme } from "next-themes";
 import Audience from "./Audience";
 import ModalBody from "./ModalBody";
 import Feelings, { EmojiProps } from "./Feelings";
+import { ActionProps } from ".";
 
 export interface AudienceProps {
   audience: string;
   icon: JSX.Element;
 }
-export default function PostModal() {
+interface Props {
+  actions: ActionProps;
+  setActions: Function;
+  open: boolean;
+  setOpen: Function;
+}
+export default function PostModal({actions, setActions, open, setOpen}: Props) {
+  const {showFeelingsModal, showBody} = actions;
   const [postAudience, setPostAudience] = useState<AudienceProps>({
     audience: "Public",
     icon: <PublicIcon className="text-sm" />,
   });
   const [showAudience, setShowAudience] = useState<boolean>(false);
-  const [showFeelingsModal, setShowFeelingsModal] = useState<boolean>(false);
-  const [showBody, setShowBody] = useState<boolean>(true);
   const [feeling, setFeeling] = useState<EmojiProps>({})
   const { systemTheme, theme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
-  const [open, setOpen] = React.useState(false);
+  
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -59,11 +65,11 @@ export default function PostModal() {
           in={showAudience}
           timeout={500}
           classNames="post_audience_modal"
-          onEnter={() => setShowBody(false)}
+          onEnter={() => setActions((prevState: ActionProps)=> ({...prevState, showBody: false}))}
           unmountOnExit
         >
           <Audience
-            setShowBody={setShowBody}
+            setActions= {setActions}
             postAudience={postAudience}
             setPostAudience={setPostAudience}
           />
@@ -72,11 +78,11 @@ export default function PostModal() {
           in={showFeelingsModal}
           timeout={500}
           classNames="post_feelings_modal"
-          onEnter={() => setShowBody(false)}
+          onEnter={() => setActions((prevState: ActionProps)=> ({...prevState, showBody: false}))}
           unmountOnExit
         >
           <Feelings
-            setShowBody={setShowBody}
+            setActions= {setActions}
             setFeeling={setFeeling}
           />
         </CSSTransition>
@@ -86,14 +92,15 @@ export default function PostModal() {
           classNames="post_main_modal"
           onEnter={() => {
             setShowAudience(false);
-            setShowFeelingsModal(false);
+            setActions((prevState: ActionProps)=> ({...prevState, showFeelingsModal: false}))
           }}
           unmountOnExit
         >
           <ModalBody
             postAudience={postAudience}
             setShowAudience={setShowAudience}
-            setShowFeelingsModal={setShowFeelingsModal}
+            actions={actions}
+            setActions={setActions}
             feeling={feeling}
             handleClose={handleClose}
           />

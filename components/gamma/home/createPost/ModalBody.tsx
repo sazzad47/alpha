@@ -20,6 +20,8 @@ import { Theme } from "emoji-picker-react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { EmojiProps } from "./Feelings";
+import { AudienceProps } from "./PostModal";
+import { ActionProps } from ".";
 
 const Picker = dynamic(
     () => {
@@ -31,19 +33,17 @@ const Picker = dynamic(
   interface Props {
     setShowAudience: Function;
     handleClose: () => void;
-    postAudience: {
-      audience: string;
-      icon: JSX.Element;
-  };
-  setShowFeelingsModal: Function;
-  feeling: EmojiProps;
+    postAudience: AudienceProps;
+    actions: ActionProps;
+    setActions: Function;
+    feeling: EmojiProps;
   }
-  const ModalBody = ({setShowAudience, handleClose, postAudience, setShowFeelingsModal, feeling}: Props) => {
+  const ModalBody = ({setShowAudience, handleClose, postAudience, actions, setActions, feeling}: Props) => {
+    const {showImageUploader, showVideoUploader} = actions;
     const fileInputRef = useRef<HTMLInputElement>(null);
     const [comment, setComment] = useState<string>("");
     const [files, setFiles] = useState<string[]>([]);
-    const [showImageUploader, setShowImageUploader] = useState<boolean>(false);
-    const [showVideoUploader, setShowVideoUploader] = useState<boolean>(false);
+    
     const [showPicker, setShowPicker] = useState<boolean>(false);
     const { systemTheme, theme } = useTheme();
     const currentTheme = theme === "system" ? systemTheme : theme;
@@ -56,8 +56,8 @@ const Picker = dynamic(
       setComment((prevInput) => prevInput + emojiObject.emoji);
     };
     const closeFileUploader = () => {
-      setShowImageUploader(false);
-      setShowVideoUploader(false);
+      setActions((prevState: ActionProps)=> ({...prevState, showImageUploader: false}))
+      setActions((prevState: ActionProps)=> ({...prevState, showVideoUploader: false}))
       setFiles([]);
     };
     const handleDragOver = (e: DragEvent<HTMLDivElement>) => {
@@ -213,8 +213,8 @@ const Picker = dynamic(
                 <Tooltip title="Add photo">
                   <IconButton
                     onClick={() => {
-                      setShowImageUploader(true);
-                      setShowVideoUploader(false);
+                      setActions((prevState: ActionProps)=> ({...prevState, showImageUploader: true}))
+                      setActions((prevState: ActionProps)=> ({...prevState, showVideoUploader: false}))
                     }}
                     className="text-textLight dark:text-textDark focus:outline-none hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover"
                   >
@@ -224,15 +224,15 @@ const Picker = dynamic(
                 <Tooltip title="Add Video">
                   <IconButton 
                    onClick={() => {
-                    setShowImageUploader(false);
-                    setShowVideoUploader(true);
+                    setActions((prevState: ActionProps)=> ({...prevState, showImageUploader: false}))
+                    setActions((prevState: ActionProps)=> ({...prevState, showVideoUploader: true}))
                   }}
                   className="text-textLight dark:text-textDark focus:outline-none hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
                     <VideoLibraryIcon />
                   </IconButton>
                 </Tooltip>
                 <Tooltip title="Add Feeling">
-                  <IconButton onClick={()=> setShowFeelingsModal(true)} className="text-textLight dark:text-textDark focus:outline-none hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
+                  <IconButton onClick={()=> setActions((prevState: ActionProps)=> ({...prevState, showFeelingsModal: true}))} className="text-textLight dark:text-textDark focus:outline-none hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
                     <MoodIcon />
                   </IconButton>
                 </Tooltip>

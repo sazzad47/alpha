@@ -5,20 +5,21 @@ import PublicIcon from "@mui/icons-material/Public";
 import GroupIcon from "@mui/icons-material/Group";
 import LockIcon from "@mui/icons-material/Lock";
 import { AudienceProps } from "./PostModal";
+import { ActionProps } from ".";
 
 interface Props {
-  setShowBody: Function;
+  setActions: Function;
   postAudience: AudienceProps;
   setPostAudience: Function;
 }
 
-const Audience = ({ setShowBody, setPostAudience, postAudience }: Props) => {
+const Audience = ({ setActions, setPostAudience, postAudience }: Props) => {
   return (
     <Grid className="audience_Modal text-textLight dark:text-textDark p-2">
       <Grid className="relative flex items-center justify-center w-full h-[2rem]">
         <Typography className="p-0">Post audience</Typography>
         <IconButton
-          onClick={() => setShowBody(true)}
+          onClick={() => setActions((prevState: ActionProps)=> ({...prevState, showBody: true}))}
           className="focus:outline-none text-textLight dark:text-textDark absolute left-0 top-0 w-[30px] h-[30px] bg-bgButton dark:bg-[#707075] hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover"
         >
           <KeyboardBackspaceIcon />
@@ -65,7 +66,7 @@ const Audience = ({ setShowBody, setPostAudience, postAudience }: Props) => {
                   audience: "Public",
                   icon: <PublicIcon className="text-sm" />,
                 });
-                setShowBody(true);
+                setActions((prevState: ActionProps)=> ({...prevState, showBody: true}))
               }}
             />
           </Grid>
@@ -98,7 +99,7 @@ const Audience = ({ setShowBody, setPostAudience, postAudience }: Props) => {
                   audience: "Friends",
                   icon: <GroupIcon className="text-sm" />,
                 });
-                setShowBody(true);
+                setActions((prevState: ActionProps)=> ({...prevState, showBody: true}))
               }}
             />
           </Grid>
@@ -128,7 +129,7 @@ const Audience = ({ setShowBody, setPostAudience, postAudience }: Props) => {
                   audience: "Only me",
                   icon: <LockIcon className="text-sm" />,
                 });
-                setShowBody(true);
+                setActions((prevState: ActionProps)=> ({...prevState, showBody: true}))
               }}
             />
           </Grid>
