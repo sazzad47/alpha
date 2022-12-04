@@ -6,7 +6,56 @@ import SearchIcon from '@mui/icons-material/Search';
 interface Props {
   setShowBody: Function;
 }
-
+const emojies = [
+  {id: 1,
+   icon: "😊",
+   title: "happy",
+   },
+  {id: 2,
+   icon: "😍",
+   title: "lovely",
+   },
+  {id: 3,
+   icon: "🥰",
+   title: "loved",
+   },
+  {id: 4,
+   icon: "😞",
+   title: "sad",
+   },
+  {id: 5,
+   icon: "😇",
+   title: "blessed",
+   },
+  {id: 6,
+   icon: "😴",
+   title: "tired",
+   },
+  {id: 7,
+   icon: "😌",
+   title: "relaxed",
+   },
+  {id: 8,
+   icon: "😠",
+   title: "angry",
+   },
+  {id: 9,
+   icon: "😟",
+   title: "worried",
+   },
+  {id: 10,
+   icon: "😔",
+   title: "alone",
+   },
+  {id: 11,
+   icon: "🤩",
+   title: "excited",
+   },
+  {id: 12,
+   icon: "😀",
+   title: "thankful",
+   },
+]
 const Feelings = ({ setShowBody }: Props) => {
   return (
     <Grid className="audience_Modal text-textLight dark:text-textDark p-2">
@@ -26,12 +75,14 @@ const Feelings = ({ setShowBody }: Props) => {
         <input className="focus:outline-none w-full bg-bgButton dark:bg-bgButtonDark"/>
         </Grid>
       </Grid>
-      {/* <Grid container>
-        <Grid item xs={6} className="flex justify-start items-center">
-            <Avatar sx={{width: '40px', height: '40px'}}>icon</Avatar>
-            <Typography className="p-0 pl-2">happy</Typography>
-        </Grid>
-      </Grid> */}
+      <Grid container className="w-full my-3 overflow-y-auto scrollbar scrollbar-track-transparent max-h-[18rem]">
+        {emojies.map((emoji)=> (
+           <Grid key={emoji.id} item xs={6} className="w-full flex justify-start items-center hover:bg-bgButton dark:hover:bg-bgButtonDark px-3 py-2 rounded-lg">
+           <Avatar sx={{width: '40px', height: '40px'}}>{emoji.icon}</Avatar>
+           <Typography className="p-0 pl-2">{emoji.title}</Typography>
+       </Grid>
+        ))}
+      </Grid>
     </Grid>
   );
 };
