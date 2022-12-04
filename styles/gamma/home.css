@@ -1,0 +1,33 @@
+
+/* CSSTransition classes  */
+.post_audience-enter {
+    position: absolute;
+    transform: translateX(-110%);
+  }
+  .post_audience-enter-active {
+    transform: translateX(0%);
+    transition: all var(--speed) ease;
+  }
+  .post_audience-exit {
+    position: absolute;
+  }
+  .post_audience-exit-active {
+    transform: translateX(-110%);
+    transition: all var(--speed) ease;
+  }
+  
+  
+  .main_body-enter {
+    transform: translateX(110%);
+  }
+  .main_body-enter-active {
+    transform: translateX(0%);
+    transition: all var(--speed) ease;
+  }
+  .main_body-exit {
+  
+  }
+  .main_body-exit-active {
+    transform: translateX(110%);
+    transition: all var(--speed) ease;
+  }

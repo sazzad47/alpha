@@ -26,7 +26,7 @@ const RightBar = () => {
               <Button className="focus:outline-none bg-[#f0e1e1] hover:bg-bgButtonHover dark:bg-[#707075] dark:hover:bg-bgButtonDarkHover text-textLight dark:text-textDark capitalize text-sm">
                 Confirm
               </Button>
-              <Button className="focus:outline-none bg-bgButton hover:bg-bgButtonHover dark:bg-bgButtonDark dark:hover:bg-bgButtonDarkHover text-textLight dark:text-textDark capitalize text-sm">
+              <Button className="focus:outline-none bg-bgLight hover:bg-bgButtonHover dark:bg-bgDark dark:hover:bg-bgButtonDarkHover text-textLight dark:text-textDark capitalize text-sm">
                 Cancel
               </Button>
             </Grid>
