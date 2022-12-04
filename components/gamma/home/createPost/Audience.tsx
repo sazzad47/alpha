@@ -3,14 +3,16 @@ import { Grid, IconButton, Typography, Divider, Avatar } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import PublicIcon from "@mui/icons-material/Public";
 import GroupIcon from "@mui/icons-material/Group";
-import LockIcon from '@mui/icons-material/Lock';
+import LockIcon from "@mui/icons-material/Lock";
+import { AudienceProps } from "./PostModal";
 
 interface Props {
   setShowBody: Function;
+  postAudience: AudienceProps;
   setPostAudience: Function;
 }
 
-const Audience = ({ setShowBody, setPostAudience }: Props) => {
+const Audience = ({ setShowBody, setPostAudience, postAudience }: Props) => {
   return (
     <Grid className="audience_Modal text-textLight dark:text-textDark p-2">
       <Grid className="relative flex items-center justify-center w-full h-[2rem]">
@@ -57,7 +59,14 @@ const Audience = ({ setShowBody, setPostAudience }: Props) => {
               name="audience"
               id="public"
               className="w-[20px] h-[20px]"
-              onChange={()=> setPostAudience({audience: "Public", icon: <PublicIcon className="text-sm"/>})}
+              checked={postAudience.audience === "Public"}
+              onChange={() => {
+                setPostAudience({
+                  audience: "Public",
+                  icon: <PublicIcon className="text-sm" />,
+                });
+                setShowBody(true);
+              }}
             />
           </Grid>
           <Grid
@@ -83,7 +92,14 @@ const Audience = ({ setShowBody, setPostAudience }: Props) => {
               name="audience"
               id="friends"
               className="w-[20px] h-[20px]"
-              onChange={()=> setPostAudience({audience: "Friends", icon: <GroupIcon className="text-sm"/>})}
+              checked={postAudience.audience === "Friends"}
+              onChange={() => {
+                setPostAudience({
+                  audience: "Friends",
+                  icon: <GroupIcon className="text-sm" />,
+                });
+                setShowBody(true);
+              }}
             />
           </Grid>
           <Grid
@@ -106,7 +122,14 @@ const Audience = ({ setShowBody, setPostAudience }: Props) => {
               name="audience"
               id="onlyMe"
               className="w-[20px] h-[20px]"
-              onChange={()=> setPostAudience({audience: "Only me", icon: <LockIcon className="text-sm"/>})}
+              checked={postAudience.audience === "Only me"}
+              onChange={() => {
+                setPostAudience({
+                  audience: "Only me",
+                  icon: <LockIcon className="text-sm" />,
+                });
+                setShowBody(true);
+              }}
             />
           </Grid>
         </Grid>

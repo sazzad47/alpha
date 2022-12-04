@@ -8,10 +8,8 @@ import {
   Avatar,
   Tooltip,
 } from "@mui/material";
-import {CSSTransition} from 'react-transition-group';
 import Dialog from "@mui/material/Dialog";
 import CloseIcon from "@mui/icons-material/Close";
-import PublicIcon from "@mui/icons-material/Public";
 import InsertEmoticonIcon from "@mui/icons-material/InsertEmoticon";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
@@ -21,6 +19,7 @@ import { useTheme } from "next-themes";
 import { Theme } from "emoji-picker-react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import { EmojiProps } from "./Feelings";
 
 const Picker = dynamic(
     () => {
@@ -37,8 +36,9 @@ const Picker = dynamic(
       icon: JSX.Element;
   };
   setShowFeelingsModal: Function;
+  feeling: EmojiProps;
   }
-  const ModalBody = ({setShowAudience, handleClose, postAudience, setShowFeelingsModal}: Props) => {
+  const ModalBody = ({setShowAudience, handleClose, postAudience, setShowFeelingsModal, feeling}: Props) => {
     const fileInputRef = useRef<HTMLInputElement>(null);
     const [comment, setComment] = useState<string>("");
     const [files, setFiles] = useState<string[]>([]);
@@ -104,8 +104,8 @@ const Picker = dynamic(
               <Grid className="flex items-center">
                 <Avatar src="/user.jpg" />
                 <Grid className="flex flex-col ml-2">
-                  <Typography className="p-0">Sazzad Hossen</Typography>
-                  <Button onClick={()=> setShowAudience(true)} className="focus:outline-none flex items-center normal-case text-textLight dark:text-textDark bg-[#f0e1e1] dark:bg-[#707075] hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
+                  <Typography className="p-0">Sazzad Hossen {feeling && `is ${feeling.icon} feeling ${feeling.title} `}</Typography>
+                  <Button onClick={()=> setShowAudience(true)} className="max-w-[6rem] focus:outline-none flex items-center normal-case text-textLight dark:text-textDark bg-[#f0e1e1] dark:bg-[#707075] hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
                      {postAudience.icon}
                     <Typography className="px-2 p-0 text-sm whitespace-nowrap ">{postAudience.audience}</Typography>
                   </Button>

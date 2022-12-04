@@ -6,19 +6,21 @@ import PublicIcon from "@mui/icons-material/Public";
 import { useTheme } from "next-themes";
 import Audience from "./Audience";
 import ModalBody from "./ModalBody";
-import Feelings from "./Feelings";
+import Feelings, { EmojiProps } from "./Feelings";
 
+export interface AudienceProps {
+  audience: string;
+  icon: JSX.Element;
+}
 export default function PostModal() {
-  const [postAudience, setPostAudience] = useState<{
-    audience: string;
-    icon: JSX.Element;
-  }>({
+  const [postAudience, setPostAudience] = useState<AudienceProps>({
     audience: "Public",
     icon: <PublicIcon className="text-sm" />,
   });
   const [showAudience, setShowAudience] = useState<boolean>(false);
   const [showFeelingsModal, setShowFeelingsModal] = useState<boolean>(false);
   const [showBody, setShowBody] = useState<boolean>(true);
+  const [feeling, setFeeling] = useState<EmojiProps>({})
   const { systemTheme, theme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
   const [open, setOpen] = React.useState(false);
@@ -62,6 +64,7 @@ export default function PostModal() {
         >
           <Audience
             setShowBody={setShowBody}
+            postAudience={postAudience}
             setPostAudience={setPostAudience}
           />
         </CSSTransition>
@@ -74,6 +77,7 @@ export default function PostModal() {
         >
           <Feelings
             setShowBody={setShowBody}
+            setFeeling={setFeeling}
           />
         </CSSTransition>
         <CSSTransition
@@ -90,6 +94,7 @@ export default function PostModal() {
             postAudience={postAudience}
             setShowAudience={setShowAudience}
             setShowFeelingsModal={setShowFeelingsModal}
+            feeling={feeling}
             handleClose={handleClose}
           />
         </CSSTransition>

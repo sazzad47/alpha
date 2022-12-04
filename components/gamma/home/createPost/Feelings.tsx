@@ -1,17 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid, IconButton, Typography, Divider, Avatar } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import SearchIcon from '@mui/icons-material/Search';
 
-interface Props {
-  setShowBody: Function;
-}
 const emojies = [
   {id: 1,
    icon: "😊",
    title: "happy",
    },
-  {id: 2,
+   {id: 2,
    icon: "😍",
    title: "lovely",
    },
@@ -32,31 +29,51 @@ const emojies = [
    title: "tired",
    },
   {id: 7,
-   icon: "😌",
-   title: "relaxed",
-   },
+    icon: "😌",
+    title: "relaxed",
+  },
   {id: 8,
-   icon: "😠",
-   title: "angry",
-   },
+    icon: "😠",
+    title: "angry",
+  },
   {id: 9,
-   icon: "😟",
-   title: "worried",
-   },
+    icon: "😟",
+    title: "worried",
+  },
   {id: 10,
-   icon: "😔",
-   title: "alone",
-   },
+    icon: "😔",
+    title: "alone",
+  },
   {id: 11,
-   icon: "🤩",
-   title: "excited",
-   },
+    icon: "🤩",
+    title: "excited",
+  },
   {id: 12,
-   icon: "😀",
-   title: "thankful",
-   },
+    icon: "😀",
+    title: "thankful",
+  },
 ]
-const Feelings = ({ setShowBody }: Props) => {
+interface Props {
+  setShowBody: Function;
+  setFeeling: Function;
+}
+
+export interface EmojiProps {
+  id?: number,
+  icon?: string,
+  title?: string
+}
+const Feelings = ({ setShowBody, setFeeling }: Props) => {
+  const [feelings, setFeelings] = useState<EmojiProps[]>(emojies)
+  
+  const handleFilterEmoji = (e: React.ChangeEvent<HTMLInputElement>)=> {
+    const filteredEmoji = emojies.filter(emoji=> emoji.title.includes(e.target.value.toLowerCase()))
+    setFeelings(filteredEmoji)
+  }
+  const handleAddFeeling = (emoji: EmojiProps) => {
+    setFeeling(emoji);
+    setShowBody(true);
+  }
   return (
     <Grid className="audience_Modal text-textLight dark:text-textDark p-2">
       <Grid className="relative flex items-center justify-center w-full h-[2rem]">
@@ -72,12 +89,12 @@ const Feelings = ({ setShowBody }: Props) => {
       <Grid>
         <Grid className="min-w-full flex items-center justify-start h-[2.5rem] bg-bgButton dark:bg-bgButtonDark rounded-3xl px-2">
         <SearchIcon/>
-        <input className="focus:outline-none w-full bg-bgButton dark:bg-bgButtonDark"/>
+        <input onChange={handleFilterEmoji} placeholder="Search" className="px-2 focus:outline-none w-full bg-bgButton dark:bg-bgButtonDark"/>
         </Grid>
       </Grid>
       <Grid container className="w-full my-3 overflow-y-auto scrollbar scrollbar-track-transparent max-h-[18rem]">
-        {emojies.map((emoji)=> (
-           <Grid key={emoji.id} item xs={6} className="w-full flex justify-start items-center hover:bg-bgButton dark:hover:bg-bgButtonDark px-3 py-2 rounded-lg">
+        {feelings.map((emoji)=> (
+           <Grid key={emoji.id} item xs={6} onClick={()=> handleAddFeeling(emoji)} className="w-full cursor-pointer flex justify-start items-center hover:bg-bgButton dark:hover:bg-bgButtonDark px-3 py-2 rounded-lg">
            <Avatar sx={{width: '40px', height: '40px'}}>{emoji.icon}</Avatar>
            <Typography className="p-0 pl-2">{emoji.title}</Typography>
        </Grid>
