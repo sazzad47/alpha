@@ -19,7 +19,12 @@ const Audience = ({ setActions, setPostAudience, postAudience }: Props) => {
       <Grid className="relative flex items-center justify-center w-full h-[2rem]">
         <Typography className="p-0">Post audience</Typography>
         <IconButton
-          onClick={() => setActions((prevState: ActionProps)=> ({...prevState, showBody: true}))}
+          onClick={() =>
+            setActions((prevState: ActionProps) => ({
+              ...prevState,
+              showBody: true,
+            }))
+          }
           className="focus:outline-none text-textLight dark:text-textDark absolute left-0 top-0 w-[30px] h-[30px] bg-bgButton dark:bg-[#707075] hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover"
         >
           <KeyboardBackspaceIcon />
@@ -66,7 +71,10 @@ const Audience = ({ setActions, setPostAudience, postAudience }: Props) => {
                   audience: "Public",
                   icon: <PublicIcon className="text-sm" />,
                 });
-                setActions((prevState: ActionProps)=> ({...prevState, showBody: true}))
+                setActions((prevState: ActionProps) => ({
+                  ...prevState,
+                  showBody: true,
+                }));
               }}
             />
           </Grid>
@@ -99,7 +107,10 @@ const Audience = ({ setActions, setPostAudience, postAudience }: Props) => {
                   audience: "Friends",
                   icon: <GroupIcon className="text-sm" />,
                 });
-                setActions((prevState: ActionProps)=> ({...prevState, showBody: true}))
+                setActions((prevState: ActionProps) => ({
+                  ...prevState,
+                  showBody: true,
+                }));
               }}
             />
           </Grid>
@@ -129,7 +140,10 @@ const Audience = ({ setActions, setPostAudience, postAudience }: Props) => {
                   audience: "Only me",
                   icon: <LockIcon className="text-sm" />,
                 });
-                setActions((prevState: ActionProps)=> ({...prevState, showBody: true}))
+                setActions((prevState: ActionProps) => ({
+                  ...prevState,
+                  showBody: true,
+                }));
               }}
             />
           </Grid>

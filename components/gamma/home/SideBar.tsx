@@ -11,6 +11,7 @@ import {
 import Image from "next/image";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Link from "next/link";
 
 
 const SideBar = () => {
@@ -24,10 +25,12 @@ const SideBar = () => {
 
   return (
     <Grid className="w-[15rem] h-[90vh] pb-5 fixed overflow-y-auto left-0 bg-bgLight dark:bg-bgDark flex flex-col p-3 text-textLight dark:text-textDark">
+      <Link href="/gamma/profiles/123">
       <Grid className="w-full flex justify-start items-center">
         <Avatar src="/user.jpg" />
-        <Typography className="pl-4">Sazzad Hossen</Typography>
+        <Typography className="pl-4 text-textLight dark:text-textDark">Sazzad Hossen</Typography>
       </Grid>
+      </Link>
       <Divider className="my-3" />
       <Typography className="p-0">Pages</Typography>
       <List>

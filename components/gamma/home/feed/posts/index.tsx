@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import { Grid, Avatar, Typography } from "@mui/material";
 import PublicIcon from "@mui/icons-material/Public";
-import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
-import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
-import { FaShare } from "react-icons/fa";
 import MoreMenus from "./MoreMenus";
-import Comment from "./comment";
 import Angry from "../../../../../public/icons/angry.png";
 import Care from "../../../../../public/icons/care.png";
 import Haha from "../../../../../public/icons/haha.png";
@@ -14,6 +10,7 @@ import Love from "../../../../../public/icons/love.png";
 import Sad from "../../../../../public/icons/sad.png";
 import Wow from "../../../../../public/icons/wow.png";
 import Actions from "./Actions";
+import Link from "next/link";
 
 interface Props {
   children: string;
@@ -47,8 +44,6 @@ const icons = [
   { id: 7, icon: Angry },
 ];
 const Posts = () => {
-  
-
   return (
     <React.Fragment>
       {[1, 2, 3, 4, 5].map((_, i) => (
@@ -60,9 +55,15 @@ const Posts = () => {
           <Grid item xs={12} className="flex flex-col">
             <Grid className="flex items-center justify-between">
               <Grid className="flex items-start">
-                <Avatar src="/user.jpg" />
+                <Link href="/gamma/profiles/123">
+                  <Avatar src="/user.jpg" />
+                </Link>
                 <Grid className="flex flex-col justify-start mt-[-2px]">
-                  <Typography className="p-0 pl-2">Arif Azad</Typography>
+                  <Link href="/gamma/profiles/123">
+                    <Typography className="p-0 pl-2 text-textLight dark:text-textDark">
+                      Arif Azad
+                    </Typography>
+                  </Link>
                   <Typography className="p-0 pl-2 text-sm">
                     8h <PublicIcon className="text-sm" />
                   </Typography>
@@ -81,8 +82,8 @@ const Posts = () => {
               atoms, and then proceed to talk about the protons, neutrons and
               electrons that make up an atom
             </ReadMore>
-           
-            <Actions/>
+
+            <Actions />
           </Grid>
         </Grid>
       ))}
@@ -90,43 +91,4 @@ const Posts = () => {
   );
 };
 
-const LikeButton = () => {
-  const [isShownReactBox, setIsShownReactBox] = useState<boolean>(false);
-  return (
-    <Grid
-      onMouseEnter={() => setIsShownReactBox(true)}
-      onMouseLeave={() => setIsShownReactBox(false)}
-      className="like_button flex cursor-pointer px-5 py-2 rounded-sm hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover"
-    >
-      <ThumbUpOffAltIcon />
-      <Typography className="pl-2 p-0">Like</Typography>
-      <Grid
-        className={`reaction_box absolute z-[100] translate-y-[-35px] flex ${
-          isShownReactBox ? "visible" : "invisible"
-        }`}
-      >
-        {icons.map((item) => (
-          <Grid key={item.id} className="mr-2">
-            <Avatar
-              sx={{ width: "30px", height: "30px" }}
-              src={item.icon.src}
-            />
-          </Grid>
-        ))}
-      </Grid>
-    </Grid>
-  );
-};
-
-interface CommentProps {
-  setShowCommentBox: Function;
-}
-const CommentButton = ({setShowCommentBox}: CommentProps) => {
-  return (
-    <Grid onClick={()=> setShowCommentBox(true)} className="flex items-center justify-center cursor-pointer px-5 py-2 rounded-sm hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
-      <ChatBubbleOutlineIcon />
-      <Typography className="pl-2 p-0">Comment</Typography>
-    </Grid>
-  );
-};
-export default Posts;
+export default Posts
