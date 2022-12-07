@@ -1,11 +1,15 @@
+import { Grid } from '@mui/material'
 import React from 'react'
 import ProfileLayout from './Layout'
 
 const Friends = () => {
   return (
-    <ProfileLayout>
+    <Grid>
+      <ProfileLayout/>
         <div>Friends</div>
-    </ProfileLayout>
+     
+    </Grid>
+   
   )
 }
 

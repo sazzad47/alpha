@@ -7,9 +7,9 @@ import ProfileLayout from './Layout';
 const About = () => {
   return (
     <Grid>
-      <ProfileLayout>
+      <ProfileLayout/>
         <div>About</div>
-      </ProfileLayout>
+     
     </Grid>
   )
 }

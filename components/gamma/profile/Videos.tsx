@@ -1,11 +1,14 @@
+import { Grid } from '@mui/material'
 import React from 'react'
 import ProfileLayout from './Layout'
 
 const Videos = () => {
   return (
-    <ProfileLayout>
+    <Grid>
+      <ProfileLayout/>
         <div>Videos</div>
-    </ProfileLayout>
+     
+    </Grid>
   )
 }
 
