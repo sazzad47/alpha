@@ -1,4 +1,4 @@
-import React, {ReactNode, useRef } from "react";
+import React, { useRef, ReactNode } from "react";
 import { Grid, Button, Avatar, Typography, IconButton, Divider } from "@mui/material";
 import Image from "next/image";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
@@ -9,7 +9,8 @@ import Link from "next/link";
 type Props = {
   children?: ReactNode
 }
-const Layout = ({children}: Props) => {
+
+const ProfileLayout = ({ children }: Props) => {
   const coverPhotoInput = useRef<HTMLInputElement>(null);
   const profilePhotoInput = useRef<HTMLInputElement>(null);
 
@@ -114,11 +115,9 @@ const Layout = ({children}: Props) => {
         <Link href="/gamma/profiles/123/photos">Photos</Link>
         <Link href="/gamma/profiles/123/videos">Videos</Link>
       </Grid>
-      <Grid>
-        {children}
-      </Grid>
+      {children}
     </Grid>
   );
 };
 
-export default Layout;
+export default ProfileLayout;

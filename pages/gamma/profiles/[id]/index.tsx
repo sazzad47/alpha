@@ -1,12 +1,12 @@
-import { NextPage } from "next";
-import Profile from "../../../../components/gamma/profile/Layout";
+import { NextPage } from 'next';
+import Posts from '../../../../components/gamma/profile/Posts'
 import Layout from "../../../../components/gamma/Layout";
 
 
 const Page: NextPage = () => {
   return (
     <Layout>
-        <Profile />
+        <Posts />
     </Layout>
   );
 };
