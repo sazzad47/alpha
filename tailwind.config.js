@@ -17,9 +17,13 @@ module.exports = {
         "textLight": "var(--textLight)",
         "textDark": "var(--textDark)",
         "bgButton": "var(--bgButton)",
+        "bgButtonSecondary": "var(--bgButtonSecondary)",
         "bgButtonHover": "var(--bgButtonHover)",
+        "bgButtonSecondaryHover": "var(--bgButtonSecondaryHover)",
         "bgButtonDark": "var(--bgButtonDark)",
+        "bgButtonSecondaryDark": "var(--bgButtonSecondaryDark)",
         "bgButtonDarkHover": "var(--bgButtonDarkHover)",
+        "bgButtonSecondaryDarkHover": "var(--bgButtonSecondaryDarkHover)",
       },
       flex: {
         'video-slider': '0 0 25%'

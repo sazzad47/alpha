@@ -30,9 +30,13 @@
   --textLight: #000;
   --textDark: #fff;
   --bgButton: #f0e1e1;
+  --bgButtonSecondary: #0f5edd;
   --bgButtonHover: #0be0e7;
+  --bgButtonSecondaryHover: #5790ec;
   --bgButtonDark: #707075;
+  --bgButtonSecondaryDark: #242429;
   --bgButtonDarkHover: #5a5c5e;
+  --bgButtonSecondaryDarkHover: #393941;
   --color-dark: #151C35;
   --color-secodary-dark: #464C70;
   --color-primary: #EE709D;
