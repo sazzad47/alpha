@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import Layout from "../../../../components/gamma/Layout";
-import About from "../../../../components/gamma/profile/About";
+import About from "../../../../components/gamma/profile/about";
 
 
 const Page: NextPage = () => {
