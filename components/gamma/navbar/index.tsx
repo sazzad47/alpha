@@ -49,7 +49,7 @@ export default function Navbar() {
                 <LiveTvIcon />
               </Button>
             </Tooltip>
-            <Tooltip title="Watch">
+            <Tooltip title="News">
               <Button className="ml-2 w-[2rem] h-[2.5rem] rounded-[10px] focus:outline-none text-textLight dark:text-textDark hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
                 <ConnectedTvIcon />
               </Button>
