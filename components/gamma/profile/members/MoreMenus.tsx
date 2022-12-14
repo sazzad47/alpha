@@ -67,7 +67,7 @@ export default function MoreMenus() {
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
         <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-          <DoNotDisturbOnIcon /> <Grid className="ml-2">Unfriend</Grid>
+          <DoNotDisturbOnIcon /> <Grid className="ml-2">Remove member</Grid>
         </MenuItem>
         <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
           <BlockIcon />{" "}

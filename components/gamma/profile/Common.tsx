@@ -13,7 +13,7 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import About from "./about";
 import Videos from "./videos";
-import Friends from "./friends";
+import Members from "./members";
 import Photos from "./photos";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import EditIcon from "@mui/icons-material/Edit";
@@ -85,7 +85,7 @@ const Common = () => {
               <Typography className="p-0 pl-5 text-2xl">
                 Sazzad Hossen
               </Typography>
-              <Typography className="p-0 pl-5">1.2k friends</Typography>
+              <Typography className="p-0 pl-5">1.2k members</Typography>
             </Grid>
           </Grid>
           <Grid className="">
@@ -117,7 +117,7 @@ const Common = () => {
         >
           <Tab label="Posts" {...a11yProps(0)} />
           <Tab label="About" {...a11yProps(1)} />
-          <Tab label="Friends" {...a11yProps(2)} />
+          <Tab label="Members" {...a11yProps(2)} />
           <Tab label="Photos" {...a11yProps(3)} />
           <Tab label="Videos" {...a11yProps(4)} />
         </Tabs>
@@ -130,7 +130,7 @@ const Common = () => {
           <About />
         </TabPanel>
         <TabPanel value={value} index={2}>
-          <Friends />
+          <Members />
         </TabPanel>
         <TabPanel value={value} index={3}>
           <Photos />

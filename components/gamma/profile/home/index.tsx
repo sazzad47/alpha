@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import Photos from "./Photos";
-import Friends from "./Friends";
+import Members from "./Members";
 import Intro from "./Intro";
 import Posts from "./posts";
 import CreatePost from "./createPost";
@@ -12,7 +12,7 @@ const Home = () => {
       <Grid className="w-[40%]">
         <Intro />
         <Photos />
-        <Friends />
+        <Members />
       </Grid>
       <Grid className="flex flex-col gap-5 w-[60%] mb-5">
         <CreatePost/>

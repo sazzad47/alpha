@@ -5,11 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import MoreMenus from "./MoreMenus";
 
-const Friends = () => {
+const Members = () => {
   return (
     <Grid className="flex flex-col p-4 w-full my-5 bg-bgLight dark:bg-bgDark">
       <Grid className="w-full flex justify-between">
-        <Typography className="p-0">Friends</Typography>
+        <Typography className="p-0">Members</Typography>
         <EditPrivacy />
       </Grid>
       <Grid className="w-full flex flex-wrap justify-between gap-[1rem] mt-5">
@@ -43,4 +43,4 @@ const Friends = () => {
   );
 };
 
-export default Friends;
+export default Members;
