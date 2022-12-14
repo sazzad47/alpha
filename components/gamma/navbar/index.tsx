@@ -9,6 +9,7 @@ import LiveTvIcon from "@mui/icons-material/LiveTv";
 import { BsMessenger } from "react-icons/bs";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import ConnectedTvIcon from '@mui/icons-material/ConnectedTv';
+import GroupIcon from '@mui/icons-material/Group';
 
 import AppsMenu from "./AppsMenu";
 import SearchBar from "./SearchBar";
@@ -33,6 +34,13 @@ export default function Navbar() {
                   <HomeIcon />
                 </Button>
               </Tooltip>
+            </Link>
+            <Link href="/gamma/friends">
+            <Tooltip title="Members">
+              <Button className="ml-2 w-[2rem] h-[2.5rem] rounded-[10px] focus:outline-none text-textLight dark:text-textDark hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
+                <GroupIcon />
+              </Button>
+            </Tooltip>
             </Link>
             <Link href="/gamma/groups">
             <Tooltip title="Group">

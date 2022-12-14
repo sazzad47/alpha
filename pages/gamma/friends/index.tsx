@@ -1,12 +1,12 @@
 import { NextPage } from "next";
-import Groups from "../../../components/gamma/groups";
+import Friends from "../../../components/gamma/friends";
 import Layout from "../../../components/gamma/Layout";
 
 
 const Page: NextPage = () => {
   return (
     <Layout>
-        <Groups />
+        <Friends />
     </Layout>
   );
 };

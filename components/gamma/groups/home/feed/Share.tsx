@@ -1,19 +1,17 @@
 import * as React from "react";
 import { useTheme } from "next-themes";
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import IconButton from "@mui/material/IconButton";
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
-import HideSourceIcon from '@mui/icons-material/HideSource';
-import SnoozeIcon from '@mui/icons-material/Snooze';
-import ShareIcon from "@mui/icons-material/Share";
+import GroupsIcon from '@mui/icons-material/Groups';
+import GroupIcon from '@mui/icons-material/Group';
+import LinkIcon from '@mui/icons-material/Link';
+import { FaShare } from "react-icons/fa";
 import DoNotDisturbIcon from "@mui/icons-material/DoNotDisturb";
-import FlagCircleIcon from "@mui/icons-material/FlagCircle";
+import ForumIcon from '@mui/icons-material/Forum';
 
-export default function MoreMenus() {
+export default function Share() {
   const { systemTheme, theme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -35,16 +33,10 @@ export default function MoreMenus() {
           p: 0,
         }}
       >
-        <IconButton
-          className="focus:outline-none hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover"
-          onClick={handleClick}
-          size="small"
-          aria-controls={open ? "account-menu" : undefined}
-          aria-haspopup="true"
-          aria-expanded={open ? "true" : undefined}
-        >
-          <MoreHorizIcon className="text-end text-textLight dark:text-textDark" />
-        </IconButton>
+        <Grid onClick={handleClick} className="flex items-center justify-end cursor-pointer px-5 py-2 rounded-sm hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
+          <FaShare />
+          <Typography className="pl-2 p-0">Share</Typography>
+        </Grid>
       </Box>
       <Menu
         anchorEl={anchorEl}
@@ -70,13 +62,17 @@ export default function MoreMenus() {
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
         <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-          <NotificationsActiveIcon /> <Grid className="ml-4">Turn on notifications for this post</Grid>
+          <ForumIcon /> <Grid className="ml-4">Share to feed</Grid>
         </MenuItem>
         <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-          <HideSourceIcon /> <Grid className="ml-4">Hide post</Grid>
+          <GroupsIcon /> <Grid className="ml-4">Share to a group</Grid>
         </MenuItem>
         <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-          <FlagCircleIcon /> <Grid className="ml-4">Report post</Grid>
+          <GroupIcon /> <Grid className="ml-4">Share to a friend&lsquo;s profile</Grid>
+        </MenuItem>
+        <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
+          <LinkIcon />
+          <Grid className="ml-4">Copy link</Grid>
         </MenuItem>
       </Menu>
     </React.Fragment>
