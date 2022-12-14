@@ -46,26 +46,35 @@ const icons = [
 const Posts = () => {
   return (
     <React.Fragment>
+      <Grid className="w-full my-5">
+        <Typography className="p-0 text-textLight dark:text-textDark text-lg">
+          {" "}
+          Recent activity
+        </Typography>
+      </Grid>
       {[1, 2, 3, 4, 5].map((_, i) => (
         <Grid
           key={i}
           container
-          className="text-textLight dark:text-textDark w-full mt-5 p-5 bg-bgLight dark:bg-bgDark"
+          className="text-textLight dark:text-textDark w-full mb-5 p-5 bg-bgLight dark:bg-bgDark"
         >
           <Grid item xs={12} className="flex flex-col">
             <Grid className="flex items-center justify-between">
               <Grid className="flex items-start">
                 <Link href="/gamma/profiles/123">
-                  <Avatar src="/user.jpg" />
+                  <Avatar src="/thumbnail-everest.jpg" />
                 </Link>
                 <Grid className="flex flex-col justify-start mt-[-2px]">
+                  <Typography className="p-0 pl-2 text-lg text-textLight dark:text-textDark">
+                    Coders Bangladesh
+                  </Typography>
                   <Link href="/gamma/profiles/123">
-                    <Typography className="p-0 pl-2 text-textLight dark:text-textDark">
-                      Arif Azad
+                    <Typography className="p-0 pl-2 text-sm opacity-[0.8] text-textLight dark:text-textDark">
+                      Sazzad Hossen
                     </Typography>
                   </Link>
                   <Typography className="p-0 pl-2 text-sm">
-                    8h <PublicIcon className="text-sm" />
+                    1h <PublicIcon className="text-sm" />
                   </Typography>
                 </Grid>
               </Grid>
@@ -74,13 +83,11 @@ const Posts = () => {
               </Grid>
             </Grid>
             <ReadMore>
-              What is the world made of? Depending on whom you ask, you will get
-              very different answers to that question. To a biologist, the world
-              is made of living organisms. To a chemist, the world is made of
-              molecules formed from atoms. If you ask that question of a
-              physicist, the physicist will probably start by talking about
-              atoms, and then proceed to talk about the protons, neutrons and
-              electrons that make up an atom
+              Python is commonly used for developing websites and software, task
+              automation, data analysis, and data visualization. Since its
+              relatively easy to learn, Python has been adopted by many
+              non-programmers such as accountants and scientists, for a variety
+              of everyday tasks, like organizing finances.
             </ReadMore>
 
             <Actions />
@@ -91,4 +98,4 @@ const Posts = () => {
   );
 };
 
-export default Posts
+export default Posts;

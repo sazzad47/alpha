@@ -70,7 +70,7 @@ const LikeButton = () => {
     <Grid
       onMouseEnter={() => setIsShownReactBox(true)}
       onMouseLeave={() => setIsShownReactBox(false)}
-      className="like_button flex cursor-pointer px-5 py-2 rounded-sm"
+      className="like_button flex cursor-pointer py-2 rounded-sm"
     >
         <IconButton className="focus:outline-none bg-bgButton hover:bg-bgButtonHover dark:bg-bgButtonDark dark:hover:bg-bgButtonDarkHover text-textLight dark:text-textDark">
           <StarIcon />

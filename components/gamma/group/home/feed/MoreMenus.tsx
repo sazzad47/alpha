@@ -76,13 +76,6 @@ export default function MoreMenus() {
           <HideSourceIcon /> <Grid className="ml-4">Hide post</Grid>
         </MenuItem>
         <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-          <SnoozeIcon /> <Grid className="ml-4">Snooze Arif Azad for 30 days</Grid>
-        </MenuItem>
-        <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-          <DoNotDisturbIcon />{" "}
-          <Grid className="ml-4">Unfollow Arif Azad</Grid>
-        </MenuItem>
-        <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
           <FlagCircleIcon /> <Grid className="ml-4">Report post</Grid>
         </MenuItem>
       </Menu>

@@ -1,6 +1,8 @@
 import * as React from "react";
 import { Grid, Typography, Avatar } from "@mui/material";
 import Dialog from "@mui/material/Dialog";
+import StarIcon from "@mui/icons-material/Star";
+import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 
 import Like from "../../../../../public/icons/like.png";
 import Love from "../../../../../public/icons/love.png";
@@ -23,9 +25,8 @@ export default function ReactModal() {
   return (
     <div>
       <Grid onClick={handleClickOpen} className="flex cursor-pointer">
-        <Avatar src={Like.src} sx={{ width: "20px", height: "20px" }} />
-        <Avatar src={Love.src} sx={{ width: "20px", height: "20px" }} />
-        <Avatar src={Wow.src} sx={{ width: "20px", height: "20px" }} />
+        <StarIcon/>
+        <SentimentVeryDissatisfiedIcon/>
         <Typography className="p-0 pl-2 text-sm opacity-[0.7]">200</Typography>
       </Grid>
       <Dialog
