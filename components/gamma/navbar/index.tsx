@@ -34,11 +34,13 @@ export default function Navbar() {
                 </Button>
               </Tooltip>
             </Link>
+            <Link href="/gamma/groups">
             <Tooltip title="Group">
               <Button className="ml-2 w-[2rem] h-[2.5rem] rounded-[10px] focus:outline-none text-textLight dark:text-textDark hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
                 <GroupsIcon />
               </Button>
             </Tooltip>
+            </Link>
             <Tooltip title="Page">
               <Button className="ml-2 w-[2rem] h-[2.5rem] rounded-[10px] focus:outline-none text-textLight dark:text-textDark hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
                 <AssistantPhotoIcon />

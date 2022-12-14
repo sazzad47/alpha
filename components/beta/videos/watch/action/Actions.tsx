@@ -49,7 +49,6 @@ const Actions = ({
           <CommentIcon />
         </IconButton>
       </Tooltip>
-     
       <Report/>
       <Tooltip title="Information">
         <IconButton onClick={handleShowInfoBox} className="focus:outline-none bg-bgButton hover:bg-bgButtonHover dark:bg-bgButtonDark dark:hover:bg-bgButtonDarkHover text-textLight dark:text-textDark">
