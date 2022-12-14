@@ -11,10 +11,9 @@ import {
 import { useTheme } from 'next-themes';
 import CloseIcon from '@mui/icons-material/Close';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import StarIcon from "@mui/icons-material/Star";
+import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 
-import Like from "../../../../../public/icons/like.png";
-import Love from "../../../../../public/icons/love.png";
-import Wow from "../../../../../public/icons/wow.png";
 
 interface Props {
   handleClose: () => void;
@@ -51,9 +50,8 @@ const ReactList = ({handleClose}: Props) => {
             aria-label="basic tabs example"
           >
             <Tab className='normal-case' label="All" {...a11yProps(0)} />
-            <Tab label={<Grid className='flex items-center'><Avatar sx={{width:'20px', height:'20px'}} src={Like.src}/> <Typography className='pl-1 p-0 text-sm opacity-[0.7]'>100</Typography></Grid>} {...a11yProps(1)} />
-            <Tab label={<Grid className='flex items-center'><Avatar sx={{width:'20px', height:'20px'}} src={Love.src}/> <Typography className='pl-1 p-0 text-sm opacity-[0.7]'>70</Typography></Grid>} {...a11yProps(2)} />
-            <Tab label={<Grid className='flex items-center'><Avatar sx={{width:'20px', height:'20px'}} src={Wow.src}/> <Typography className='pl-1 p-0 text-sm opacity-[0.7]'>30</Typography></Grid>} {...a11yProps(3)} />
+            <Tab label={<Grid className='flex items-center'><StarIcon/><Typography className='pl-1 p-0 text-sm opacity-[0.7]'>100</Typography></Grid>} {...a11yProps(1)} />
+            <Tab label={<Grid className='flex items-center'><SentimentVeryDissatisfiedIcon/><Typography className='pl-1 p-0 text-sm opacity-[0.7]'>70</Typography></Grid>} {...a11yProps(2)} />
           </Tabs>
           <IconButton onClick={handleClose} className="text-textLight dark:text-textDark w-[30px] h-[30px] bg-bgButton dark:bg-[#707075] hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
                 <CloseIcon/>
@@ -67,7 +65,7 @@ const ReactList = ({handleClose}: Props) => {
                   <Avatar src='/user.jpg' />
                   <Typography className='pl-2 p-0'>Sazzad Hossen</Typography>
                 </Grid>
-                <Button className='flex items-center normal-case text-textLight dark:text-textDark bg-[#f0e1e1] dark:bg-[#707075] hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover'><PersonAddIcon/> <Typography className='pl-2 p-0'>Add Friend</Typography></Button>
+                <Button className='flex items-center normal-case text-textLight dark:text-textDark bg-[#f0e1e1] dark:bg-[#707075] hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover'><PersonAddIcon/> <Typography className='pl-2 p-0'>Add Member</Typography></Button>
               </Grid>
             ))}
           </TabPanel>
@@ -88,17 +86,6 @@ const ReactList = ({handleClose}: Props) => {
                 <Grid className='flex items-center'>
                   <Avatar src='/user.jpg' />
                   <Typography className='pl-2 p-0'>Mahmudul Hasan</Typography>
-                </Grid>
-                <Button className='flex items-center normal-case text-textLight dark:text-textDark bg-[#f0e1e1] dark:bg-[#707075] hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover'><PersonAddIcon/> <Typography className='pl-2 p-0'>Add Friend</Typography></Button>
-              </Grid>
-            ))}
-          </TabPanel>
-          <TabPanel value={value} index={3}>
-            {[1,2,3,4].map((_, i)=> (
-              <Grid key={i} className="w-full flex justify-between items-center my-3">
-                <Grid className='flex items-center'>
-                  <Avatar src='/user.jpg' />
-                  <Typography className='pl-2 p-0'>Nasim Arafat</Typography>
                 </Grid>
                 <Button className='flex items-center normal-case text-textLight dark:text-textDark bg-[#f0e1e1] dark:bg-[#707075] hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover'><PersonAddIcon/> <Typography className='pl-2 p-0'>Add Friend</Typography></Button>
               </Grid>

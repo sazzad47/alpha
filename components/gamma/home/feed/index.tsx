@@ -6,8 +6,7 @@ import CreatePost from '../createPost'
 
 const Feed = () => {
   return (
-    <Grid className='flex justify-center flex-col w-[calc(100%-30rem)] items-center ml-[15rem]'>
-     
+    <Grid className='flex justify-center flex-col w-[calc(100%-20rem)] items-center ml-[20rem]'>
       <CreatePost/>
       <Posts/>
     </Grid>

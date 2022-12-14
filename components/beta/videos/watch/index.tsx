@@ -85,14 +85,11 @@ const VideoPlayer = ({ toggleTheater }: Props) => {
 
   const {
     playing,
-    controls,
     light,
-
     muted,
     playbackRate,
     pip,
     played,
-    seeking,
     volume,
   } = state;
 
