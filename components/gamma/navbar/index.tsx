@@ -35,7 +35,7 @@ export default function Navbar() {
                 </Button>
               </Tooltip>
             </Link>
-            <Link href="/gamma/friends">
+            <Link href="/gamma/members">
             <Tooltip title="Members">
               <Button className="ml-2 w-[2rem] h-[2.5rem] rounded-[10px] focus:outline-none text-textLight dark:text-textDark hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
                 <GroupIcon />
@@ -43,17 +43,19 @@ export default function Navbar() {
             </Tooltip>
             </Link>
             <Link href="/gamma/groups">
-            <Tooltip title="Group">
+            <Tooltip title="Groups">
               <Button className="ml-2 w-[2rem] h-[2.5rem] rounded-[10px] focus:outline-none text-textLight dark:text-textDark hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
                 <GroupsIcon />
               </Button>
             </Tooltip>
             </Link>
-            <Tooltip title="Page">
+            <Link href="/gamma/pages">
+            <Tooltip title="Pages">
               <Button className="ml-2 w-[2rem] h-[2.5rem] rounded-[10px] focus:outline-none text-textLight dark:text-textDark hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
                 <AssistantPhotoIcon />
               </Button>
             </Tooltip>
+            </Link>
             <Tooltip title="Watch">
               <Button className="ml-2 w-[2rem] h-[2.5rem] rounded-[10px] focus:outline-none text-textLight dark:text-textDark hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
                 <LiveTvIcon />

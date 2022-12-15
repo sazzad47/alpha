@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import Friends from "../../../components/gamma/friends";
+import Friends from "../../../components/gamma/members";
 import Layout from "../../../components/gamma/Layout";
 
 

@@ -14,85 +14,85 @@ import { AiOutlinePlus } from "react-icons/ai";
 
 
 const SideBar = () => {
-  const [groupIndex, setGroupIndex] = React.useState<number>(3);
+  const [pageIndex, setPageIndex] = React.useState<number>(3);
   
-  const groups = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const pages = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-  const groupsToRender = groups.slice(0, groupIndex);
+  const pagesToRender = pages.slice(0, pageIndex);
 
   return (
     <Grid className="w-[20rem] h-[90vh] pb-5 fixed overflow-y-auto left-0 bg-bgLight dark:bg-bgDark flex flex-col p-3 text-textLight dark:text-textDark">
-      <Typography className="p-0 text-xl my-2">Groups</Typography>
+      <Typography className="p-0 text-xl my-2">Pages</Typography>
       <Grid className="flex flex-col">
         <Grid className="py-1 px-2 rounded-[5px] flex items-center cursor-pointer hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
           <IconButton className="w-[30px] h-[30px] focus:outline-none text-textLight dark:text-textDark bg-bgButton dark:bg-[#707075]">
             <AiOutlinePlus />
           </IconButton>
-          <Typography className="pl-2 text-sm">Create new group</Typography>
+          <Typography className="pl-2 text-sm">Create new page</Typography>
         </Grid>
       </Grid>
       <Divider className="my-4" />
-      <Typography className="p-0">Groups you manage</Typography>
+      <Typography className="p-0">Pages you manage</Typography>
       <List>
-        {groupsToRender.map((_, i) => (
+        {pagesToRender.map((_, i) => (
           <ListItem
             key={i}
             className="py-1 px-2 rounded-[5px] flex items-center cursor-pointer hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover"
           >
             <Grid className="relative w-[30px] h-[20px]">
-              <Image src="/thumbnail-everest.jpg" alt="" fill />
+              <Image src="/thumbnail-coding.jpg" alt="" fill />
             </Grid>
             <Typography className="p-2 line-clamp-1 text-sm">
-              Coders Bangladesh
+              Lets Code
             </Typography>
           </ListItem>
         ))}
         <ListItem
-          onClick={() => setGroupIndex(groupIndex === 3 ? groups.length : 3)}
+          onClick={() => setPageIndex(pageIndex === 3 ? pages.length : 3)}
           className="p-2 rounded-[5px] cursor-pointer hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover"
         >
           <IconButton className="w-[30px] h-[30px] focus:outline-none text-textLight dark:text-textDark bg-bgButton dark:bg-bgButtonDark hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
-            {groupIndex === groups.length ? (
+            {pageIndex === pages.length ? (
               <ExpandLessIcon />
             ) : (
               <ExpandMoreIcon />
             )}
           </IconButton>
           <Typography className="p-2 line-clamp-1 text-sm">
-            {groupIndex === groups.length ? "See less" : "See more"}
+            {pageIndex === pages.length ? "See less" : "See more"}
           </Typography>
         </ListItem>
         
       </List>
       <Divider className="my-4" />
-      <Typography className="p-0">Groups you have joined</Typography>
+      <Typography className="p-0">Pages you have liked</Typography>
       <List>
-        {groupsToRender.map((_, i) => (
+        {pagesToRender.map((_, i) => (
           <ListItem
             key={i}
             className="py-1 px-2 rounded-[5px] flex items-center cursor-pointer hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover"
           >
             <Grid className="relative w-[30px] h-[20px]">
-              <Image src="/thumbnail-everest.jpg" alt="" fill />
+              <Image src="/thumbnail-coding.jpg" alt="" fill />
             </Grid>
             <Typography className="p-2 line-clamp-1 text-sm">
-              Coders Bangladesh
+              Lets Code
             </Typography>
           </ListItem>
         ))}
         <ListItem
-          onClick={() => setGroupIndex(groupIndex === 3 ? groups.length : 3)}
+          onClick={() => setPageIndex(pageIndex === 3 ? pages.length : 3)}
           className="p-2 rounded-[5px] cursor-pointer hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover"
         >
           <IconButton className="w-[30px] h-[30px] focus:outline-none text-textLight dark:text-textDark bg-bgButton dark:bg-bgButtonDark hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
-            {groupIndex === groups.length ? (
+            {pageIndex === pages.length ? (
               <ExpandLessIcon />
             ) : (
               <ExpandMoreIcon />
             )}
           </IconButton>
           <Typography className="p-2 line-clamp-1 text-sm">
-            {groupIndex === groups.length ? "See less" : "See more"}
+            {pageIndex === pages.length ? "See less" : "See more"}
           </Typography>
         </ListItem>
         

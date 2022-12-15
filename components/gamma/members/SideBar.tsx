@@ -17,6 +17,7 @@ const SideBar = () => {
 
   return (
     <Grid className="w-[20rem] h-[90vh] pb-5 fixed overflow-y-auto left-0 bg-bgLight dark:bg-bgDark flex flex-col p-3 text-textLight dark:text-textDark">
+      <Typography className="p-0 text-xl my-2">Members</Typography>
       <Grid className="flex flex-col">
         {menus.map((item)=> (
             <Grid key={item.id} onClick={()=> setActiveElement(item.title)} className={`p-2 rounded-[5px] flex items-center cursor-pointer ${activeElement=== item.title? "bg-bgButtonHover dark:bg-bgButtonDarkHover" : ""} hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover`}>
