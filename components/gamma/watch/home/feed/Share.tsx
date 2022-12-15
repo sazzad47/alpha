@@ -34,8 +34,8 @@ export default function Share() {
         }}
       >
         <Grid onClick={handleClick} className="flex items-center justify-end cursor-pointer px-5 py-2 rounded-sm hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
-          <FaShare />
-          <Typography className="pl-2 p-0">Share</Typography>
+          <FaShare className="text-sm" />
+          <Typography className="pl-2 p-0 text-sm">Share</Typography>
         </Grid>
       </Box>
       <Menu

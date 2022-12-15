@@ -30,13 +30,18 @@ const Actions = () => {
   const [showCommentBox, setShowCommentBox] = useState<boolean>(false);
   return (
     <React.Fragment>
-      <ActionHeader setShowCommentBox={setShowCommentBox} />
       <hr className="my-4" />
-      <Grid className="flex relative justify-between">
-      
-        <LikeButton />
-        <CommentButton setShowCommentBox={setShowCommentBox} />
-        <Share />
+      <Grid container spacing={3}>
+          <Grid item xs={6}>
+            <Grid className="flex justify-between items-center">
+              <LikeButton />
+              <CommentButton setShowCommentBox={setShowCommentBox} />
+              <Share />
+            </Grid>
+          </Grid>
+          <Grid item xs={6}>
+           <ActionHeader setShowCommentBox={setShowCommentBox} />
+          </Grid>
       </Grid>
       <Grid>
         {showCommentBox && (
@@ -52,13 +57,16 @@ const Actions = () => {
 
 const ActionHeader = ({ setShowCommentBox }: CommentProps) => {
   return (
-    <Grid className="flex justify-between items-center">
+    <Grid className="w-full h-full flex justify-between items-center">
       <ReactModal />
       <Grid
         onClick={() => setShowCommentBox((prev: boolean) => !prev)}
         className="cursor-pointer"
       >
         <Typography className="p-0 text-sm"> 10 Comments</Typography>
+      </Grid>
+      <Grid>
+        <Typography className="p-0 text-sm"> 36 views</Typography>
       </Grid>
     </Grid>
   );
@@ -70,10 +78,10 @@ const LikeButton = () => {
     <Grid
       onMouseEnter={() => setIsShownReactBox(true)}
       onMouseLeave={() => setIsShownReactBox(false)}
-      className="like_button flex cursor-pointer px-5 py-2 rounded-sm"
+      className="like_button flex cursor-pointer py-2 rounded-sm"
     >
         <IconButton className="focus:outline-none bg-bgButton hover:bg-bgButtonHover dark:bg-bgButtonDark dark:hover:bg-bgButtonDarkHover text-textLight dark:text-textDark">
-          <StarIcon />
+          <StarIcon className="text-sm" />
         </IconButton>
       <Grid
         className={`reaction_box absolute z-[100] translate-y-[-45px] flex ${
@@ -81,9 +89,8 @@ const LikeButton = () => {
         }`}
       >
         <IconButton className="focus:outline-none bg-bgButton hover:bg-bgButtonHover dark:bg-bgButtonDark dark:hover:bg-bgButtonDarkHover text-textLight dark:text-textDark">
-          <SentimentVeryDissatisfiedIcon />
+          <SentimentVeryDissatisfiedIcon className="text-sm" />
         </IconButton>
-   
       </Grid>
     </Grid>
   );
@@ -98,8 +105,8 @@ const CommentButton = ({ setShowCommentBox }: CommentProps) => {
       onClick={() => setShowCommentBox((prev: boolean) => !prev)}
       className="flex items-center justify-center cursor-pointer px-5 py-2 rounded-sm hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover"
     >
-      <ChatBubbleOutlineIcon />
-      <Typography className="pl-2 p-0">Comment</Typography>
+      <ChatBubbleOutlineIcon className="text-sm" />
+      <Typography className="pl-2 p-0 text-sm">Comment</Typography>
     </Grid>
   );
 };

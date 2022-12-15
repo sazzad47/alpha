@@ -29,7 +29,6 @@ const ReactList = ({handleClose}: Props) => {
   return (
     <Grid className='w-full text-textLight dark:text-textDark'>
         <Grid className='w-full flex items-center justify-between mb-3'>
-
           <Tabs
             TabIndicatorProps={{
               sx: {
@@ -51,7 +50,7 @@ const ReactList = ({handleClose}: Props) => {
           >
             <Tab className='normal-case' label="All" {...a11yProps(0)} />
             <Tab label={<Grid className='flex items-center'><StarIcon/><Typography className='pl-1 p-0 text-sm opacity-[0.7]'>100</Typography></Grid>} {...a11yProps(1)} />
-            <Tab label={<Grid className='flex items-center'><SentimentVeryDissatisfiedIcon/><Typography className='pl-1 p-0 text-sm opacity-[0.7]'>70</Typography></Grid>} {...a11yProps(2)} />
+            {/* <Tab label={<Grid className='flex items-center'><SentimentVeryDissatisfiedIcon/><Typography className='pl-1 p-0 text-sm opacity-[0.7]'>70</Typography></Grid>} {...a11yProps(2)} /> */}
           </Tabs>
           <IconButton onClick={handleClose} className="text-textLight dark:text-textDark w-[30px] h-[30px] bg-bgButton dark:bg-[#707075] hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
                 <CloseIcon/>

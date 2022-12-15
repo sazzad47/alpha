@@ -13,7 +13,7 @@ const index = () => {
       <Grid className="w-full text-textLight dark:text-textDark p-5">
         <Grid container spacing={2}>
           {[1, 2, 3, 4, 5, 6].map((_, i) => (
-            <Grid item xs={6} >
+            <Grid key={i} item xs={6} >
               <Grid className="flex flex-col bg-bgLight dark:bg-bgDark p-3">
               <Grid className="relative w-full h-[15rem]">
                 <Image src="/thumbnail-coding.jpg" alt="" fill />

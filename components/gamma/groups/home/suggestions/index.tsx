@@ -16,7 +16,7 @@ const index = () => {
               <Grid item className="w-full flex flex-col items-start">
                 <Grid className="mt-2 flex items-start">
                   <Typography className="line-clamp-2 pl-0 font-medium text-[1rem] text-textLight dark:text-textDark">
-                    Lets Code
+                    Coders Bangladesh
                   </Typography>
                 </Grid>
                 <Typography className="pl-0 opacity-[0.7] text-sm text-textLight dark:text-textDark">

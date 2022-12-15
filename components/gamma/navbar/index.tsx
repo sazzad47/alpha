@@ -56,11 +56,13 @@ export default function Navbar() {
               </Button>
             </Tooltip>
             </Link>
+            <Link href="/gamma/watch">
             <Tooltip title="Watch">
               <Button className="ml-2 w-[2rem] h-[2.5rem] rounded-[10px] focus:outline-none text-textLight dark:text-textDark hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
                 <LiveTvIcon />
               </Button>
             </Tooltip>
+            </Link>
             <Tooltip title="News">
               <Button className="ml-2 w-[2rem] h-[2.5rem] rounded-[10px] focus:outline-none text-textLight dark:text-textDark hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
                 <ConnectedTvIcon />
