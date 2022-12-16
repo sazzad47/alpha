@@ -14,7 +14,7 @@ const Suggestions = () => {
       <Grid className="w-full text-textLight dark:text-textDark mt-5 p-5 bg-bgLight dark:bg-bgDark">
         <Grid container spacing={2}>
           {[1, 2, 3, 4, 5, 6].map((_, i) => (
-            <Grid item xs={4} className="flex flex-col">
+            <Grid key={i} item xs={4} className="flex flex-col">
               <Grid className="relative w-full h-[15rem]">
                 <Image src="/user.jpg" alt="" fill />
               </Grid>
