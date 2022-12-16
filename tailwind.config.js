@@ -10,8 +10,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        "bgDarkPrimary": "var(--bgDarkPrimary)",
         "bgDark": "var(--bgDark)",
         "bgDarkHover": "var(--bgDarkHover)",
+        "bgLightPrimary": "var(--bgLightPrimary)",
         "bgLight": "var(--bgLight)",
         "bgLightHover": "var(--bgLightHover)",
         "textLight": "var(--textLight)",

@@ -11,6 +11,7 @@ import Image from "next/image";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { AiOutlinePlus } from "react-icons/ai";
+import Link from "next/link";
 
 
 const SideBar = () => {
@@ -24,12 +25,14 @@ const SideBar = () => {
     <Grid className="w-[20rem] h-[90vh] pb-5 fixed overflow-y-auto left-0 bg-bgLight dark:bg-bgDark flex flex-col p-3 text-textLight dark:text-textDark">
       <Typography className="p-0 text-xl my-2">Pages</Typography>
       <Grid className="flex flex-col">
-        <Grid className="py-1 px-2 rounded-[5px] flex items-center cursor-pointer hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
+        <Link href="/gamma/pages/creation">
+        <Grid className="text-textLight dark:text-textDark py-1 px-2 rounded-[5px] flex items-center cursor-pointer hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
           <IconButton className="w-[30px] h-[30px] focus:outline-none text-textLight dark:text-textDark bg-bgButton dark:bg-[#707075]">
             <AiOutlinePlus />
           </IconButton>
           <Typography className="pl-2 text-sm">Create new page</Typography>
         </Grid>
+        </Link>
       </Grid>
       <Divider className="my-4" />
       <Typography className="p-0">Pages you manage</Typography>
