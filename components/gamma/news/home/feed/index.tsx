@@ -11,6 +11,7 @@ import Sad from "../../../../../public/icons/sad.png";
 import Wow from "../../../../../public/icons/wow.png";
 import Actions from "./Actions";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Props {
   children: string;
@@ -61,7 +62,7 @@ const Posts = () => {
                   </Link>
                   <Grid className="flex flex-col justify-start mt-[-2px]">
                     <Typography className="p-0 pl-2 text-lg text-textLight dark:text-textDark">
-                      Beauty of Bangladesh
+                      Al Jazeera
                     </Typography>
                     <Typography className="p-0 pl-2 text-sm">
                       1h <PublicIcon className="text-sm" />
@@ -73,12 +74,14 @@ const Posts = () => {
                 </Grid>
               </Grid>
               <ReadMore>
-                Bangladesh is one of the few countries in South Asia, which
-                remains to be explored. Bangladesh has a delicate and
-                distinctive attraction of its own to offer.
+                George&lsquo;s home, like many in the Newtok community, faces flooding
+                as frequent storms further erode the land. An October storm
+                recently surrounded George&lsquo;s house with water. Now when she
+                walks, the house shakes.
               </ReadMore>
-              <video src={"/bg-hero.mp4"} autoPlay loop controls />
-
+               <Grid className="w-full h-[15rem] relative">
+                 <Image src="/thumbnail-everest.jpg" alt="" fill />
+               </Grid>
               <Actions />
             </Grid>
           </Grid>

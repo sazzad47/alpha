@@ -82,7 +82,6 @@ const Posts = () => {
               atoms, and then proceed to talk about the protons, neutrons and
               electrons that make up an atom
             </ReadMore>
-
             <Actions />
           </Grid>
         </Grid>

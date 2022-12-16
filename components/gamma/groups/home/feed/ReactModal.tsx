@@ -24,7 +24,7 @@ export default function ReactModal() {
 
   return (
     <div>
-      <Grid onClick={handleClickOpen} className="flex cursor-pointer">
+      <Grid onClick={handleClickOpen} className="flex items-center cursor-pointer">
         <StarIcon/>
         <SentimentVeryDissatisfiedIcon/>
         <Typography className="p-0 pl-2 text-sm opacity-[0.7]">200</Typography>

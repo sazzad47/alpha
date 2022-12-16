@@ -63,11 +63,13 @@ export default function Navbar() {
               </Button>
             </Tooltip>
             </Link>
+            <Link href="/gamma/news">
             <Tooltip title="News">
               <Button className="ml-2 w-[2rem] h-[2.5rem] rounded-[10px] focus:outline-none text-textLight dark:text-textDark hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
                 <ConnectedTvIcon />
               </Button>
             </Tooltip>
+            </Link>
           </div>
           <div className="iconBox2 text-textLight dark:text-textDark flex items-center justify-between px-[25px]">
             <Tooltip title="Messenger">

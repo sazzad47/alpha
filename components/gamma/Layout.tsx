@@ -1,4 +1,3 @@
-import { Grid } from '@mui/material'
 import type { ReactNode } from 'react'
 import Navbar from './navbar'
 import { ThemeProvider } from "next-themes";

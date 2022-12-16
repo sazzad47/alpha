@@ -1,9 +1,12 @@
 import * as React from "react";
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Avatar } from "@mui/material";
 import Dialog from "@mui/material/Dialog";
 import StarIcon from "@mui/icons-material/Star";
 import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 
+import Like from "../../../../../public/icons/like.png";
+import Love from "../../../../../public/icons/love.png";
+import Wow from "../../../../../public/icons/wow.png";
 import ReactList from "./ReactList";
 import { useTheme } from "next-themes";
 
@@ -22,8 +25,8 @@ export default function ReactModal() {
   return (
     <div>
       <Grid onClick={handleClickOpen} className="flex items-center cursor-pointer">
-        <StarIcon/>
-        <SentimentVeryDissatisfiedIcon/>
+        <StarIcon  />
+        <SentimentVeryDissatisfiedIcon  />
         <Typography className="p-0 pl-2 text-sm opacity-[0.7]">200</Typography>
       </Grid>
       <Dialog
