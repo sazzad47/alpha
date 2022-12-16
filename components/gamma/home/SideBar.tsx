@@ -71,18 +71,22 @@ const SideBar = () => {
       <Divider className="my-4" />
       <Grid className="flex flex-col">
         <Typography className="p-0 mb-2">Create</Typography>
-        <Grid className="py-1 px-2 rounded-[5px] flex items-center cursor-pointer hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
+        <Link href="/gamma/pages/create" >
+        <Grid className="text-textLight dark:text-textDark py-1 px-2 rounded-[5px] flex items-center cursor-pointer hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
           <IconButton className="w-[30px] h-[30px] focus:outline-none text-textLight dark:text-textDark bg-bgButton dark:bg-[#707075]">
             <AiOutlinePlus />
           </IconButton>
           <Typography className="pl-2 text-sm">Create new page</Typography>
         </Grid>
-        <Grid className="py-1 px-2 rounded-[5px] flex items-center cursor-pointer hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
+        </Link>
+        <Link href="/gamma/groups/create" >
+        <Grid className="text-textLight dark:text-textDark py-1 px-2 rounded-[5px] flex items-center cursor-pointer hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
           <IconButton className="w-[30px] h-[30px] focus:outline-none text-textLight dark:text-textDark bg-bgButton dark:bg-[#707075]">
             <AiOutlinePlus />
           </IconButton>
           <Typography className="pl-2 text-sm">Create new group</Typography>
         </Grid>
+        </Link>
       </Grid>
       <Divider className="my-4" />
       <Typography className="p-0">Contacts</Typography>

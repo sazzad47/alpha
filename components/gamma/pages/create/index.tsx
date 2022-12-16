@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Grid, Typography } from "@mui/material";
 import PageCategories from "../../common/PageCategories";
 
-const Creation = () => {
+const Create = () => {
   return (
     <Grid className="min-h-[100vh] text-textLight dark:text-textDark bg-bgLightPrimary dark:bg-bgDarkPrimary pt-[100px] flex items-center justify-center px-2 py-5">
       <Grid className="max-w-[25rem] bg-bgLight dark:bg-bgDark p-5">
@@ -41,4 +41,4 @@ const Creation = () => {
   );
 };
 
-export default Creation;
+export default Create;
