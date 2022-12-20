@@ -1,16 +1,12 @@
 import * as React from "react";
 import { useTheme } from "next-themes";
-import { Grid } from "@mui/material";
+import { Grid, Tooltip } from "@mui/material";
 import Box from "@mui/material/Box";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
-import HideSourceIcon from '@mui/icons-material/HideSource';
-import SnoozeIcon from '@mui/icons-material/Snooze';
-import DoNotDisturbIcon from "@mui/icons-material/DoNotDisturb";
-import FlagCircleIcon from "@mui/icons-material/FlagCircle";
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+
 
 export default function MoreMenus() {
   const { systemTheme, theme } = useTheme();
@@ -34,16 +30,17 @@ export default function MoreMenus() {
           p: 0,
         }}
       >
+        <Tooltip title="Menu">
         <IconButton
-          className="focus:outline-none hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover"
+          className="focus:outline-none hover:bg-bgButton dark:hover:bg-bgButtonDark"
           onClick={handleClick}
-          size="small"
           aria-controls={open ? "account-menu" : undefined}
           aria-haspopup="true"
           aria-expanded={open ? "true" : undefined}
         >
-          <MoreHorizIcon className="text-end text-textLight dark:text-textDark" />
+          <MoreVertIcon className="text-end text-textLight dark:text-textDark" />
         </IconButton>
+        </Tooltip>
       </Box>
       <Menu
         anchorEl={anchorEl}
@@ -69,20 +66,10 @@ export default function MoreMenus() {
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
         <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-          <NotificationsActiveIcon /> <Grid className="ml-4">Turn on notifications for this post</Grid>
+           <Grid className="ml-4">Settings</Grid>
         </MenuItem>
         <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-          <HideSourceIcon /> <Grid className="ml-4">Hide post</Grid>
-        </MenuItem>
-        <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-          <SnoozeIcon /> <Grid className="ml-4">Snooze Arif Azad for 30 days</Grid>
-        </MenuItem>
-        <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-          <DoNotDisturbIcon />{" "}
-          <Grid className="ml-4">Unfollow Arif Azad</Grid>
-        </MenuItem>
-        <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-          <FlagCircleIcon /> <Grid className="ml-4">Report post</Grid>
+            <Grid className="ml-4">Logout</Grid>
         </MenuItem>
       </Menu>
     </React.Fragment>
