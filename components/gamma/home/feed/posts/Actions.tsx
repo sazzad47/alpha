@@ -82,7 +82,6 @@ const LikeButton = () => {
         <IconButton className="focus:outline-none bg-bgButton hover:bg-bgButtonHover dark:bg-bgButtonDark dark:hover:bg-bgButtonDarkHover text-textLight dark:text-textDark">
           <SentimentVeryDissatisfiedIcon />
         </IconButton>
-   
       </Grid>
     </Grid>
   );

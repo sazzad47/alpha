@@ -1,0 +1,67 @@
+/* CSSTransition classes  */
+.delta_mainSidebar-enter {
+    position: absolute;
+    transform: translateX(110%);
+  }
+  .delta_mainSidebar-enter-active {
+    transform: translateX(0%);
+    transition: all var(--speed) ease;
+  }
+  .delta_mainSidebar-exit {
+    
+  }
+  .delta_mainSidebar-exit-active {
+    transform: translateX(110%);
+    transition: all var(--speed) ease;
+  }
+
+
+.delta_sideProfile-enter {
+    position: absolute;
+    transform: translateX(-110%);
+  }
+  .delta_sideProfile-enter-active {
+    transform: translateX(0%);
+    transition: all var(--speed) ease;
+  }
+  .delta_sideProfile-exit {
+    position: absolute;
+  }
+  .delta_sideProfile-exit-active {
+    transform: translateX(-110%);
+    transition: all var(--speed) ease;
+  }
+
+
+  .delta_sideGroup-enter {
+    position: absolute;
+    transform: translateX(-110%);
+  }
+  .delta_sideGroup-enter-active {
+    transform: translateX(0%);
+    transition: all var(--speed) ease;
+  }
+  .delta_sideGroup-exit {
+    position: absolute;
+  }
+  .delta_sideGroup-exit-active {
+    transform: translateX(-110%);
+    transition: all var(--speed) ease;
+  }
+  
+  
+  .delta_sideRoom-enter {
+    position: absolute;
+    transform: translateX(-110%);
+  }
+  .delta_sideRoom-enter-active {
+    transform: translateX(0%);
+    transition: all var(--speed) ease;
+  }
+  .delta_sideRoom-exit {
+    position: absolute;
+  }
+  .delta_sideRoom-exit-active {
+    transform: translateX(-110%);
+    transition: all var(--speed) ease;
+  }

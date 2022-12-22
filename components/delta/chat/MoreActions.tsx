@@ -7,8 +7,7 @@ import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
-
-export default function MoreMenus() {
+export default function MoreActions() {
   const { systemTheme, theme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -34,6 +33,7 @@ export default function MoreMenus() {
         <IconButton
           className="focus:outline-none hover:bg-bgButton dark:hover:bg-bgButtonDark"
           onClick={handleClick}
+          size="small"
           aria-controls={open ? "account-menu" : undefined}
           aria-haspopup="true"
           aria-expanded={open ? "true" : undefined}
@@ -66,10 +66,10 @@ export default function MoreMenus() {
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
         <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-           <Grid className="">Settings</Grid>
+          <Grid className="">Delete message</Grid>
         </MenuItem>
         <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-            <Grid className="">Logout</Grid>
+           <Grid className="">Forward</Grid>
         </MenuItem>
       </Menu>
     </React.Fragment>

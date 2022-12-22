@@ -1,32 +1,67 @@
-import React from "react";
-import { Avatar, Grid, Typography } from "@mui/material";
-import Menubar from "./Menubar";
+import React, { useState } from "react";
+import { Grid } from "@mui/material";
+import { CSSTransition } from "react-transition-group";
+import MainBar from "./MainBar";
+import Profile from "./Profile";
+import Room from "./Room";
+import GroupBar from "./group";
+
+export interface SideMenuProps {
+  showMainBar?: boolean;
+  showProfile?: boolean;
+  showGroup?: boolean;
+  showRoom?: boolean;
+}
 
 const SideBar = () => {
+
+  const [state, setState] = useState<SideMenuProps>({
+    showMainBar: true,
+    showProfile: false,
+    showGroup: false,
+    showRoom: false,
+  })
+ console.log('state', state)
   return (
-    <Grid className="w-full h-[100vh] flex flex-col">
-      <Grid className="h-[20%]">
-        <Menubar/>
-      </Grid>
-      <Grid className="h-[80%] max-h-[80%] overflow-y-auto">
-        <Grid>
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((_, i) => (
-            <Grid
-              key={i}
-              className="px-3 py-3 cursor-pointer flex items-start justify-between hover:bg-bgButton dark:hover:bg-bgButtonDark "
-            >
-              <Grid className="flex items-center gap-2">
-                <Avatar src="/user.jpg" className="w-[50px] h-[50px]" />
-                <Grid className="flex flex-col">
-                  <Typography className="p-0">Sazzad Hossen</Typography>
-                  <Typography className="p-0 text-sm opacity-[0.7]">How are you?</Typography>
-                </Grid>
-              </Grid>
-              <Typography className="p-0">6.33 AM</Typography>
-            </Grid>
-          ))}
-        </Grid>
-      </Grid>
+    <Grid className="relative w-full h-[100vh]">
+      <CSSTransition
+        classNames="delta_mainSidebar"
+        in={state.showMainBar}
+        timeout={50}
+        unmountOnExit
+        onEnter={() => {
+        setState((prevState: SideMenuProps)=> ({...prevState, showProfile: false, showGroup: false, showRoom: false}));
+        }}
+      >
+        <MainBar state={state} setState={setState} />
+      </CSSTransition>
+      <CSSTransition
+        classNames="delta_sideProfile"
+        in={state.showProfile}
+        timeout={50}
+        unmountOnExit
+        onEnter={() => setState((prevState: SideMenuProps)=> ({...prevState, showMainBar: false}))}
+      >
+        <Profile setState={setState} />
+      </CSSTransition>
+      <CSSTransition
+        classNames="delta_sideGroup"
+        in={state.showGroup}
+        timeout={50}
+        unmountOnExit
+        onEnter={() => setState((prevState: SideMenuProps)=> ({...prevState, showMainBar: false}))}
+      >
+        <GroupBar setState={setState} />
+      </CSSTransition>
+      <CSSTransition
+        classNames="delta_sideRoom"
+        in={state.showRoom}
+        timeout={500}
+        unmountOnExit
+        onEnter={() => setState((prevState: SideMenuProps)=> ({...prevState, showMainBar: false}))}
+      >
+        <Room />
+      </CSSTransition>
     </Grid>
   );
 };

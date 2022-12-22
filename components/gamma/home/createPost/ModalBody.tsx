@@ -203,7 +203,6 @@ const ModalBody = ({
                   </Grid>
                 </Grid>
               )}
-
               <Grid
                 onDragOver={handleDragOver}
                 onDrop={handleDrop}

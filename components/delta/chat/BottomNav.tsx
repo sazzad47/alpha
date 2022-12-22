@@ -41,14 +41,14 @@ const BottomNav = () => {
               />
             </Grid>
           )}
-          <IconButton className="focus:outline-none ml-[-10px] hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
+          <IconButton className="text-textLight dark:text-textDark focus:outline-none ml-[-10px] hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
             <AttachFileIcon />
           </IconButton>
         </Grid>
       </Grid>
       <Grid className="flex gap-2 flex-1">
-        <input placeholder="Type a message" className="text-textLight dark:text-textDark w-full px-3 focus:outline-none rounded-md" />
-        <IconButton>
+        <input placeholder="Type a message" className="text-textLight dark:text-textDark bg-[#fff] dark:bg-[#bcd4bc55] w-full px-3 focus:outline-none rounded-md" />
+        <IconButton className="text-textLight dark:text-textDark focus:outline-none hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover">
            <KeyboardVoiceIcon />
         </IconButton>
       </Grid>

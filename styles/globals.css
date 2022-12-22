@@ -78,3 +78,5 @@ a {
 @import url(./beta/videoContainer.css);
 /*.........Gamma............*/
 @import url(./gamma/home.css)
+/*.........Delta............*/
+@import url(./delta/home.css)

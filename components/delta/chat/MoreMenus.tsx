@@ -6,8 +6,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import SettingsIcon from '@mui/icons-material/Settings';
-import LogoutIcon from '@mui/icons-material/Logout';
+
 
 export default function MoreMenus() {
   const { systemTheme, theme } = useTheme();
@@ -67,22 +66,22 @@ export default function MoreMenus() {
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
         <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-          <Grid className="ml-4">Contact info</Grid>
+          <Grid className="">Contact info</Grid>
         </MenuItem>
         <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-           <Grid className="ml-4">Close chat</Grid>
+           <Grid className="">Close chat</Grid>
         </MenuItem>
         <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-           <Grid className="ml-4">Mute notifications</Grid>
+           <Grid className="">Mute notifications</Grid>
         </MenuItem>
         <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-           <Grid className="ml-4">Delete chat</Grid>
+           <Grid className="">Delete chat</Grid>
         </MenuItem>
         <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-           <Grid className="ml-4">Report</Grid>
+           <Grid className="">Report</Grid>
         </MenuItem>
         <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-           <Grid className="ml-4">Block</Grid>
+           <Grid className="">Block</Grid>
         </MenuItem>
       </Menu>
     </React.Fragment>
