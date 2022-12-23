@@ -1,16 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Avatar, Grid, IconButton, TextField, Typography } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import CloseIcon from "@mui/icons-material/Close";
-import { SideMenuProps } from "..";
 import { useTheme } from "next-themes";
-import { SidebarGroupProps } from ".";
-
-interface Props {
-  setState: Function;
-  setGroupBarState: Function;
-}
+import { sidebarTypes } from "../../context/types";
+import { Context, StoreProps } from "../../context/store";
 
 const contacts = [
   { id: 1, name: "Siam Ahmed" },
@@ -28,7 +23,8 @@ interface ParticipantsProps {
   id: number;
   name?: string;
 }
-const AddParticipants = ({ setState, setGroupBarState}: Props) => {
+const AddParticipants = () => {
+  const { dispatch } = useContext(Context) as StoreProps;
   const { systemTheme, theme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
   const [contactList, setContactList] = useState<ParticipantsProps[]>(contacts);
@@ -57,10 +53,10 @@ const AddParticipants = ({ setState, setGroupBarState}: Props) => {
       <Grid className="relative text-lg text-textDark h-[20vh] bg-[#34b483] dark:bg-[#66814b33] flex items-center justify-center">
         <IconButton
           onClick={() =>
-            setState((prevState: SideMenuProps) => ({
-              ...prevState,
-              showMainBar: true,
-            }))
+            dispatch({
+              type: sidebarTypes.CHANGE_SIDEBAR_STATE,
+              payload: { showMainBar: true },
+            })
           }
           
           className="focus:outline-none absolute left-2 text-inherit"
@@ -141,10 +137,10 @@ const AddParticipants = ({ setState, setGroupBarState}: Props) => {
       >
         <IconButton
           onClick={() =>
-            setGroupBarState((prevState: SidebarGroupProps) => ({
-              ...prevState,
-              showCreateGroupBar: true,
-            }))
+            dispatch({
+              type: sidebarTypes.CHANGE_SIDEBAR_STATE,
+              payload: { showCreateGroupBar: true },
+            })
           }
           className="focus:outline-none text-textDark"
         >

@@ -7,12 +7,12 @@ export interface MainBarProps {
   state?: SideMenuProps;
   setState: Function;
 }
-const MainBar = ({state, setState}: MainBarProps) => {
+const MainBar = () => {
  
   return (
     <Grid className="absolute w-full h-full flex flex-col">
       <Grid className="h-[20%]">
-        <Menubar state={state} setState={setState} />
+        <Menubar/>
       </Grid>
       <Grid className="h-[80%] max-h-[80%] overflow-y-auto">
         <Grid>

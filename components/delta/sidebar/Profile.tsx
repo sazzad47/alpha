@@ -1,13 +1,16 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import { Avatar, Button, Grid, IconButton, TextField } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import { SideMenuProps } from ".";
+import { sidebarTypes } from "../context/types";
+import { Context, StoreProps } from "../context/store";
 
 interface ProfileProps {
   setState: Function;
 }
-const Profile = ({ setState }: ProfileProps) => {
+const Profile = () => {
+  const { dispatch } = useContext(Context) as StoreProps;
   const profilePhotoInput = useRef<HTMLInputElement>(null);
 
   const handleChooseProfilePhoto = () => {
@@ -18,10 +21,10 @@ const Profile = ({ setState }: ProfileProps) => {
       <Grid className="relative text-lg text-textDark h-[20%] bg-[#34b483] dark:bg-[#66814b33] flex items-center justify-center">
         <IconButton
           onClick={() =>
-            setState((prevState: SideMenuProps) => ({
-              ...prevState,
-              showMainBar: true,
-            }))
+            dispatch({
+              type: sidebarTypes.CHANGE_SIDEBAR_STATE,
+              payload: { showMainBar: true },
+            })
           }
           className="focus:outline-none absolute left-2 text-inherit"
         >

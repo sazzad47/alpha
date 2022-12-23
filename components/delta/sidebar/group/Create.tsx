@@ -1,15 +1,12 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import { Avatar, Button, Grid, IconButton, TextField } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
-import { SideMenuProps } from "..";
-import { SidebarGroupProps } from ".";
+import { sidebarTypes } from "../../context/types";
+import { Context, StoreProps } from "../../context/store";
 
-interface Props {
-  setState: Function;
-  setGroupBarState: Function;
-}
-const Create = ({ setState, setGroupBarState}: Props) => {
+const Create = () => {
+  const { dispatch } = useContext(Context) as StoreProps;
   const profilePhotoInput = useRef<HTMLInputElement>(null);
 
   const handleChooseProfilePhoto = () => {
@@ -20,10 +17,10 @@ const Create = ({ setState, setGroupBarState}: Props) => {
       <Grid className="relative text-lg text-textDark h-[20%] bg-[#34b483] dark:bg-[#66814b33] flex items-center justify-center">
         <IconButton
           onClick={() =>
-            setGroupBarState((prevState: SidebarGroupProps) => ({
-              ...prevState,
-              showAddParticipantsBar: true,
-            }))
+            dispatch({
+              type: sidebarTypes.CHANGE_SIDEBAR_STATE,
+              payload: { showAddParticipantsBar: true },
+            })
           }
           className="focus:outline-none absolute left-2 text-inherit"
         >
@@ -80,10 +77,9 @@ const Create = ({ setState, setGroupBarState}: Props) => {
                 />
               </Grid>
               <Grid className="w-full flex flex-col mt-3 px-3">
-                
                 <Grid className="w-full flex justify-end mt-4">
                   <Button className="text-textDark normal-case focus:outline-none bg-[#34b483] dark:bg-[#66814b33]">
-                    Save
+                    Create
                   </Button>
                 </Grid>
               </Grid>
