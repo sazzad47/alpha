@@ -34,11 +34,13 @@ export default function Navbar() {
         </div>
       </div>
       <div className="flex gap-5 items-center text-xl">
+        <Link href="/delta/groups/123">
         <Tooltip title="Group">
           <IconButton className="focus:outline-none">
             <GroupsIcon className="text-textLight dark:text-textDark text-2xl" />
           </IconButton>
         </Tooltip>
+        </Link>
         <Tooltip title="Room">
           <IconButton className="focus:outline-none">
             <CameraIndoorIcon className="text-textLight dark:text-textDark text-2xl" />
