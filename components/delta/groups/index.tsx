@@ -1,8 +1,8 @@
 import React from "react";
 import { Grid } from "@mui/material";
 import SideBar from "./sidebar";
-import Chat from "./chat";
 import { StoreProvider } from "./context/store";
+import Main from "./main";
 
 const Home = () => {
   return (
@@ -16,7 +16,7 @@ const Home = () => {
           </Grid>
           <Grid item xs={8}>
             <Grid className="h-full">
-              <Chat />
+              <Main />
             </Grid>
           </Grid>
         </Grid>

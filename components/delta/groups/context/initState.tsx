@@ -6,4 +6,7 @@ export const initState: DeltaProps = {
     showCreateBar: false,
     showAddParticipantsBar: false,
     showCreateGroupBar: false,
+    showChat: true,
+    showGroupInfo: false,
+    showSearchPage: false,
   };

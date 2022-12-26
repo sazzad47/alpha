@@ -6,7 +6,7 @@ import ChatBox from './ChatBox'
 
 const Chat = () => {
   return (
-    <Grid className="w-full h-[90vh] flex flex-col">
+    <Grid className="absolute w-full h-[90vh] flex flex-col">
         <Grid className="h-[10%] bg-[#e0d9d9] dark:bg-[#31363b]">
             <Navbar/>
         </Grid>

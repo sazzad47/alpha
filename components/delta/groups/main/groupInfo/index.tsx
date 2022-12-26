@@ -3,7 +3,7 @@ import { Avatar, Divider, Grid, Typography } from "@mui/material";
 import Navbar from "./Navbar";
 import Info from "./Info";
 
-const Profile = () => {
+const GroupInfo = () => {
   return (
     <Grid className="absolute w-full h-[90vh] bg-bgLight dark:bg-bgDark flex flex-col">
       <Grid className="h-[10%] bg-[#e0d9d9] dark:bg-[#31363b]">
@@ -24,4 +24,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default GroupInfo;

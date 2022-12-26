@@ -18,15 +18,15 @@ const ChatBox = () => {
     <Grid className="px-5 py-5 flex flex-col gap-3 justify-end">
       {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_, i) => (
         <Grid key={i} className="flex flex-col gap-3">
-          <Message flex="flex-row" >
-          <Typography className="px-3 py-3 w-[60%] bg-[#d5e4de] dark:bg-[#29440e33]">
-        Where are you now? I am searching for you for two days.
-      </Typography>
+          <Message flex="flex-row">
+            <Typography className="px-3 py-3 max-w-[60%] bg-[#d5e4de] dark:bg-[#29440e33]">
+              Did you cook today?
+            </Typography>
           </Message>
-          <Message flex="flex-row-reverse" >
-          <Typography className="px-3 py-3 w-[60%] bg-[#b5b8bb] dark:bg-[#13070a33]">
-        Where are you now? I am searching for you for two days.
-      </Typography>
+          <Message flex="flex-row-reverse">
+            <Typography className="px-3 py-3 max-w-[60%] bg-[#b5b8bb] dark:bg-[#13070a33]">
+              Yes
+            </Typography>
           </Message>
         </Grid>
       ))}
@@ -69,7 +69,7 @@ interface MessageProps {
 }
 const Message = ({ flex, children }: MessageProps) => {
   const [isShownActions, setIsShownActions] = useState<boolean>(false);
- 
+
   return (
     <Grid
       onMouseEnter={() => setIsShownActions(true)}
@@ -78,7 +78,6 @@ const Message = ({ flex, children }: MessageProps) => {
     >
       {isShownActions && <Actions />}
       {children}
-      
     </Grid>
   );
 };

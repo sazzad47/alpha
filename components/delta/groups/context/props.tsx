@@ -4,4 +4,7 @@ export interface DeltaProps {
     showCreateBar?: boolean;
     showAddParticipantsBar?: boolean;
     showCreateGroupBar?: boolean;
+    showChat?: boolean;
+    showGroupInfo?: boolean;
+    showSearchPage?: boolean;
   }

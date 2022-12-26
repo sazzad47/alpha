@@ -6,9 +6,12 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { Context, StoreProps } from "../../context/store";
+import { sidebarTypes } from "../../context/types";
 
 
 export default function MoreMenus() {
+  const { dispatch } = React.useContext(Context) as StoreProps;
   const { systemTheme, theme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -65,8 +68,8 @@ export default function MoreMenus() {
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
-        <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-          <Grid className="">Contact info</Grid>
+        <MenuItem onClick={()=> dispatch({type: sidebarTypes.CHANGE_SIDEBAR_STATE, payload: {showGroupInfo: true}})} className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
+          <Grid className="">Group info</Grid>
         </MenuItem>
         <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
            <Grid className="">Close chat</Grid>
@@ -81,7 +84,7 @@ export default function MoreMenus() {
            <Grid className="">Report</Grid>
         </MenuItem>
         <MenuItem className="hover:bg-bgLightHover dark:hover:bg-bgDarkHover">
-           <Grid className="">Block</Grid>
+           <Grid className="">Leave group</Grid>
         </MenuItem>
       </Menu>
     </React.Fragment>
