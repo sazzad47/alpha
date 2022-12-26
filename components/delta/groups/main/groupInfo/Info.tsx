@@ -1,33 +1,20 @@
 import React from "react";
 import { Grid, Typography } from "@mui/material";
+import Image from "next/image";
 
-const infos = {
-  Country: "Bangladesh",
-  "Post code": 5300,
-  Height: 5.6 + '"',
-  Weight: 60 + " kg",
-  Gender: "Male",
-  "Marital Status": "Single",
-  "Blood group": "O+",
-  "Educational qualification": "BSc",
-  Hobby: "Reading",
-  "Future plan": "I want to explore the whole world.",
-};
 const Info = () => {
   return (
-    <Grid container className="w-full">
-      {Object.entries(infos).map(([k, v], i) => (
-        <Grid key={i} item xs={12}>
-          <Grid className="w-[100%] flex justify-between px-5 py-3">
-            <Grid className="w-[50%] flex justify-start">
-              <Typography className="p-0"> {k} </Typography>
-            </Grid>
-            <Grid className="w-[50%] flex justify-start">
-              <Typography className="p-0"> {v} </Typography>
+    <Grid container className="w-full flex flex-col pb-5">
+      <Typography className="p-0 text-lg">Media</Typography>
+      <Grid className="w-full flex flex-wrap gap-3">
+        {[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map((_,i)=> (
+          <Grid key={i} className="w-[calc(20%-10px)] h-[5rem]">
+            <Grid className="relative w-full h-full">
+             <Image src="/thumbnail-everest.jpg" alt="" fill />
             </Grid>
           </Grid>
-        </Grid>
-      ))}
+        ))}
+      </Grid>
     </Grid>
   );
 };

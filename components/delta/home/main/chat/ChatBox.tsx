@@ -1,4 +1,4 @@
-import { Grid, IconButton, Typography } from "@mui/material";
+import { Avatar, Grid, IconButton, Typography } from "@mui/material";
 import React, { useState } from "react";
 import InsertEmoticonIcon from "@mui/icons-material/InsertEmoticon";
 import MoreActions from "./MoreActions";
@@ -19,14 +19,15 @@ const ChatBox = () => {
       {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_, i) => (
         <Grid key={i} className="flex flex-col gap-3">
           <Message flex="flex-row" >
-          <Typography className="px-3 py-3 max-w-[60%] bg-[#d5e4de] dark:bg-[#29440e33]">
+          <Typography className="p-2 max-w-[60%] bg-[#d5e4de] dark:bg-[#29440e33]">
         Where are you now? I am searching for you for two days.
       </Typography>
           </Message>
           <Message flex="flex-row-reverse" >
-          <Typography className="px-3 py-3 max-w-[60%] bg-[#b5b8bb] dark:bg-[#13070a33]">
+          <Typography className="p-2 max-w-[60%] bg-[#b5b8bb] dark:bg-[#13070a33]">
         Where are you now? I am searching for you for two days.
-      </Typography>
+         </Typography>
+         <Avatar src="/user.jpg" className="w-[30px] h-[30px]"/>
           </Message>
         </Grid>
       ))}

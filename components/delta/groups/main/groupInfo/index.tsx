@@ -10,13 +10,13 @@ const GroupInfo = () => {
         <Navbar />
       </Grid>
       <Grid className="h-[90%] overflow-y-auto">
-
       <Grid className="w-full p-5 flex flex-col items-center justify-center">
-        <Avatar src="/user.jpg" className="w-[150px] h-[150px]" />
-        <Typography className="p-0 my-5 text-2xl">Sazzad Hossen</Typography>
+        <Avatar src="/thumbnail-everest.jpg" className="w-[150px] h-[150px]" />
+        <Typography className="p-0 mt-5 text-2xl">Food lovers</Typography>
+        <Typography className="p-0 mb-3">120 members</Typography>
         <Divider className="w-full" />
       </Grid>
-      <Grid className="w-full p-5">
+      <Grid className="w-full px-5">
         <Info/>
       </Grid>
       </Grid>
