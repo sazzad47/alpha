@@ -11,12 +11,7 @@ const Main = () => {
             <Grid className="relative w-full h-[5rem]">
               <Image src="/thumbnail-everest.jpg" alt="" fill />
             </Grid>
-            <Grid className="w-full">
-              <Typography className="p-0 line-clamp-1">Bike Lovers</Typography>
-              <Typography className="p-0 text-sm opacity-[0.7]">
-                120 members
-              </Typography>
-            </Grid>
+            <Typography className="p-0 line-clamp-1">Bike Lovers</Typography>
             <Button
               fullWidth
               className="text-textLight dark:text-textDark focus:outline-none bg-bgButton dark:bg-bgButtonDark hover:bg-bgButtonHover dark:hover:bg-bgButtonDarkHover normal-case"

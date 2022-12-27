@@ -1,8 +1,37 @@
 import React from "react";
-import { Avatar, Grid, Typography } from "@mui/material";
+import { Avatar, Grid, Typography, Badge } from "@mui/material";
 import Menubar from "./Menubar";
 import Link from "next/link";
+import { styled } from "@mui/material/styles";
 
+const StyledBadge = styled(Badge)(() => ({
+  "& .MuiBadge-badge": {
+    backgroundColor: "#44b700",
+    color: "#44b700",
+    boxShadow: `0 0 0 2px `,
+    "&::after": {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      borderRadius: "50%",
+      animation: "ripple 1.2s infinite ease-in-out",
+      border: "1px solid currentColor",
+      content: '""',
+    },
+  },
+  "@keyframes ripple": {
+    "0%": {
+      transform: "scale(.8)",
+      opacity: 1,
+    },
+    "100%": {
+      transform: "scale(2.4)",
+      opacity: 0,
+    },
+  },
+}));
 const MainBar = () => {
   return (
     <Grid className="absolute w-full h-full flex flex-col">
@@ -18,20 +47,20 @@ const MainBar = () => {
             >
               <Link href="/delta/groups/123">
                 <Grid className="text-textLight dark:text-textDark w-full flex items-center gap-4">
-                  <Avatar
-                    src="/thumbnail-everest.jpg"
-                    className="w-[50px] h-[50px]"
-                  />
+                  <StyledBadge
+                    overlap="circular"
+                    anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+                    variant="dot"
+                  >
+                    <Avatar
+                      alt=""
+                      src="/thumbnail-coding.jpg"
+                      className="w-[50px] h-[50px]"
+                    />
+                  </StyledBadge>
                   <Grid className="flex-1 flex flex-col">
-                    <Grid className="flex justify-between items-center">
-                      <Typography className="p-0 line-clamp-1">
-                        Food Lovers
-                      </Typography>
-                      <Typography className="p-0 text-xs">6.33 AM</Typography>
-                    </Grid>
-                    <Typography className="p-0 text-sm opacity-[0.7] line-clamp-1">
-                      Shafin: Chicken salad recipe uses a few simple ingredients
-                      to create a cold, creamy salad
+                    <Typography className="p-0 line-clamp-1">
+                      Cyber Security
                     </Typography>
                   </Grid>
                 </Grid>

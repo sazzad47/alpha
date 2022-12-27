@@ -63,7 +63,7 @@ const AddParticipants = () => {
         >
           <KeyboardBackspaceIcon />
         </IconButton>
-        Add group participants
+        Add room audience
       </Grid>
       <Grid
         className={`flex flex-col ${

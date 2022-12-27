@@ -11,7 +11,7 @@ const Menubar = () => {
   return (
     <Grid className="h-full flex flex-col justify-center items-center">
       <Grid className="w-full px-3 h-[50%] bg-[#34b483] dark:bg-[#66814b33] flex items-center justify-between">
-        <Typography className="p-0 text-xl">Groups</Typography>
+        <Typography className="p-0 text-xl">Rooms</Typography>
         <Grid className="flex items-center">
         <Tooltip
           title="Create new group"
