@@ -20,15 +20,18 @@ const ChatBox = () => {
         <Grid key={i} className="flex flex-col gap-3">
           <Message flex="flex-row">
             <Typography className="p-2 max-w-[60%] bg-[#d5e4de] dark:bg-[#29440e33]">
-              Where are you now? I am searching for you for two days.
+              Did you cook today?
             </Typography>
           </Message>
           <Message flex="flex-row-reverse">
             <Grid className="flex gap-3 items-end max-w-[60%]">
               <Avatar className="w-[30px] h-[30px]" src="/user.jpg" />
-              <Typography className="p-2 max-w-full whitespace-normal bg-[#b5b8bb] dark:bg-[#13070a33]">
-                Right now at Bangabandhu Sheikh Mujib Safari Park
-              </Typography>
+              <Grid className="flex flex-col">
+                <Typography className="p-0 text-xs">Shafin</Typography>
+                <Typography className="p-2 max-w-full whitespace-normal bg-[#b5b8bb] dark:bg-[#13070a33]">
+                  Yes, I did. I love cooking!
+                </Typography>
+              </Grid>
             </Grid>
           </Message>
         </Grid>

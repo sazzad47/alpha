@@ -34,30 +34,33 @@ export default function Navbar() {
         </div>
       </div>
       <div className="flex gap-5 items-center text-xl">
-        <Link href="/delta/groups/123">
+        <Link href="/delta/groups">
         <Tooltip title="Group">
           <IconButton className="focus:outline-none">
             <GroupsIcon className="text-textLight dark:text-textDark text-2xl" />
           </IconButton>
         </Tooltip>
         </Link>
+        <Link href="/delta/rooms">
         <Tooltip title="Room">
           <IconButton className="focus:outline-none">
             <CameraIndoorIcon className="text-textLight dark:text-textDark text-2xl" />
           </IconButton>
         </Tooltip>
+        </Link>
+        <Link href="/delta/live_chat">
         <Tooltip title="Live chat">
           <IconButton className="focus:outline-none">
             <VideoCameraFrontIcon className="text-textLight dark:text-textDark text-2xl" />
           </IconButton>
         </Tooltip>
+        </Link>
         <Notification />
         <AppsMenu />
         <Link href="/delta/me">
         <Avatar
           sx={{ width: 30, height: 30 }}
           className="text-lg p-0 bg-zinc-600  rounded-full cursor-pointer"
-          
         >
           S
         </Avatar>

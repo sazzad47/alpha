@@ -4,6 +4,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import MoreMenus from './MoreMenus';
 import { Context, StoreProps } from '../../context/store';
 import { sidebarTypes } from '../../context/types';
+import CallIcon from '@mui/icons-material/Call';
+import VideocamIcon from '@mui/icons-material/Videocam';
 
 const Navbar = () => {
     const { dispatch } = useContext(Context) as StoreProps;
@@ -17,6 +19,16 @@ const Navbar = () => {
              </Grid>
         </Grid>
         <Grid className="flex items-center gap-3">
+            <Tooltip title="Start a voice call">
+                <IconButton className="text-textLight dark:text-textDark focus:outline-none hover:bg-bgButton dark:hover:bg-bgButtonDark" >
+                    <CallIcon/>
+                </IconButton>
+            </Tooltip>
+            <Tooltip title="Start a video call">
+                <IconButton className="text-textLight dark:text-textDark focus:outline-none hover:bg-bgButton dark:hover:bg-bgButtonDark" >
+                    <VideocamIcon/>
+                </IconButton>
+            </Tooltip>
             <Tooltip title="Search messages">
                 <IconButton onClick={()=> dispatch({type: sidebarTypes.CHANGE_SIDEBAR_STATE, payload: {showSearchPage: true}})} className="text-textLight dark:text-textDark focus:outline-none hover:bg-bgButton dark:hover:bg-bgButtonDark" >
                     <SearchIcon/>

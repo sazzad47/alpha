@@ -1,11 +1,11 @@
 import { NextPage } from "next";
-import Groups from "../../../components/delta/groups/id";
+import Rooms from "../../../components/delta/rooms/id";
 import Layout from "../../../components/delta/Layout";
 
 const Page: NextPage = () => {
   return (
       <Layout>
-        <Groups />
+        <Rooms />
       </Layout>
   );
 };

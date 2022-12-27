@@ -1,11 +1,11 @@
 import { NextPage } from "next";
-import Groups from "../../../components/delta/groups/id";
+import Home from "../../../components/delta/liveChat/home";
 import Layout from "../../../components/delta/Layout";
 
 const Page: NextPage = () => {
   return (
       <Layout>
-        <Groups />
+        <Home />
       </Layout>
   );
 };
