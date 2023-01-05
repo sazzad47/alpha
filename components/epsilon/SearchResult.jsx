@@ -37,9 +37,9 @@ const SearchResult = () => {
     const { items, queries, searchInformation } = result;
 
     return (
-        <div className="w-full flex flex-col min-h-[100vh]">
+        <div className="w-full flex flex-col items-center min-h-[100vh]">
             <SearchResultHeader />
-            <main className="grow p-[12px] pb-0 md:pr-5 md:pl-20 mt-[5rem]">
+            <main className="grow mt-[5rem]">
                 <div className="flex text-sm text-[#70757a] mb-3">{`About ${searchInformation.formattedTotalResults} results in (${searchInformation.formattedSearchTime})`}</div>
                 {!imageSearch ? (
                     <>
@@ -57,9 +57,9 @@ const SearchResult = () => {
                         ))}
                     </div>
                 )}
-                <Pagination queries={queries} />
             </main>
             {/* <Footer /> */}
+                <Pagination queries={queries} />
         </div>
     );
 };

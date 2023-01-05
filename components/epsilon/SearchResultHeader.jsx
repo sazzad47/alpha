@@ -4,6 +4,7 @@ import { BsImage } from "react-icons/bs";
 import { BiNews } from "react-icons/bi";
 import { RiVideoLine } from "react-icons/ri";
 import { SlTag } from "react-icons/sl";
+import TravelExploreIcon from "@mui/icons-material/TravelExplore";
 
 import SearchInput from "./SearchInput";
 import ProfileIcon from "./ProfileIcon";
@@ -30,6 +31,8 @@ const SearchResultHeader = () => {
 
     return (
         <div className="fixed bg-stone-400 px-5 w-full h-[5rem] flex items-center justify-between">
+            <div className="flex gap-[2rem] items-center">
+       
             <div className="brand_logo">
             <Link href="/">
               <Image
@@ -39,6 +42,13 @@ const SearchResultHeader = () => {
               />
             </Link>
           </div>
+          <div>
+             
+          <Link href="/epsilon">
+          <TravelExploreIcon className="text-white"/>
+          </Link>
+          </div>
+            </div>
             <SearchBar/>
             <div className="flex items-center z-10">
             <div className="mr-5 text-black">

@@ -7,7 +7,7 @@ const SearchedItemTemplate = ({ data }) => {
         <div className="flex flex-col py-3 max-w-[700px]">
             <div
                 className="group cursor-pointer"
-                onClick={() => window.open(data.link, "_blank")}
+                onClick={() => window.open(data.link, '_self')}
             >
                 <div className="text-sm truncate text-[#202124]">
                     {data.formattedUrl}
