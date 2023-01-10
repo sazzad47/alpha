@@ -8,7 +8,6 @@ const Home = () => {
     <Grid className='bg-[#f7f2f2] dark:bg-[#242526] pt-[80px] flex items-start justify-between px-2 py-5'>
            <SideBar/>
            <Main/>
-           {/* <RightBar/> */}
     </Grid>
   )
 }
