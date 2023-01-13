@@ -15,7 +15,7 @@ interface Props {
 const Topbar = () => {
   const [openSidebar, setOpenSidebar] = useState<boolean>(false);
   return (
-    <Grid className="w-full h-[10vh] p-3">
+    <Grid className=" w-full flex items-center justify-between h-[10vh] p-3">
       <Button
         onClick={() => setOpenSidebar(!openSidebar)}
         startIcon={<ListIcon />}
@@ -23,6 +23,19 @@ const Topbar = () => {
       >
         Categories
       </Button>
+      <Grid className="flex gap-3">
+
+      <Button
+        className="rounded-3xl px-4 focus:outline-none bg-slate-200 dark:bg-stone-700 normal-case text-textLight dark:text-textDark"
+      >
+        Sell on Zeta
+      </Button>
+      <Button
+        className="rounded-3xl px-4 focus:outline-none bg-slate-200 dark:bg-stone-700 normal-case text-textLight dark:text-textDark"
+      >
+        Buy from users
+      </Button>
+      </Grid>
       <CSSTransition
         classNames="zeta_mainMenu"
         in={openSidebar}
@@ -43,7 +56,7 @@ const Sidebar = ({ setOpenSidebar }: { setOpenSidebar: Function }) => {
   const [currentMicroMenu, setCurrentMicroMenu] = useState<string>("");
 
   return (
-    <Grid className="absolute overflow-hidden left-0 top-[10vh] w-[18rem] h-[90vh] bg-zinc-300 dark:bg-teal-900 text-textLight dark:text-textDark">
+    <Grid className="z-[10] absolute overflow-hidden left-0 top-[10vh] w-[18rem] h-[90vh] bg-zinc-300 dark:bg-teal-900 text-textLight dark:text-textDark">
       <CSSTransition
         classNames="zeta_megaMenu"
         timeout={500}
