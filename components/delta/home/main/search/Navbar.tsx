@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <Grid className="px-3 py-2 h-full flex justify-start text-textLight dark:text-textDark">
         <Grid className="flex items-center gap-3">
-               <IconButton onClick={()=> dispatch({type: sidebarTypes.CHANGE_SIDEBAR_STATE, payload: {showChat: true}})} className="text-textLight dark:text-textDark focus:outline-none hover:bg-bgButton dark:hover:bg-bgButtonDark" >
+               <IconButton onClick={()=> dispatch({type: sidebarTypes.CHANGE_SIDEBAR_STATE, payload: {showSearchPage: false}})} className="text-textLight dark:text-textDark focus:outline-none hover:bg-bgButton dark:hover:bg-bgButtonDark" >
                     <CloseIcon/>
                 </IconButton>
                 <Typography className="p-0 ">Search Messages</Typography>

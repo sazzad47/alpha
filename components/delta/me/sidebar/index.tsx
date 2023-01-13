@@ -18,7 +18,7 @@ const SideBar = () => {
       <CSSTransition
         classNames="delta_mainSidebar"
         in={state.showSettingsMenu}
-        timeout={50}
+        timeout={500}
         unmountOnExit
         onEnter={() => dispatch({type: sidebarTypes.CHANGE_SIDEBAR_STATE, payload: {showNotification: false, showPrivacy: false, showSecurity: false, showTheme: false} })}
       >
@@ -27,7 +27,7 @@ const SideBar = () => {
       <CSSTransition
         classNames="delta_sideProfile"
         in={state.showNotification}
-        timeout={50}
+        timeout={500}
         unmountOnExit
         onEnter={() => dispatch({type: sidebarTypes.CHANGE_SIDEBAR_STATE, payload: {showSettingsMenu: false, showPrivacy: false, showSecurity: false, showTheme: false}})}
       >
@@ -36,7 +36,7 @@ const SideBar = () => {
       <CSSTransition
         classNames="delta_sideProfile"
         in={state.showPrivacy}
-        timeout={50}
+        timeout={500}
         unmountOnExit
         onEnter={() => dispatch({type: sidebarTypes.CHANGE_SIDEBAR_STATE, payload: {showSettingsMenu: false, showNotification: false, showSecurity: false, showTheme: false, showPrivacyMenu: true}})}
       >
@@ -45,7 +45,7 @@ const SideBar = () => {
       <CSSTransition
         classNames="delta_sideProfile"
         in={state.showSecurity}
-        timeout={50}
+        timeout={500}
         unmountOnExit
         onEnter={() => dispatch({type: sidebarTypes.CHANGE_SIDEBAR_STATE, payload: {showSettingsMenu: false, showNotification: false, showPrivacy: false, showTheme: false}})}
       >
@@ -54,7 +54,7 @@ const SideBar = () => {
       <CSSTransition
         classNames="delta_sideProfile"
         in={state.showTheme}
-        timeout={50}
+        timeout={500}
         unmountOnExit
         onEnter={() => dispatch({type: sidebarTypes.CHANGE_SIDEBAR_STATE, payload: {showSettingsMenu: false, showNotification: false, showPrivacy: false, showSecurity: false}})}
       >

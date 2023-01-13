@@ -1,0 +1,51 @@
+/* CSSTransition classes  */
+.zeta_mainMenu-enter {
+    position: absolute;
+    transform: translateX(-110%);
+  }
+  .zeta_mainMenu-enter-active {
+    transform: translateX(0%);
+    transition: all var(--speed) ease;
+  }
+  .zeta_mainMenu-exit {
+    
+  }
+  .zeta_mainMenu-exit-active {
+    transform: translateX(-110%);
+    transition: all var(--speed) ease;
+  }
+
+
+.zeta_megaMenu-enter {
+    position: absolute;
+    transform: translateX(-110%);
+  }
+  .zeta_megaMenu-enter-active {
+    transform: translateX(0%);
+    transition: all var(--speed) ease;
+  }
+  .zeta_megaMenu-exit {
+    position: absolute;
+  }
+  .zeta_megaMenu-exit-active {
+    transform: translateX(-110%);
+    transition: all var(--speed) ease;
+  }
+
+
+  .zeta_microMenu-enter {
+    position: absolute;
+    transform: translateX(110%);
+  }
+  .zeta_microMenu-enter-active {
+    transform: translateX(0%);
+    transition: all var(--speed) ease;
+  }
+  .zeta_microMenu-exit {
+    position: absolute;
+  }
+  .zeta_microMenu-exit-active {
+    transform: translateX(110%);
+    transition: all var(--speed) ease;
+  }
+  

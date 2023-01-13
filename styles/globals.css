@@ -77,6 +77,8 @@ a {
 @import url(./beta/navbar.css);
 @import url(./beta/videoContainer.css);
 /*.........Gamma............*/
-@import url(./gamma/home.css)
+@import url(./gamma/home.css);
 /*.........Delta............*/
-@import url(./delta/home.css)
+@import url(./delta/home.css);
+/*.........Zeta............*/
+@import url(./zeta/home.css);

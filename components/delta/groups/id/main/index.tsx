@@ -11,34 +11,24 @@ const Main = () => {
   const { state, dispatch } = useContext(Context) as StoreProps;
 
   return (
-    <Grid className="relative w-full h-[90vh]">
-      <CSSTransition
-        classNames="delta_mainSidebar"
-        in={state.showChat}
-        timeout={50}
-        unmountOnExit
-        onEnter={() => dispatch({type: sidebarTypes.CHANGE_SIDEBAR_STATE, payload: { showGroupInfo: false, showSearchPage: false } })}
-      >
+    <Grid className="w-[70vw] h-[90vh] relative">
+      <Grid className="w-full h-full">
         <Chat />
-      </CSSTransition>
-      <CSSTransition
-        classNames="delta_mainSidebar"
-        in={state.showGroupInfo}
-        timeout={50}
-        unmountOnExit
-        onEnter={() => dispatch({type: sidebarTypes.CHANGE_SIDEBAR_STATE, payload: { showChat: false, showSearchPage: false } })}
+      </Grid>
+      <Grid
+        className={`fixed ${
+          state.showGroupInfo ? "translate-x-0" : "translate-x-full"
+        } ease-in-out duration-500 top-0 bottom-0 w-full h-full`}
       >
         <GroupInfo />
-      </CSSTransition>
-      <CSSTransition
-        classNames="delta_sideProfile"
-        in={state.showSearchPage}
-        timeout={50}
-        unmountOnExit
-        onEnter={() => dispatch({type: sidebarTypes.CHANGE_SIDEBAR_STATE, payload: { showGroupInfo: false, showChat: false } })}
+      </Grid>
+      <Grid
+        className={`fixed ${
+          state.showSearchPage ? "translate-x-0" : "translate-x-full"
+        } ease-in-out duration-500 top-0 bottom-0 w-full h-full`}
       >
-        <Search/>
-      </CSSTransition>
+        <Search />
+      </Grid>
     </Grid>
   );
 };

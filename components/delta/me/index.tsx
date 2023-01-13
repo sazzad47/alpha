@@ -15,7 +15,7 @@ const Home = () => {
             </Grid>
           </Grid>
           <Grid item xs={8}>
-            <Grid className="h-full">
+            <Grid className="relative h-full">
               <Profile/>
             </Grid>
           </Grid>

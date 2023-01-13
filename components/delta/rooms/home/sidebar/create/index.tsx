@@ -12,9 +12,9 @@ const GroupBar = () => {
   return (
     <Grid className="relative w-full h-[90vh]">
       <CSSTransition
-        classNames="delta_mainSidebar"
+        classNames="delta_sideProfile"
         in={state.showAddParticipantsBar}
-        timeout={50}
+        timeout={500}
         unmountOnExit
         onEnter={() =>
           dispatch({
@@ -26,9 +26,9 @@ const GroupBar = () => {
         <AddParticipants />
       </CSSTransition>
       <CSSTransition
-        classNames="delta_sideProfile"
+        classNames="delta_mainSidebar"
         in={state.showCreateGroupBar}
-        timeout={50}
+        timeout={500}
         unmountOnExit
         onEnter={() =>
           dispatch({

@@ -4,9 +4,9 @@ import Layout from "../../components/delta/Layout";
 
 const Page: NextPage = () => {
   return (
-      <Layout>
-        <Delta />
-      </Layout>
+    <Layout>
+      <Delta />
+    </Layout>
   );
 };
 

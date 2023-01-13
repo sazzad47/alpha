@@ -6,7 +6,7 @@ import SearchBar from './SearchBar'
 
 const Search = () => {
   return (
-    <Grid className="absolute w-full h-[90vh] bg-bgLight dark:bg-bgDark flex flex-col">
+    <Grid className="w-[calc(100%-30vw)] mt-[10vh] h-[calc(100%-10vh)] bg-bgLight dark:bg-bgDark flex flex-col">
         <Grid className="h-[10%] bg-[#e0d9d9] dark:bg-[#31363b]">
             <Navbar/>
         </Grid>

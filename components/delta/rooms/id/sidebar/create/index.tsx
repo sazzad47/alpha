@@ -14,7 +14,7 @@ const GroupBar = () => {
       <CSSTransition
         classNames="delta_mainSidebar"
         in={state.showAddParticipantsBar}
-        timeout={50}
+        timeout={500}
         unmountOnExit
         onEnter={() =>
           dispatch({
@@ -28,7 +28,7 @@ const GroupBar = () => {
       <CSSTransition
         classNames="delta_sideProfile"
         in={state.showCreateGroupBar}
-        timeout={50}
+        timeout={500}
         unmountOnExit
         onEnter={() =>
           dispatch({

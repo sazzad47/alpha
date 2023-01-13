@@ -14,7 +14,7 @@ const SideBar = () => {
       <CSSTransition
         classNames="delta_mainSidebar"
         in={state.showMainBar}
-        timeout={50}
+        timeout={500}
         unmountOnExit
         onEnter={() => dispatch({type: sidebarTypes.CHANGE_SIDEBAR_STATE, payload: { showContactExplore: false } })}
       >
@@ -23,7 +23,7 @@ const SideBar = () => {
       <CSSTransition
         classNames="delta_sideProfile"
         in={state.showContactExplore}
-        timeout={50}
+        timeout={500}
         unmountOnExit
         onEnter={() => dispatch({type: sidebarTypes.CHANGE_SIDEBAR_STATE, payload: { showMainBar: false } })}
       >

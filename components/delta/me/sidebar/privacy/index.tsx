@@ -15,9 +15,9 @@ const Privacy = () => {
   return (
     <Grid className="relative w-full h-[90vh]">
       <CSSTransition
-        classNames="delta_mainSidebar"
+        classNames="delta_sideProfile"
         in={state.showPrivacyMenu}
-        timeout={50}
+        timeout={500}
         unmountOnExit
         onEnter={() =>
           dispatch({
@@ -31,7 +31,7 @@ const Privacy = () => {
       <CSSTransition
         classNames="delta_mainSidebar"
         in={state.showOnlinePrivacy}
-        timeout={50}
+        timeout={500}
         unmountOnExit
         onEnter={() =>
           dispatch({
@@ -45,7 +45,7 @@ const Privacy = () => {
       <CSSTransition
         classNames="delta_mainSidebar"
         in={state.showLastSeenPrivacy}
-        timeout={50}
+        timeout={500}
         unmountOnExit
         onEnter={() =>
           dispatch({
@@ -57,9 +57,9 @@ const Privacy = () => {
         <LastSeen />
       </CSSTransition>
       <CSSTransition
-        classNames="delta_sideProfile"
+        classNames="delta_mainSidebar"
         in={state.showAboutPrivacy}
-        timeout={50}
+        timeout={500}
         unmountOnExit
         onEnter={() =>
           dispatch({
@@ -71,9 +71,9 @@ const Privacy = () => {
         <About />
       </CSSTransition>
       <CSSTransition
-        classNames="delta_sideProfile"
+        classNames="delta_mainSidebar"
         in={state.showBlocked}
-        timeout={50}
+        timeout={500}
         unmountOnExit
         onEnter={() =>
           dispatch({

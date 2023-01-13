@@ -1,13 +1,12 @@
 import React from 'react';
 import {Grid} from '@mui/material';
-import Topbar from './topbar';
 import Main from './main';
-import Sidebar from './sidebar';
+import Topbar from './topbar';
 
 const Home = () => {
   return (
-    <Grid className='z-[-1] bg-[#f7f2f2] dark:bg-[#242526] pt-[10vh] flex items-start'>
-           <Sidebar/>
+    <Grid className='relative bg-[#f7f2f2] dark:bg-[#242526] pt-[10vh] flex flex-col items-start'>
+           <Topbar/>
            <Main/>
     </Grid>
   )

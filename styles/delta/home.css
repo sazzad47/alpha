@@ -65,3 +65,38 @@
     transform: translateX(-110%);
     transition: all var(--speed) ease;
   }
+
+
+  .delta_home_chat-enter {
+    position: absolute;
+    transform: translateX(0%);
+  }
+  .delta_home_chat-enter-active {
+    transform: translateX(0%);
+    transition: all var(--speed) ease;
+  }
+  .delta_home_chat-exit {
+    z-index: -1;
+  }
+  .delta_home_chat-exit-active {
+    transform: translateX(0%);
+    transition: all var(--speed) ease;
+  }
+
+
+  .delta_home_profile-enter {
+    position: absolute;
+    
+  }
+  .delta_home_profile-enter-active {
+    transform: translateX(0%);
+    transition: all var(--speed) ease;
+  }
+  .delta_home_profile-exit {
+    
+  }
+  .delta_home_profile-exit-active {
+   
+    transition: all var(--speed) ease;
+  }
+  
